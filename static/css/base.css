@@ -14,11 +14,11 @@
 }
 
 /* Links */
-.main-logo-link {
+.nav-link, .main-logo-link {
     text-decoration: none;
 }
 
-.main-logo-link:visited {
+.nav-link:visited, .main-logo-link:visited {
     text-decoration: none;
     color: white;
 }
