@@ -25,7 +25,7 @@
 
     {% block corejs %}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous">
+        integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
@@ -44,12 +44,25 @@
 <body>
     <header class="container-fluid fixed-top container-wrapper-header">
         <div class="row">
-            <div class="col-12 col-lg-4 my-auto py-auto text-center">
+            <div class="col-12 col-lg-4 m-auto p-auto text-center">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h1 class="text-uppercase"><strong>Vintage Corner</strong></h1>
                 </a>
             </div>
             <div class="col-12 col-lg-4">
+                <form method="GET" action="">
+                    <div class="input-group">
+                        <input class="form-control border border-black rounded-0" type="text" name="q"
+                            placeholder="Search" aria-label="Search">
+                        <div class="input-group-append">
+                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">Search
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
             <div class="col-12 col-lg-4">
             </div>
@@ -68,14 +81,12 @@
 
     <footer>
         <div class="container-wrapper-footer">
-            <div class="container h-100">
-                <div class="row text-center">
-                    <div class="col-12 col-md-6 my-auto py-auto">
-                        <h2>Follow us on social media</h2>
-                    </div>
-                    <div class="col-12 col-md-6 my-auto py-auto">
-                        <h2>Subscribe to our newsletter</h2>
-                    </div>
+            <div class="row text-center">
+                <div class="col-12 col-md-6 m-auto p-auto">
+                    <h2>Follow us on social media</h2>
+                </div>
+                <div class="col-12 col-md-6 m-auto p-auto">
+                    <h2>Subscribe to our newsletter</h2>
                 </div>
             </div>
         </div>
