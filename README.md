@@ -1,131 +1,360 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Vintage Corner
 
-Welcome USER_NAME,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+The live website can be seen [here]()
 
-## Gitpod Reminders
+![printscreen responsive website]()
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+## Table of content
+- [UX/UI Design](#uxui-design)
+  - [User Stories](#user-stories)
+  - [Wireframes](#wireframes)
+  - [Colour scheme](#colour-scheme)
+  - [Project Planning](#project-planning)
+    - [Agile methodologies](#agile-methodologies)
+    - [Database design](#database-design)
+- [Features](#features)
+  - [Existing features](#existing-features)
+  - [Header](#header)
+  - [Navigation menu](#navigation-menu)
+  - [Landing page](#landing-page)
+  - [Contact page](#contact-page)
+  - [Register account/login page](#register-accountlogin-page)
+  - [Footer](#footer)
+  - [Potential future features](#potential-future-features)
+- [Technologies used](#technologies-used)
+  - [Languages](#languages)
+  - [Database](#database)
+  - [Frameworks](#frameworks)
+  - [Libraries & Additional Programs/Software/Tools](#libraries--additional-programssoftwaretools)
+- [Manual Testing](#manual-testing)
+  - [Responsivness](#responsivness)
+  - [Browser compability](#browser-compability)
+  - [Validator testing](#validator-testing)
+  - [User Story testing](#user-story-testing)
+  - [Bugs](#bugs)
+- [Deployment](#deployment)
+  - [Forking](#forking)
+  - [Cloning](#cloning)
+  - [Deployment to Heroku](#deployment-to-heroku)
+- [References/credit](#referencescredit)
+  - [Content](#content)
+  - [Media](#media)
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+## UX/UI Design
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+### User Stories
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+An agile approach was used to initialize the project - Epics to set the main structure for the user stories that needed to be written, and to give me the bigger picture of the project. After the epics were set I wrote all the user stories and gave them labels to identify the must-haves, the should-haves, the could-haves and the wont-have - all in line with the MoSCoW prioritazion method. Every user story that I would work with then got some Acceptance Criterias and Tasks make their purpose even clearer.
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+I ended up with a total of 25 User Stories to work with in the end, the majority o them made it into
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+![printscreen user story]()
 
-### Connecting your Mongo database
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+Below are the epics and the Stories I ended up with. If they made it all the way to the end or need more work I will discuss further down in the [User Story testing](#user-story-testing) section. 
 
-------
 
-## Release History
+__EPIC:__
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**June 18, 2024,** Add Mongo back into template
+__EPIC:__
+ 
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+__EPIC:__
 
-**May 28 2024:** Fix Mongo and Links installs
 
-**April 26 2024:** Update node version to 16
+__EPIC:__
 
-**September 20 2023:** Update Python version to 3.9.17.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+__EPIC:__
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+__EPIC:__
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### Wireframes
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+Wireframes for both the mobile design and larger devices such as tablets and computers were made using [Balsamique](https://balsamiq.com/). The apporach was as mentioned a simple but straight forward design and almost every view got its own wireframe to make the code process as simple and effective as possible, since the design was already drawn out. I really loved the process and even though I made some changes to some pages along the way, due to it not looking as I imagined when for example responsivness came into the picture - I kept all of the wireframes in its original state as a reference.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+Below are some examples:
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+There were ? wireframes made in total, which can all be found [here]().
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Colour scheme
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
+### Project planning
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
+### Agile methodologies
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+- Kanban board - I used the Project Board in GitHub for the planning of the Project. Issues were created as User Stories with Acceptance Criterias belonging to each User Story. The User Stories were also assigned with some tasks, to clarify for myself what each User Story demanded of me. As discussed above I had to come back to my Project board and redo plus add some stories, but this just meant that I learned the value of a good Agile approach even more. 
 
-**How will this affect me?**
+As I love working on the design of a web page it's easy to put way to much time on that part, so the User Stories really helped me to focus on the functionality of the project first and foremost.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- Epics - I really understand the value of Epics for larger projects, to give a better overview of the projects user stories and further prioritize the work process. But they seem a little over-ambitious for a project of this size, although they work well with my brain.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+- MoSCoW Prioritization - The User Stories are labeled with one of the following four categories, all according to the MoSCow prioritization methodology:
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+  - Must Have: Features and requirements that are absolutely neccessary for the product to function and for the website to fulfill its purpose. These User Stories have the highest priority. 
 
-**So….?**
+  - Should Have: Important features that should be included if possible, but they are not critical for the website to function.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+  - Could Have: Desirable features that can be added if there is enough time and resources.
 
-**Can I opt out?**
+  - Won’t Have: Features that will not be included in the project at this point, but might be a desirable feature in future development. 
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+![printscreen moscow open issues]() ![printscreen moscow closed issues]()
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### Database Design
 
----
 
-Happy coding!
+![printscreen root directory]()
+
+
+__Entity Relationship Diagrams(ERD)__
+
+
+![printscreen entity relationship diagram]()
+
+
+## Features
+
+### Existing features
+
+
+### Header
+
+
+![printscreen header]()
+
+The mobile version containts pretty much the same features but presented in a responsive way, fitting into different screen sizes. 
+
+![printscreen header mobile version]()
+
+
+### Navigation menu
+
+
+![printscreen web page navigation menu]()
+
+With the help of Bootstrap and some custom CSS styling the navigation menu becomes a drop down feature on smaller devices. On smaller screens the social media icons aren't visible to the visitor in the navigation menu - so that the menu doesn't take up to much space. Instead they are only visible in the footer area on smaller screens. 
+
+![printscreen drop down navigation menu]()
+
+
+### Landing page & Footer
+
+
+
+
+### Contact page
+
+On the Contact page the user can find all the information they can possibly need if the wan't to get in touch with 
+
+Phone number, email adress and the restaurants adress is all there, in case somebody want's to send them a letter.
+
+![printscreen contact information]()
+
+
+![printscreen contact form]()
+
+
+
+### Register account/sign in 
+
+
+
+### Potential future features
+
+
+
+## Technologies used
+
+### Languages
+- HTML5
+- CSS3
+- JavaScript
+- Python
+
+
+### Database
+- CI Database URL (Postgres) - used to store all data.
+
+
+### Frameworks
+Django - main framework for a secure and resuable development process.
+
+
+### Libraries & Additional Programs/Software/Tools
+- Bootstrap - used for some of the front-end design. Mainly to make the page responsive and make use of Bootstraps grid system. It was accompanied by some custom CSS since I'm not all that familiar with Bootstraps many fuctions and add ons just yet.
+- Balsamique - used to create all wireframes for the project
+- Django All Auth - used for user registration and authentication
+- Django Crispy Forms - used for all forms on the page, mainly to control their behaviour and give them the same look for a good UX
+- Django Summernote - used as the editor for the Admin panel
+- dj-database-url - used to connect Django to database via URL
+- Favicon - used for finding a tab icon, which also became part of the logo for the restaruant project
+- Font Awesome - used for social media icons 
+- GitHub - used to store all the code and the Projects Kanban board
+- GitPod - used as the IDE during development
+- Google Fonts - used for custom fonts on the entire page
+- Gunicorn - used as the server to run Python code/Django on Heroku platform
+- Heroku - used as the platform to deploy the project
+- Lucidchart - used to create the Entity Relationship Diagrams, also known as ERD
+- Pexels - used to find suiting images for all pages of the site
+- Psycopg - PostgreSQL adapter for Python
+- Whitenoice - used to handle the static files for deployment
+
+Images are hosted in the projects static directory for this project, but in the future I want to work Cloudinary.
+
+
+## Manual testing
+
+The manual testing consisted of not only the things listed below, but the testing also meant asking everybody I know to test the website and all its functions - such as 
+
+### Responsivness 
+
+Mainly thanks to Bootstrap the page is responsive on all devices - from mobile phones to tablets, laptops and larger screens. It reaches a max-width on larger devices as to not look to stretched out and looks alright on even the smallest mobile screens. I've asked friends and family to try it out on different devices to get as many opinions in as possible. 
+
+### Browser compability
+
+The project has been tested on different browsers such as: Google Chrome, Safari, Microsoft Edge and Mozilla Firefox. It looks and functions pretty much the same on all browsers. 
+
+### Validator testing
+
+- HTML - through the official W3C validator. 
+
+![printscreen html validator]()
+
+- CSS - through the official Jigsaw validator. No issues came back when i ran the code through the CSS validator. 
+
+![printscreen css validator]()
+
+- JavaScript - the JavaScript check in JSHint came back with 
+
+![printscreen javascript validator]()
+
+- Python - PEP8 Python Validator
+
+There were quite a few files to run throught the PEP8 validator,
+
+![printscreen python validator]()
+
+When testing the page using Lighthouse for Chrome, 
+
+![printscreen lighthouse]()
+
+
+### User Story testing
+
+The User Story testing has been performed throughout the development. When building the site I moved the Stories I was working on into the "In Progress" column on my Kanban-board, and then checked that every acceptance criteria and task was fulfilled before moving it into the "Done" column. As you can see there are still Stories left in the "In progress" column, due to the fact that some criterias have been met, but not all of them. The project is still functional but I don't want to move them into the Done column until the criterias are fully met. 
+
+
+Along with the User Stories regarding some admin features, there are stories about a review page that haven't made it out of the "Todo" column yet. These are really good Stories to work with in the future 
+
+
+![printscreen kanban board]()
+
+
+### Bugs
+
+
+
+## Deployment
+
+This project was deployed using Heroku.
+
+### Forking
+
+- Navigate to the GitHub repository.
+- On the top right hand side, click the button named "Fork".
+- A new page named "Create new Fork" will open up, where you can choose to edit hte name of the project.
+- Click on "Create Fork" at the bottom of the page. 
+- Now a copy of the project will appear in your list of repositories.
+
+
+### Cloning
+
+- Navigate to the GitHub repository.
+- Click on the "Code" tab at the top of the repository and copy the URL for web that appears. 
+- Open up the terminal in a code editor of your choice and change the current working directory to a new one you will use to clone the repository. 
+- Type in "git clone" in the terminal, paste in the copied URL and press "Enter".
+
+
+### Deployment to Heroku
+
+1. Create and set up the Heroku app
+- Login to your Heroku account and navigate to the dashboard.
+- Click on the "New"-button to create a new app.
+- Give the app a unique name.
+
+
+2. Ready your code for deployment in your Code Editor.
+- Install a production ready webserver for Heroku such as gunicorn by writing the following command in your terminal: pip3 install gunicorn~=20.1.0.
+- Add gunicorn==20.1.0 to the requirements.txt file with the following command in your terminal: pip3 freeze --local > requirements.txt.
+- Create a file called Procfile in the root directory of your project.
+- Inside the Procfile declare that the web process followed by the command to execute your Django project: web: gunicorn yourprojectsname.wsgi
+- Open the projects settings.py file an set DEBUG=False
+- In settings.py add '.herokuapp.com' to the ALLOWED_HOSTS list.
+- Git add, git commit and git push to GitHub so that all files are up to date in your repository.
+
+
+3. Ready your database for deployment
+- Create an env.py file and add the following:
+import os
+os.environ.setdefault( "DATABASE_URL", "")
+os.environ.setdefault("SECRET_KEY", "your__secret_key")
+- Check to se that your env.py file is added to the .gitignore file. 
+- Make sure your settings.py has this code in it: SECRET_KEY = os.environ.get("SECRET_KEY").
+- Click on the "Settings" tab and navigate to the "Reveal Config Vars" section. 
+- Add a SECRET_KEY value to Herokus Config Vars.
+
+
+4. Deployment with static files
+- Install Python package for whitenoise with the command: pip3 install whitenoise==6.7.0
+- Add whitenoise to your requirements.txt file with the command: pip3 freeze --local > requirements.txt
+- Add 'whitenoise.middleware.WhiteNoiseMiddleware' to the list of MIDDLEWARE in settings.py below Django SecurityMiddleware.
+- In settings.py add a path to staticfiles in this way: STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+- Run python3 manage.py collectstatic in the terminal to collect the static files and when asked to choose yes or no, type "yes" in the terminal.
+- Check what Python version is used in your development environment and look up the supported runtime closest to your Python version. 
+- Create a runtime.txt file in your apps root directory and add the Python version from the list of supported runtimes, in a format like this: python-3.12.5.
+
+
+4. Deploy on Heroku
+- Click on the "Deploy" tab on your Heroku Dashboard.
+- Under the "Deploy method" section choose to Connect to GitHub, depending on earlier access you might be asked to authenticate using GitHub.
+- Choose the projects repository in the list that apperas when you start to type in the search box. 
+- Start a manual deployment of the main branch by scrolling to the bottom of the Deploy-page and click on "Deploy branch".
+- Click "Open app" to view your deployed project. 
+- Open the "Resources" tab and switch to Eco Dyno to keep the project up and running. 
+
+
+## References/credit
+
+
+### Content
+
+
+The Code Institute code along project "Boutique Ado" has been extremly helpful when it comes to setting up the structure for the project and I have returned to it again and agian throughout the development to make sure i use the right commands, deploy in the right way and so on. 
+The models we worked with in that project was of course inspiration for when designing my own 
+
+As always [Stack Overflow](https://stackoverflow.co/) has been my go to place everytime I've googled a piece of code for troubleshooting. 
+
+
+### Media
+
+[Pexels.com](https://www.pexels.com/)
+[Favicon](https://favicon.io/emoji-favicons/)
