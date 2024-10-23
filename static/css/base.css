@@ -15,6 +15,7 @@
 
 .callout-container {
     height: 80vh;
+    width: 100vw;
     background: url('/static/images/callout_image.jpg') no-repeat bottom right fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -24,6 +25,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    margin: 0;
 }
 
 /* Links */
@@ -37,6 +39,7 @@
 }
 
 .jumbotron-header {
+    margin: auto;
     color: white;
 
 }
