@@ -13,6 +13,19 @@
     color: white;
 }
 
+.callout-container {
+    height: 80vh;
+    background: url('/static/images/callout_image.jpg') no-repeat bottom right fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
 /* Links */
 .nav-link, .main-logo-link {
     text-decoration: none;
@@ -20,5 +33,14 @@
 
 .nav-link:visited, .main-logo-link:visited {
     text-decoration: none;
+    color: white;
+}
+
+.jumbotron-header {
+    color: white;
+
+}
+
+.btn-jumbotron {
     color: white;
 }
