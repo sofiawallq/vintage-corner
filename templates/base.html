@@ -44,7 +44,7 @@
 <body>
     <header class="container-fluid fixed-top container-wrapper-header">
         <div class="row">
-            <div class="col-12 col-lg-4 m-auto p-auto text-center">
+            <div class="col-12 col-lg-4 m-auto p-auto text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h1 class="text-uppercase"><strong>Vintage Corner</strong></h1>
                 </a>
@@ -86,6 +86,20 @@
                             <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                             {% endif %}
                         </div>
+                    </li>
+                    <li class="list-inline-item"></li>
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                            <div class="text-center">
+                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <p class="my-0">
+                                    {% if grand_total %}
+                                        ${{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                        $0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
                     </li>
                 </ul>
             </div>
