@@ -1,5 +1,19 @@
+/* General styling */
+html {
+    height: 100%;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
 /* Containers */
-.container-wrapper-header {
+.container-header {
     background-color: #659985;
     color: white;
 }
@@ -38,12 +52,30 @@
     color: white;
 }
 
+/* Buttons */
+.btn-jumbotron {
+    color: white;
+}
+
+/* Callout */
 .jumbotron-header {
     margin: auto;
     color: white;
 
 }
 
-.btn-jumbotron {
-    color: white;
+/* Navigation menu */
+.dropdown-menu {
+    background-color: #659985;
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
 }
