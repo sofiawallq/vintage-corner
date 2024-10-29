@@ -1,6 +1,7 @@
 /* General styling */
 html {
     height: 100%;
+    width: 100%;
 }
 
 body {
@@ -20,21 +21,11 @@ body {
 .container-header {
     background-color: #659985;
     color: white;
+    margin: 0;
 }
 
-.container-wrapper-header {
+.header-wrapper-container {
     margin-top: 10em;
-}
-
-.container-wrapper-content {
-    margin: auto;
-}
-
-.container-wrapper-footer {
-    background-color: #659985;
-    color: white;
-    position: relative;
-    width: 100vw;
 }
 
 .callout-container {
@@ -50,6 +41,16 @@ body {
     justify-content: center;
     position: relative;
     margin: 0;
+}
+
+/* Footer */
+.footer-container {
+    background-color: #659985;
+    color: white;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
 }
 
 /* Links */
@@ -89,10 +90,6 @@ a.category-badge > span.badge:hover {
     background-color: #659985;
 }
 
-.products-header {
-    margin-top: 12em;
-}
-
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
@@ -104,8 +101,8 @@ a.category-badge > span.badge:hover {
     }
 }
 
-@media (max-width: 320px) {
-    .products-header {
-        margin-top: 20em;
+@media (max-width: 1106px) {
+    .container-wrapper-header {
+        margin-top: 14em;
     }
 }
