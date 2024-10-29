@@ -57,6 +57,11 @@ html {
     color: white;
 }
 
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
 /* Callout */
 .jumbotron-header {
     margin: auto;
