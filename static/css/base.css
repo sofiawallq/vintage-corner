@@ -69,19 +69,8 @@ html {
     background-color: #659985;
 }
 
-/* Product page */
-.overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
-}
-
 .products-header {
-    margin-top: 200px;
+    margin-top: 12em;
 }
 
 /* fixed top navbar only on medium and up */
@@ -92,5 +81,11 @@ html {
         right: 0;
         left: 0;
         z-index: 1030;
+    }
+}
+
+@media (max-width: 320px) {
+    .products-header {
+        margin-top: 20em;
     }
 }
