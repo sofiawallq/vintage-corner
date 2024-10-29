@@ -11,6 +11,7 @@ def all_products(request):
     products = Product.objects.all()
     query = None
     categories = None
+    sort = None
 
     if request.GET:
         if 'category' in request.GET:
@@ -27,10 +28,18 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
+        if 'sort' in request.GET:
+            sort = request.GET['sort']
+            if sort == 'price':
+                products = products.order_by('price')
+            elif sort == 'name':
+                products = products.order_by('name')    
+
     context = {
         'products': products,
         'search_term': query,
         'current_categories': categories,
+        'current_sort': sort,
     }
 
     return render(request, 'products/products.html', context)
