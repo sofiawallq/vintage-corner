@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.snapchat',
     'home',
     'products',
+    'shopping_cart',
 ]
 
 MIDDLEWARE = [
