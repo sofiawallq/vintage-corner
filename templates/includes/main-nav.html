@@ -5,9 +5,11 @@
                 Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">Furniture</a>
-                <a href="" class="dropdown-item ">Decoration</a>
-                <a href="" class="dropdown-item ">Lighting</a>
+                <a href="{% url 'products' %}?category=furniture" class="dropdown-item">Furniture</a>
+                <a href="{% url 'products' %}?category=candle_holder" class="dropdown-item ">Candle holders</a>
+                <a href="{% url 'products' %}?category=camera" class="dropdown-item ">Cameras</a>
+                <a href="{% url 'products' %}?category=mirror" class="dropdown-item ">Mirrors</a>
+                <a href="{% url 'products' %}?category=type_writer" class="dropdown-item ">Typewriters</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
