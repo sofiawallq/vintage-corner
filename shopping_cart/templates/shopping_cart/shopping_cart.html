@@ -5,19 +5,19 @@
 <div class="container header-wrapper-container">
     <div class="row">
         <div class="col">
-        </div>
     </div>
-    {% endblock %}
+</div>
+{% endblock %}
 
-    {% block content %}
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <h2>Shopping Bag</h2>
-                <hr>
-            </div>
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h2>Shopping Bag</h2>
+            <hr>
         </div>
     </div>
+</div>
     <div class="row">
         <div class="col-12">
             {% if cart_items %}
@@ -28,6 +28,7 @@
                             <th scope="col">Product Info</th>
                             <th scope="col"></th>
                             <th scope="col">Price</th>
+                            <th scope="col">Remove item</th>
                         </tr>
                     </thead>
 
@@ -42,6 +43,11 @@
                         </td>
                         <td class="py-3">
                             <p class="my-0">${{ item.product.price }}</p>
+                        </td>
+                        <td class="py-3">
+                            <button class="btn btn-danger btn-sm remove-item" data-item-id="{{ item.item_id }}">
+                                <i class="fas fa-trash"></i> Remove
+                            </button>
                         </td>
                     </tr>
                     {% endfor %}
@@ -95,4 +101,34 @@
                 </div>
             </div>
             {% endif %}
-            {% endblock %}
+        </div>
+    </div>    
+{% endblock %}
+
+{% block postloadjs %}
+<script type="text/javascript">
+$(document).ready(function() {
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        e.preventDefault();
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).data('item-id');
+        var url = `/shopping_cart/remove_from_cart/${itemId}/`;
+
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data: {
+                'csrfmiddlewaretoken': csrfToken,
+            },
+            success: function() {
+                location.reload();
+            },
+            error: function() {
+                alert('Error removing item. Please try again.');
+            }
+        });
+    });
+});
+</script>
+{% endblock %}
