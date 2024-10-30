@@ -108,7 +108,7 @@
 {% block postloadjs %}
 <script type="text/javascript">
 $(document).ready(function() {
-    // Remove item and reload on click
+    // Remove item and reload page on click
     $('.remove-item').click(function(e) {
         e.preventDefault();
         var csrfToken = "{{ csrf_token }}";
