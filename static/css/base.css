@@ -6,6 +6,7 @@ html {
 
 body {
     background-color: #cab2a4;
+    margin: 0;
 }
 
 /* from Bulma */
@@ -24,14 +25,10 @@ body {
     margin: 0 0 20px 0;
 }
 
-.header-wrapper-container {
-    margin-top: 10em;
-}
-
 .callout-container {
     height: 80vh;
     width: 100vw;
-    background: url('/static/images/callout_image.jpg') no-repeat bottom right fixed;
+    background: url('/media/callout_image.jpg') no-repeat bottom right fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -40,7 +37,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    margin: 0;
+    margin-top: -20px;
 }
 
 /* Footer */
@@ -50,7 +47,6 @@ body {
     position: relative;
     width: 100%;
     margin: 0;
-    padding: 20px 0;
 }
 
 /* Links */
@@ -98,11 +94,5 @@ a.category-badge > span.badge:hover {
         right: 0;
         left: 0;
         z-index: 1030;
-    }
-}
-
-@media (max-width: 1106px) {
-    .header-wrapper-container {
-        margin-top: 14em;
     }
 }

@@ -46,7 +46,7 @@
 </head>
 
 <body>
-    <header class="container-fluid fixed-top header-container">
+    <header class="container-fluid header-container">
         <div class="row">
             <div class="col-12 col-lg-4 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
@@ -126,9 +126,6 @@
     <div class="message-container"></div>
     {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
-
     {% block content %}
     {% endblock %}
 
@@ -147,7 +144,6 @@
 
     {% block postloadjs %}
     {% endblock %}
-
 
 </body>
 

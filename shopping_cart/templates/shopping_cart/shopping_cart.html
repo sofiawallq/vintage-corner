@@ -1,25 +1,18 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-<div class="container header-wrapper-container">
-    <div class="row">
-        <div class="col">
-    </div>
-</div>
-{% endblock %}
-
 {% block content %}
-<div class="container-fluid">
+<div class="container">
     <div class="row">
-        <div class="col-12">
-            <h2>Shopping Bag</h2>
+        <div class="col-12 text-center">
+            <h2>Shopping Cart</h2>
             <hr>
         </div>
     </div>
 </div>
-    <div class="row">
-        <div class="col-12">
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
             {% if cart_items %}
             <div class="table-responsive rounded">
                 <table class="table table-sm table-borderless">
@@ -41,7 +34,7 @@
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                             <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                         </td>
-                        <td class="py-3">
+                        <td class="py-3 d-md-table-cell d-block text-md-center">
                             <p class="my-0">${{ item.product.price }}</p>
                         </td>
                         <td class="py-3">
@@ -83,11 +76,11 @@
                 </table>
             </div>
             {% else %}
-            <div class="container container-wrapper-content">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
                         {% if bag_items %}
-                        <div class="table-responsive rounded"></div>
+                        <div class="table-responsive rounded">
                         {% else %}
                         <p class="lead mb-5">Your bag is empty.</p>
                         <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
@@ -102,7 +95,8 @@
             </div>
             {% endif %}
         </div>
-    </div>    
+    </div>
+</div>      
 {% endblock %}
 
 {% block postloadjs %}
