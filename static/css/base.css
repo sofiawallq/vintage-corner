@@ -40,15 +40,6 @@ body {
     margin-top: -20px;
 }
 
-/* Footer */
-.footer-container {
-    background-color: #659985;
-    color: white;
-    position: relative;
-    width: 100%;
-    margin: 0;
-}
-
 /* Links */
 a, .nav-link, .main-logo-link {
     text-decoration: none;
@@ -84,6 +75,31 @@ a.category-badge > span.badge:hover {
 /* Navigation menu */
 .dropdown-menu {
     background-color: #659985;
+}
+
+/* Footer */
+.footer-container {
+    background-color: #659985;
+    color: white;
+    position: relative;
+    width: 100%;
+    margin: 0;
+}
+
+/* Bootstrap toasts */
+.message-container {
+    position: fixed;
+    top: 100px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
 }
 
 /* fixed top navbar only on medium and up */
