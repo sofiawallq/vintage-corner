@@ -13,7 +13,7 @@ def view_cart(request):
 def add_to_cart(request, item_id):
     """ Add the specified product to the shopping cart """
 
-    product = Product.objects.get(pk=item_id)
+    product = get_object_or_404(Product, pk=item_id)
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
 
@@ -27,10 +27,13 @@ def add_to_cart(request, item_id):
 
 def remove_from_cart(request, item_id):
     """ Remove the specified product from the shopping cart """
+
+    product = get_object_or_404(Product, pk=item_id)
     cart = request.session.get('cart', {})
 
     if item_id in cart:
         del cart[item_id]
+        messages.success(request, f'Removed {product.name} from your shopping cart')
 
     request.session['cart'] = cart
     return redirect('view_cart')
