@@ -26,6 +26,17 @@
     color: #aab7c4;
 }
 
+/* Drop-down country field */
+select,
+select option {
+    color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
 /* Loading overlay spinner */
 #loading-overlay {
 	display: none;
