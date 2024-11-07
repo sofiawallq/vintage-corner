@@ -41,12 +41,12 @@ def checkout(request):
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
             'phone_number': request.POST['phone_number'],
-            'country': request.POST['country'],
-            'postcode': request.POST['postcode'],
-            'town_or_city': request.POST['town_or_city'],
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
+            'postcode': request.POST['postcode'],
+            'town_or_city': request.POST['town_or_city'],
             'county': request.POST['county'],
+            'country': request.POST['country'],
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
@@ -55,9 +55,9 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_cart = json.dumps(cart)
             order.save()
-            for item_id in cart.items():
+            for item_id in cart.keys():
                 try:
-                    product = Product.objects.get(id=item_id)
+                    product = Product.objects.get(id=int(item_id))
                     order_line_item = OrderLineItem(
                         order=order,
                         product=product,
@@ -134,6 +134,8 @@ def checkout_success(request, order_number):
         order.user_profile = profile
         order.save()
 
+        save_info = 'save_info' in request.POST
+
         # Save the user's info
         if save_info:
             profile_data = {
@@ -148,6 +150,8 @@ def checkout_success(request, order_number):
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
+            else:
+                messages.error(request, 'We could not save your information to your profile, please try again.')
 
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
