@@ -1,12 +1,11 @@
 /* General styling */
-html {
-    height: 100%;
-    width: 100%;
-}
 
 body {
     background-color: #cab2a4;
+    height: 100%;
+    width: 100%;
     margin: 0;
+    padding: 0;
 }
 
 /* from Bulma */
@@ -132,8 +131,6 @@ a.category-badge > span.badge:hover {
     overflow-x: hidden;
     overflow-y: auto;
 }
-
-
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
