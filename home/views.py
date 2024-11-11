@@ -5,7 +5,7 @@ from products.views import all_products
 # Create your views here.
 def index(request):
     """ A view to return the home/index page with products """
-    products = Product.objects.all()[:6]
+    products = Product.objects.all().order_by('-created_on')[:3]
 
     context = {
         'products': products,
