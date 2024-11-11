@@ -6,38 +6,46 @@ from .forms import ReviewForm, ResponseForm
 
 
 def review_list(request):
-    reviews = Review.objects.all().order_by('-created_at')
-    return render(request, 'reviews/review_list.html', {'reviews': reviews})
-
-
-@login_required
-def add_review(request):
-    user_profile = UserProfile.objects.get(user=request.user)
+    """ A view to show all reviews, with optional sort functionality """
+    reviews = Review.objects.all()
+    sort = request.GET.get('sort', None)
     
-    if request.method == 'POST':
-        form = ReviewForm(request.POST, user_profile=user_profile)
-        if form.is_valid():
-            review = form.save(commit=False)
+    # If the form is submitted to add a review
+    if request.method == 'POST' and 'review_form' in request.POST:
+        review_form = ReviewForm(request.POST, user_profile=request.user.profile)
+        if review_form.is_valid():
+            review = review_form.save(commit=False)
             review.user = request.user
             review.save()
             return redirect('review_list')
     else:
-        form = ReviewForm()
-    return render(request, 'add_review.html', {'form': form})
+        review_form = ReviewForm()
 
-
-@login_required
-def add_response(request, review_id):
-    review = get_object_or_404(Review, id=review_id)
-    
-    if request.method == 'POST':
-        form = ResponseForm(request.POST)
-        if form.is_valid():
-            response = form.save(commit=False)
+    # If the form is submitted to add a response to a review
+    if request.method == 'POST' and 'response_form' in request.POST:
+        response_form = ResponseForm(request.POST)
+        if response_form.is_valid():
+            review_id = request.POST.get('review_id')
+            review = get_object_or_404(Review, id=review_id)
+            response = response_form.save(commit=False)
             response.review = review
             response.user = request.user
             response.save()
-            return redirect('review_detail', review_id=review.id)
+            return redirect('review_list')
     else:
-        form = ResponseForm()
-    return render(request, 'add_response.html', {'form': form, 'review': review})
+        response_form = ResponseForm()
+
+    # Sorting the reviews if needed
+    if sort == 'date':
+        reviews = reviews.order_by('-created_at')
+    elif sort == 'product':
+        reviews = reviews.order_by('product__name')
+
+    context = {
+        'reviews': reviews,
+        'review_form': review_form,
+        'response_form': response_form,
+        'current_sort': sort,
+    }
+
+    return render(request, 'reviews/review_list.html', context)
