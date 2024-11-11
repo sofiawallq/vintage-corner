@@ -5,11 +5,10 @@ from products.views import all_products
 # Create your views here.
 def index(request):
     """ A view to return the home/index page with products """
-    products = Product.objects.all()
+    products = Product.objects.all()[:6]
 
     context = {
         'products': products,
     }
 
     return render(request, 'home/index.html', context)
-

@@ -57,11 +57,9 @@
             <div class="col-12 col-lg-4 m-auto p-auto text-center d-none d-lg-flex">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group">
-                        <input class="form-control border border-black rounded-0" type="text" name="q"
-                            placeholder="Search" aria-label="Search">
+                        <input class="form-control" type="text" name="q" placeholder="Search" aria-label="Search">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0"
-                                type="submit">Search
+                            <button class="form-control btn" type="submit">Search
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
@@ -124,35 +122,33 @@
     </header>
 
     {% if messages %}
-        <div class="message-container">
-            {% for message in messages %}
-                {% with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
-                    {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
-                    {% endif %}
-                {% endwith %}
-            {% endfor %}
-        </div>
+    <div class="message-container">
+        {% for message in messages %}
+        {% with message.level as level %}
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
+        {% endfor %}
+    </div>
     {% endif %}
 
     {% block content %}
     {% endblock %}
 
-    <footer class="w-100">
-        <div class="container-fluid footer-container py-4">
-            <div class="row">
-                <div class="col-12 col-md-6 text-center">
-                    <h2>Follow us on social media</h2>
-                </div>
-                <div class="col-12 col-md-6 text-center">
-                    <h2>Subscribe to our newsletter</h2>
-                </div>
+    <footer class="container-fluid footer-container">
+        <div class="row">
+            <div class="col-12 col-md-6 text-center">
+                <h2>Follow us on social media</h2>
+            </div>
+            <div class="col-12 col-md-6 text-center">
+                <h2>Subscribe to our newsletter</h2>
             </div>
         </div>
     </footer>
