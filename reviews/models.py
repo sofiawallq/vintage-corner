@@ -15,7 +15,7 @@ class Review(models.Model):
         unique_together = ('product', 'user')
 
     def __str__(self):
-        return f'Review for {self.product.name} by {self.user.username}'
+        return f'Review for {self.product.name if self.product else 'No Product'} by {self.user.username}'
 
 class Response(models.Model):
     review = models.ForeignKey(Review, on_delete=models.CASCADE, related_name='responses')
