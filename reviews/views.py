@@ -5,6 +5,11 @@ from profiles.models import UserProfile
 from .forms import ReviewForm, ResponseForm
 
 
+def review_list(request):
+    reviews = Review.objects.all().order_by('-created_at')
+    return render(request, 'reviews/review_list.html', {'reviews': reviews})
+
+
 @login_required
 def add_review(request):
     user_profile = UserProfile.objects.get(user=request.user)
