@@ -8,11 +8,11 @@
         <div class="col-12 text-center mt-3">
             <h1>Reviews</h1>
             <hr class="w-60 mb-1">
+        </div>    
     </div>
-
     <!-- Sorting options -->
     <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 mt-4">
             <form method="get" action="{% url 'review_list' %}">
                 <select name="sort" onchange="this.form.submit()">
                     <option value="">Sort by:</option>
@@ -23,28 +23,10 @@
         </div>
     </div>
 
-    <!-- Add a new review (only for logged-in users, but form shown to all) -->
-    <div class="row mt-4">
-        <div class="col-12">
-            <h3>Add a new review</h3>
-            <form method="post">
-                {% csrf_token %}
-                {{ review_form | crispy }}
-                <button class="btn btn-secondary" type="submit" name="review_form">Submit Review</button>
-            </form>
-        </div>
-    </div>
-
-    {% if login_prompt %}
-    <div class="alert alert-warning mt-3">
-        {{ login_prompt }}
-    </div>
-    {% endif %}
-
     <!-- Display reviews and their responses -->
     {% for review in reviews %}
-    <div class="row mt-4">
-        <div class="col-12">
+    <div class="row">
+        <div class="col-12 col-md-4">
             <h4>{{ review.product.name }}</h4>
             <p>{{ review.comment }}</p>
             <small>Posted on: {{ review.created_at }}</small>
@@ -72,6 +54,24 @@
             </div>
         </div>
     </div>
+
+    <!-- Add a new review (only for logged-in users, but form shown to all) -->
+    <div class="row mt-4">
+        <div class="col-12 col-md-6 mt-4">
+            <h3>Add a new review</h3>
+            <form method="post">
+                {% csrf_token %}
+                {{ review_form | crispy }}
+                <button class="btn btn-secondary" type="submit" name="review_form">Submit Review</button>
+            </form>
+        </div>
+    </div>
+
+    {% if login_prompt %}
+    <div class="alert alert-warning mt-3">
+        {{ login_prompt }}
+    </div>
+    {% endif %}
     {% empty %}
     <p>No reviews available.</p>
     {% endfor %}

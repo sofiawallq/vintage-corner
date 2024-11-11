@@ -92,10 +92,6 @@ a.category-badge > span.badge:hover {
 }
 
 /* Navigation menu */
-.navbar-nav {
-    text-align: center;
-}
-
 .dropdown-menu {
     background-color: #738d8d;
 }
@@ -144,6 +140,11 @@ footer {
     background-color: #dc3545;
     border-color: #dc3545;
     border-radius: 0;
+}
+
+/* Checkout */
+.cart-item-image {
+    max-width: 200px;
 }
 
 /* Bootstrap toasts */
