@@ -8,7 +8,7 @@
         <div class="col-12 text-center mt-3">
             <h1>Reviews</h1>
             <hr class="w-60 mb-1">
-        </div>    
+        </div>
     </div>
     <!-- Sorting options -->
     <div class="row">
@@ -23,57 +23,86 @@
         </div>
     </div>
 
-    <!-- Display reviews and their responses -->
-    {% for review in reviews %}
-    <div class="row">
-        <div class="col-12 col-md-4">
-            <h4>{{ review.product.name }}</h4>
-            <p>{{ review.comment }}</p>
-            <small>Posted on: {{ review.created_at }}</small>
+    <!-- Display reviews in a grid -->
+    <div class="row mt-4">
+        {% for review in reviews %}
+        <div class="col-12 col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Written by: {{ review.user }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ review.product.name }}</h6>
+                    <p class="card-text">{{ review.comment }}</p>
+                    <small>Posted on: {{ review.created_at }}</small>
+                </div>
+                <div class="card-footer text-center">
+                    <button class="btn btn-secondary" data-bs-toggle="modal"
+                        data-bs-target="#responseModal{{ review.id }}">
+                        Add Response
+                    </button>
+                </div>
+            </div>
+        </div>
 
-            <!-- Form to add response to this review (only for logged-in users) -->
-            {% if user.is_authenticated %}
-            <form method="post">
-                {% csrf_token %}
-                {{ response_form | crispy }}
-                <input type="hidden" name="review_id" value="{{ review.id }}">
-                <button class="btn btn-secondary" type="submit" name="response_form">Submit Response</button>
-            </form>
-            {% endif %}
-
-            <!-- Display responses to this review -->
-            <div class="responses mt-3">
-                {% for response in review.response_set.all %}
-                    <div class="response">
-                        <p><strong>{{ response.user.username }}:</strong> {{ response.comment }}</p>
-                        <small>Posted on: {{ response.created_at }}</small>
+        <!-- Response modal -->
+        <div class="modal fade" id="responseModal{{ review.id }}" tabindex="-1"
+            aria-labelledby="responseModalLabel{{ review.id }}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="responseModalLabel{{ review.id }}">Add a Response</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                {% empty %}
-                    <p>No responses yet.</p>
-                {% endfor %}
+                    <div class="modal-body">
+                        {% if user.is_authenticated %}
+                        <form method="post" id="response-form-{{ review.id }}">
+                            {% csrf_token %}
+                            {{ response_form | crispy }}
+                            <input type="hidden" name="review_id" value="{{ review.id }}">
+                            <button type="submit" class="btn btn-primary">Submit Response</button>
+                        </form>
+                        {% else %}
+                        <p>Please <a href="{% url 'login' %}">log in</a> to add a response.</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- New review button -->
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <a href="{% url 'add_review' %}" class="btn btn-primary">Add a new review</a>
+        </div>
+    </div>
+</div>
+
+<!-- New review modal -->
+<div class="modal fade" id="newReviewModal" tabindex="-1" aria-labelledby="newReviewModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newReviewModalLabel">Add a New Review</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                {% if user.is_authenticated %}
+                <form method="post">
+                    {% csrf_token %}
+                    {{ review_form | crispy }}
+                    <button type="submit" class="btn btn-primary">Submit Review</button>
+                </form>
+                {% else %}
+                <p>Please <a href="{% url 'login' %}">log in</a> to write a review.</p>
+                {% endif %}
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Add a new review (only for logged-in users, but form shown to all) -->
-    <div class="row mt-4">
-        <div class="col-12 col-md-6 mt-4">
-            <h3>Add a new review</h3>
-            <form method="post">
-                {% csrf_token %}
-                {{ review_form | crispy }}
-                <button class="btn btn-secondary" type="submit" name="review_form">Submit Review</button>
-            </form>
-        </div>
-    </div>
-
-    {% if login_prompt %}
-    <div class="alert alert-warning mt-3">
-        {{ login_prompt }}
-    </div>
-    {% endif %}
-    {% empty %}
-    <p>No reviews available.</p>
-    {% endfor %}
+{% if not reviews %}
+<p class="text-center mt-4">No reviews available.</p>
+{% endif %}
 </div>
 {% endblock %}

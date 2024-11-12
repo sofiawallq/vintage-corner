@@ -201,6 +201,17 @@ Phone number, email adress and the restaurants adress is all there, in case some
 ### Potential future features
 
 
+## SEO/Meta optimization
+
+Searched different vintage stores online to see what keywords they use, 
+
+quite hard since many companies load in tags from companies so they cannot be viewed in the head when you use DevTools
+
+also learned about the social media meta tags
+
+meta keys will be updated according to what items are in the shop
+
+## Facebook page
 
 ## Technologies used
 
@@ -372,6 +383,8 @@ The Code Institute code along project "Boutique Ado" has been extremly helpful w
 The models we worked with in that project was of course inspiration for when designing my own 
 
 As always [Stack Overflow](https://stackoverflow.co/) has been my go to place everytime I've googled a piece of code for troubleshooting. 
+
+Product info mainly from Wikipedia
 
 
 ### Media

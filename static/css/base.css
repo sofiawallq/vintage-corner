@@ -139,7 +139,12 @@ footer {
     border-radius: 0;
 }
 
-/* Checkout */
+/*Review page*/
+.review-card {
+    background-color: #d8c4bf;
+}
+
+/* Checkout view*/
 .cart-item-image {
     max-width: 200px;
 }

@@ -8,7 +8,7 @@ class ReviewForm(forms.ModelForm):
         model = Review
         fields = ('product', 'comment',)
         widgets = {
-            'comment': forms.Textarea(attrs={'placeholder': 'Write your review here', 'rows': 8}),
+            'comment': forms.Textarea(attrs={'placeholder': 'Write your review here', 'rows': 6}),
         }
 
     def __init__(self, *args, **kwargs):
@@ -26,5 +26,5 @@ class ResponseForm(forms.ModelForm):
         model = Response
         fields = ('comment',)
         widgets = {
-            'comment': forms.Textarea(attrs={'placeholder': 'Write your response here', 'rows': 4}),
+            'comment': forms.Textarea(attrs={'placeholder': 'Write your response here', 'rows': 2}),
         }

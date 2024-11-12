@@ -6,62 +6,47 @@ from .forms import ReviewForm, ResponseForm
 
 
 def review_list(request):
+    sort_by = request.GET.get('sort', '')
     reviews = Review.objects.all()
-    current_sort = request.GET.get('sort', '')
 
-    if current_sort == 'date':
+    if sort_by == 'date':
         reviews = reviews.order_by('-created_at')
-    elif current_sort == 'product':
+    elif sort_by == 'product':
         reviews = reviews.order_by('product__name')
-
-    if request.method == 'POST' and 'review_form' in request.POST:
-        if request.user.is_authenticated:
-            review_form = ReviewForm(request.POST)
-            if review_form.is_valid():
-                new_review = review_form.save(commit=False)
-                new_review.user = request.user
-                new_review.save()
-                return redirect('review_list')
-        else:
-            review_form = ReviewForm(request.POST)
-            return render(request, 'reviews/review_list.html', {
-                'reviews': reviews,
-                'review_form': review_form,
-                'current_sort': current_sort,
-                'login_prompt': 'You must be logged in to submit a review.',
-            })
-
-    else:
-        review_form = ReviewForm()
-
-    if request.method == 'POST' and 'response_form' in request.POST:
-        if request.user.is_authenticated:
-            response_form = ResponseForm(request.POST)
-            review_id = request.POST.get('review_id')
-            review = get_object_or_404(Review, id=review_id)
-
-            if response_form.is_valid():
-                response = response_form.save(commit=False)
-                response.review = review
-                response.user = request.user
-                response.save()
-                return redirect('review_list')
-        else:
-            response_form = ResponseForm(request.POST)
-            return render(request, 'reviews/review_list.html', {
-                'reviews': reviews,
-                'response_form': response_form,
-                'current_sort': current_sort,
-                'login_prompt': 'You must be logged in to submit a response.',
-            })
-
-    else:
-        response_form = ResponseForm()
 
     return render(request, 'reviews/review_list.html', {
         'reviews': reviews,
-        'review_form': review_form,
-        'response_form': response_form,
-        'current_sort': current_sort,
-        'login_prompt': None,
+        'current_sort': sort_by,
+    })
+
+
+@login_required
+def add_response(request):
+    if request.method == 'POST':
+        form = ResponseForm(request.POST)
+        if form.is_valid():
+            review_id = form.cleaned_data['review_id']
+            review = Review.objects.get(id=review_id)
+            response = form.save(commit=False)
+            response.user = request.user
+            response.review = review
+            response.save()
+            return redirect('review_list')
+    return redirect('review_list')
+
+
+@login_required
+def add_review(request):
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.user = request.user
+            review.save()
+            return redirect('review_list')
+    else:
+        form = ReviewForm()
+    
+    return render(request, 'reviews/add_review.html', {
+        'form': form,
     })
