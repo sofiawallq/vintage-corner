@@ -35,7 +35,9 @@ def all_products(request):
             if sort == 'price':
                 products = products.order_by('price')
             elif sort == 'name':
-                products = products.order_by('name')    
+                products = products.order_by('name')
+            elif sort == 'news':
+                products = products.order_by('created_on')     
 
     context = {
         'products': products,

@@ -1,2 +1,42 @@
 [
+{
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+        "name": "furniture",
+        "friendly_name": "Furniture"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+        "name": "candle_holder",
+        "friendly_name": "Candleholders"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+        "name": "mirror",
+        "friendly_name": "Mirrors"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 4,
+    "fields": {
+        "name": "camera",
+        "friendly_name": "Cameras"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 5,
+    "fields": {
+        "name": "type_writer",
+        "friendly_name": "Typewriters"
+    }
+}
 ]

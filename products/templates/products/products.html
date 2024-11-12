@@ -21,6 +21,7 @@
                 <label for="sort">Sort by:</label>
                 <select name="sort" id="sort" onchange="this.form.submit()">
                     <option value="">Select</option>
+                    <option value="news" {% if current_sort == 'news' %}selected{% endif %}>News</option>
                     <option value="price" {% if current_sort == 'price' %}selected{% endif %}>Price</option>
                     <option value="name" {% if current_sort == 'name' %}selected{% endif %}>Name</option>
                 </select>
