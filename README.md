@@ -55,6 +55,8 @@ An agile approach was used to initialize the project - Epics to set the main str
 
 I ended up with a total of 25 User Stories to work with in the end, the majority o them made it into
 
+some of them contain acceptance criterias about size and quantity, which I think are vital to a general online store but in this case that criteria isn't aktuell since very item only exist in one exemplar och the store doesn't sell clothes at this point.
+
 ![printscreen user story]()
 
 
@@ -87,7 +89,9 @@ Below are some examples:
 
 
 
-There were ? wireframes made in total, which can all be found [here]().
+There were 18 wireframes made in total, which can all be found [here]().
+
+As some might notice there are no wireframes for the reviews page, since this came about later in the project when I felt the need for more custom models and more interactive features on the site. 
 
 
 ### Colour scheme
@@ -95,6 +99,10 @@ There were ? wireframes made in total, which can all be found [here]().
 
 
 ### Project planning
+
+At first I set up pretty much the same structure as the Boutique Ado project, with multiple static folders for CSS beloning to different apps, but after a while I just felt that it made the structure more messy since I am the only one working on the project. I see the value when multiple people are involved, but in this project it just felt redundant.
+
+
 
 
 ### Agile methodologies
@@ -156,9 +164,14 @@ With the help of Bootstrap and some custom CSS styling the navigation menu becom
 ![printscreen drop down navigation menu]()
 
 
-### Landing page & Footer
+### Home page & Footer
 
 
+### Product list page
+
+Sort by option by either price, name or news. at the moment the news doesn't really change much since 
+
+### About page
 
 
 ### Contact page
@@ -173,9 +186,16 @@ Phone number, email adress and the restaurants adress is all there, in case some
 ![printscreen contact form]()
 
 
-
 ### Register account/sign in 
 
+
+### Personal profile page
+
+
+### Shopping cart view
+
+
+### Checkout view
 
 
 ### Potential future features
