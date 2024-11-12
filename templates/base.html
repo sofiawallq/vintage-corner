@@ -12,27 +12,39 @@
     {% endblock %}
 
     {% block extra_meta %}
+    <!--Metatags for search engines-->
+    <meta name="description" content="Discover a carefully curated selection of handpicked vintage products and home decor from around the world. High quality, fast shipping, and global service.
+    Your go-to destination for unique vintage products.">
+    <meta name="keywords"
+        content="vintage e-commerce, vintage home decor, vintage items, curated vintage decor products, retro home accessories, vintage furniture, vintage mirrors, vintage cameras, vintage typewriters, international shipping">
+    <meta name="author" content="Vintage Corner by Sofia Wallsquid">
+
+    <!--Metatags for social media-->
+    <meta property="og:title" content="Vintage Corner">
+    <meta property="og:description" content="Explore our range of handpicked vintage items, carefully selected products and home decor from around the world.">
+    <meta property="og:url" content="https://vintage-corner-9f26bce1e332.herokuapp.com/">
+    <meta property="og:type" content="website">
     {% endblock %}
 
     {% block corecss %}
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     <!--Favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tangerine:wght@400;700&display=swap"
         rel="stylesheet">
+
     <!--Static CSS-->
     <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
-    {% endblock %}
-
-    {% block extra_css %}
     {% endblock %}
 
     {% block corejs %}
@@ -52,7 +64,7 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Vintage Corner</title>
+    <title>Vintage Corner | Carefully Curated Vintage Items And Home Decor</title>
 </head>
 
 <body>
@@ -158,13 +170,16 @@
                 <a href="{% url 'home' %}"><strong>Vintage Corner</strong></a>
                 <ul class="list-unstyled d-flex flex-row">
                     <li class="nav-item">
-                        <a class="icon-link p-2" href="http://www.facebook.com" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a class="icon-link p-2" href="http://www.facebook.com" target="_blank"><i
+                                class="fa-brands fa-square-facebook"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="icon-link p-2" href="http://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a class="icon-link p-2" href="http://instagram.com" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="icon-link p-2" href="https://www.tiktok.com/explore" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                        <a class="icon-link p-2" href="https://www.tiktok.com/explore" target="_blank"><i
+                                class="fa-brands fa-tiktok"></i></a>
                     </li>
                 </ul>
             </div>
@@ -182,8 +197,8 @@
                                 <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span
                                             class="asterisk">* </span></label><input type="email" name="EMAIL"
                                         class="required email" id="mce-EMAIL" required="" value=""></div>
-                                        <div class="indicates-required"><span class="asterisk">*</span> indicates
-                                            required</div>   
+                                <div class="indicates-required"><span class="asterisk">*</span> indicates
+                                    required</div>
                                 <div id="mce-responses" class="clear foot">
                                     <div class="response" id="mce-error-response" style="display: none;"></div>
                                     <div class="response" id="mce-success-response" style="display: none;">
@@ -197,8 +212,9 @@
                                 </div>
                                 <div class="optionalParent">
                                     <div class="clear foot">
-                                        <input type="submit" name="subscribe" placeholder="Enter your email" id="mc-embedded-subscribe" class="btn my-2"
-                                            value="Subscribe" aria-label="Subscribe">
+                                        <input type="submit" name="subscribe" placeholder="Enter your email"
+                                            id="mc-embedded-subscribe" class="btn my-2" value="Subscribe"
+                                            aria-label="Subscribe">
                                     </div>
                                 </div>
                             </div>
