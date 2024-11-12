@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-sofiawallq-vintagecorne-ghzhx4etuci.ws.codeinstitute-ide.net', 'https://vintage-corner-9f26bce1e332.herokuapp.com/', 'localhost']
+ALLOWED_HOSTS = ['8000-sofiawallq-vintagecorne-ghzhx4etuci.ws.codeinstitute-ide.net', 'vintage-corner-9f26bce1e332.herokuapp.com', 'localhost']
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-sofiawallq-vintagecorne-ghzhx4etuci.ws.codeinstitute-ide.net']
 
