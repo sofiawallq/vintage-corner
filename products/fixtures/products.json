@@ -1,0 +1,198 @@
+[
+{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "name": "Night candleholder",
+        "category": 2,
+        "description": "Classic candle holder in solid brass, 15 cm high. Produced around 1910 by swedish manufacturer Skultuna this rare piece is the perfect decoration for your home.",
+        "price": "25.00",
+        "image_url": null,
+        "image": "night_candle_holder.png",
+        "sku": "O43B5LN4",
+        "created_on": "2024-11-11T14:27:55.875Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "name": "Oval wall mirror",
+        "category": 3,
+        "description": "This little cutie was made in the 1930's, measures 30cm in height and fits pretty much everywhere. It has a beautiful blackened brass frame and well preserved mirror glass. Can either be hung by a ribbon as seen in the image, or by a hatch on the back.",
+        "price": "80.00",
+        "image_url": null,
+        "image": "mirror_brass.png",
+        "sku": "6C9AMBUB",
+        "created_on": "2024-11-11T14:27:55.875Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+        "name": "Polaroid Land Camera",
+        "category": 4,
+        "description": "Here it is, the iconic Polaroid OneStep camera with the classic Polaroid Land Camera build. The rainbow model that hipsters love to draw. The one that iPhone cases attempt to imitate. The legend. \r\n\r\nWe've come across a well preserved item with the flash bulb ramp still intact.",
+        "price": "60.00",
+        "image_url": null,
+        "image": "camera_polaroid_land.png",
+        "sku": "L19F9MZ3",
+        "created_on": "2024-11-11T14:27:55.875Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+        "name": "Pentacon Praktica Camera",
+        "category": 4,
+        "description": "Praktica was a brand of camera manufactured by Pentacon in Dresden in eastern Germany, within the GDR between 1949 and the German reunification in 1990. \r\n\r\nThe TL1000 was produced in the 1980's and the item we have curated still works like a charm.",
+        "price": "50.00",
+        "image_url": null,
+        "image": "camera_praktica.png",
+        "sku": "IMIHSEWT",
+        "created_on": "2024-11-11T14:27:55.875Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+        "name": "Balda Pontina Camera",
+        "category": 4,
+        "description": "The Balda Pontina is a folding 6×9 medium format camera which we believe was made in 1938 in Dresden, Germany. This camera is in remarkable shape for its age, and who knows what stories it’s told in so many years.  Prontor is a leaf shutter with a great range of speeds, introduced in 1935 by Gauthier.",
+        "price": "70.00",
+        "image_url": null,
+        "image": "camera_prontor_two.png",
+        "sku": "37M52OA5",
+        "created_on": "2024-11-11T14:27:55.875Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+        "name": "Yashica Camera",
+        "category": 4,
+        "description": "In 1958 Yashica rolled out the the first Yashica 44. Hoping to stand out a bit from the others in this now crowded field, Yashica made the Yashica 44 with different camera cover colors as to appeal to a broader audience. \r\n\r\nWe stumbled across this rare beauty in the original black color a while back, and now it wants to find its way into a new home. Minor scratches on the cover but overall good condition.",
+        "price": "80.00",
+        "image_url": null,
+        "image": "camera_yashica_4.png",
+        "sku": "R73TBBRB",
+        "created_on": "2024-11-11T14:27:55.875Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+        "name": "Candelabra antique silver",
+        "category": 2,
+        "description": "Silver candelabras originated in ancient times, with examples dating back to Roman and Greek civilizations. However, it wasn't until the 17th and 18th centuries that their popularity grew among European nobility.\r\n\r\nThis one however is a little more modern than that. Produced in the 1950's with a silver coating it measures 30cm in height and can hold a total of five candles.",
+        "price": "80.00",
+        "image_url": null,
+        "image": "candelabra.png",
+        "sku": "KNAMRP87",
+        "created_on": "2024-11-11T14:27:55.875Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+        "name": "Candelabra brass finsh",
+        "category": 2,
+        "description": "When used in the context of ancient Roman and Etruscan history, candelabras are tall metal stands, often made of bronze, which were designed to hold oil lamps or candles. It was not until the Middle Ages that the candelabra form with which we are more familiar today, that of a branched candleholder, was developed.\r\n\r\nThis ornate brass item measures about 30cm high and fits 5 candels. The stamps beneath the candelabra tells us that it was made somewhere by the end of the 19th century.",
+        "price": "90.00",
+        "image_url": null,
+        "image": "candelabra_brass.png",
+        "sku": "7EHIMGPN",
+        "created_on": "2024-11-11T14:27:55.875Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+        "name": "Chair",
+        "category": 1,
+        "description": "This one feels more retro than vintage, but still a gem in our storage. Produced in the 70's with a bright turquoise fabric decorated with embroided flowers. Four legs in solid oak. This chair will be the talk of the town in its new home!",
+        "price": "120.00",
+        "image_url": null,
+        "image": "chair_sixties_vibe.png",
+        "sku": "J1QU1O8C",
+        "created_on": "2024-11-11T14:27:55.875Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+        "name": "Sidetable Art Nouveau",
+        "category": 1,
+        "description": "Art Nouveau is an international style of art, architecture, and applied art, especially the decorative arts. It was often inspired by natural forms such as the sinuous curves of plants and flowers. It was popular between 1890 and 1910 during the Belle Époque period.\r\n\r\nThis sidetable with a bronze finish was produced a couple of years after Art Nouveau had its glory days, but it has all the features of a typical piece from that time period.",
+        "price": "140.00",
+        "image_url": null,
+        "image": "table_art_nouveau.png",
+        "sku": "9I2H1SKW",
+        "created_on": "2024-11-11T14:27:55.875Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+        "name": "Set of mirrors",
+        "category": 3,
+        "description": "A set of total five mirrors in different shapes and sizes. Beautiful brass finish and only minor marks on some glass. The mirrors have a Baroque feel about them, but were actually produced somewhere between 1940 and 1950. We bought them from an estate and now they want to live with you!",
+        "price": "250.00",
+        "image_url": null,
+        "image": "set_five_mirrors_brass.png",
+        "sku": "OVGMIGLN",
+        "created_on": "2024-11-11T14:27:55.875Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 12,
+    "fields": {
+        "name": "Rococo candleholders",
+        "category": 2,
+        "description": "During the mid-18th century, French Rococo influences transformed the candlestick stem into a masterpiece of floral decorations, asymmetrical designs brought into being by casting the base from independent pieces and soldering and chasing it afterwards.\r\n\r\nThese two rococo candleholders of solid brass dates back to end of the 18th century and measures 25 cm in height. They can hold two candles each and are a real centerpiece for the table with their ornate and heavy body.",
+        "price": "140.00",
+        "image_url": null,
+        "image": "two_piece_candle_holders.png",
+        "sku": "33PRFONB",
+        "created_on": "2024-11-11T14:27:55.875Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 13,
+    "fields": {
+        "name": "LC Smith typewriter",
+        "category": 5,
+        "description": "In 1889 the Smith-Premier, the first typewriter to bear the Smith name, was manufactured in Lyman C. Smith's gun factory on South Clinton Street in Syracuse, New York. Alexander T. Brown, an employee, invented the machine, and Wilbert Smith financed the construction of the prototype. And thus, the LC Smith was born. \r\n\r\nThis one is a Smith-Corona from the early 1920's in really good condition. We rescued it from an old newspaper company.",
+        "price": "70.00",
+        "image_url": null,
+        "image": "typewriter_lc_smith.png",
+        "sku": "QCH2EAXG",
+        "created_on": "2024-11-11T14:27:55.875Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 14,
+    "fields": {
+        "name": "Triumph typewriter",
+        "category": 5,
+        "description": "Triumph-Adler was founded in 1896 by Siegfried Bettmann as Deutsche Triumph Fahrradwerke Aktiengesellschaft (AG) in Nuremberg as a subsidiary of the Triumph Cycle Co. Ltd. of Coventry. In 1909, Triumph entered the office equipment business after purchasing the equipment of a bankrupt typewriter company whose assets were being auctioned off to the public.\r\n\r\nThis orange beauty was made in the 1970's and is a must for the typewriter enthusiast!",
+        "price": "80.00",
+        "image_url": null,
+        "image": "typewriter_triumph.png",
+        "sku": "9OZFWPBV",
+        "created_on": "2024-11-11T14:27:55.875Z"
+    }
+}
+]
