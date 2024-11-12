@@ -15,13 +15,13 @@
             </div>
         </div>
         {% if grand_total and not on_profile_page %}
-            <p class="logo-font bg-white text-black py-1">Your Bag ({{ product_count }})</p>
-            <div class="bag-notification-wrapper">
+            <p class="bg-white py-1">Your Bag ({{ product_count }})</p>
+            <div class="bag-notification-wrapper"> 
                 {% for item in bag_items %}
                     <div class="row">
                         <div class="col-3 my-1">
                             {% if item.product.image %}
-                            <img class="img-fluid rounded" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                             {% else %}
                             <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
                             {% endif %}

@@ -144,6 +144,12 @@ footer {
     background-color: #d8c4bf;
 }
 
+/* Shopping cart */
+.bag-notification-wrapper img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Checkout view*/
 .cart-item-image {
     max-width: 200px;
