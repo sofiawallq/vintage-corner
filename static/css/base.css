@@ -144,9 +144,11 @@ footer {
 }
 
 /*Review page*/
-.review-card {
+.card {
     background-color: #d8c4bf;
 }
+
+
 
 /* Shopping cart */
 .bag-notification-wrapper img {

@@ -17,6 +17,8 @@ stripe.api_key = settings.STRIPE_SECRET_KEY
 @require_POST
 def cache_checkout_data(request):
     try:
+        request.session['save_info'] = 'save-info' in request.POST
+        
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
@@ -134,7 +136,7 @@ def checkout_success(request, order_number):
         order.user_profile = profile
         order.save()
 
-        save_info = 'save_info' in request.POST
+        save_info = request.session.get('save_info', False)
 
         # Save the user's info
         if save_info:

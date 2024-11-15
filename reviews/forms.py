@@ -19,3 +19,5 @@ class ReviewForm(forms.ModelForm):
                 orderlineitem__order__user_profile=user_profile
             ).distinct()
             self.fields['product'].queryset = purchased_products
+            self.fields['product'].required = False
+            self.fields['product'].empty_label = "No product (general review)"
