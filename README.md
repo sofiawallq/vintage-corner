@@ -200,8 +200,16 @@ The database design consists of a main project directory called vintage_corner, 
 
 __Entity Relationship Diagrams(ERD)__
 
+Tree custom models were made for this project - one for Products, one to handle the Contact form in the contact app, and one to manage Reviews. Many more models exist within the project but they all come from the Boutique Ado code along project and are little or not altered at all. 
 
-![printscreen entity relationship diagram]()
+Below are the ERD's that were drawn out for the project. The User model is handled by the Django Framwork, but it plays an importanty role in my Review model since it has a one-to-many relationship - making sure signed in users can write many reviews connected to their one profile. The Review model also has a ForeignKey in the form of a product-field that is connected to the Product model, so that a user is able to write a review about a specific product that they have bought if they wish to.
+
+
+![printscreen entity relationship diagram](static/images/printscreens/erd_data_models.jpeg)
+
+
+
+Had a model for response as well
 
 
 ## Features
