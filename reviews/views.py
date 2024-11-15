@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
-from .models import Product, Review, Response
+from .models import Product, Review
 from profiles.models import UserProfile
-from .forms import ReviewForm, ResponseForm
+from .forms import ReviewForm
 
 
 def review_list(request):
@@ -18,21 +18,6 @@ def review_list(request):
         'reviews': reviews,
         'current_sort': sort_by,
     })
-
-
-@login_required
-def add_response(request):
-    if request.method == 'POST':
-        form = ResponseForm(request.POST)
-        if form.is_valid():
-            review_id = form.cleaned_data['review_id']
-            review = Review.objects.get(id=review_id)
-            response = form.save(commit=False)
-            response.user = request.user
-            response.review = review
-            response.save()
-            return redirect('review_list')
-    return redirect('review_list')
 
 
 @login_required

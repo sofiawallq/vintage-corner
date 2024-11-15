@@ -34,37 +34,6 @@
                     <p class="card-text">{{ review.comment }}</p>
                     <small>Posted on: {{ review.created_at }}</small>
                 </div>
-                <div class="card-footer text-center">
-                    <button class="btn btn-secondary" data-bs-toggle="modal"
-                        data-bs-target="#responseModal{{ review.id }}">
-                        Add Response
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Response modal -->
-        <div class="modal fade" id="responseModal{{ review.id }}" tabindex="-1"
-            aria-labelledby="responseModalLabel{{ review.id }}" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="responseModalLabel{{ review.id }}">Add a Response</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        {% if user.is_authenticated %}
-                        <form method="post" id="response-form-{{ review.id }}">
-                            {% csrf_token %}
-                            {{ response_form | crispy }}
-                            <input type="hidden" name="review_id" value="{{ review.id }}">
-                            <button type="submit" class="btn btn-primary">Submit Response</button>
-                        </form>
-                        {% else %}
-                        <p>Please <a href="{% url 'login' %}">log in</a> to add a response.</p>
-                        {% endif %}
-                    </div>
-                </div>
             </div>
         </div>
         {% endfor %}
@@ -84,7 +53,9 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="newReviewModalLabel">Add a New Review</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             <div class="modal-body">
                 {% if user.is_authenticated %}
@@ -104,5 +75,4 @@
 {% if not reviews %}
 <p class="text-center mt-4">No reviews available.</p>
 {% endif %}
-</div>
 {% endblock %}

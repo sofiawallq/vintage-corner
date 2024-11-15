@@ -44,11 +44,16 @@ html, body {
 }
 
 /* Links */
+a {
+    color: #000;
+    text-decoration: none;
+}
+
 a, .nav-link, .main-logo-link {
     text-decoration: none;
 }
 
-a, .nav-link:visited, .main-logo-link:visited {
+.nav-link:visited, .main-logo-link:visited {
     text-decoration: none;
     color: white;
 }

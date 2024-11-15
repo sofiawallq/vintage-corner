@@ -1,5 +1,5 @@
 from django import forms
-from .models import Review, Response
+from .models import Review
 from products.models import Product
 
 
@@ -19,12 +19,3 @@ class ReviewForm(forms.ModelForm):
                 orderlineitem__order__user_profile=user_profile
             ).distinct()
             self.fields['product'].queryset = purchased_products
-
-
-class ResponseForm(forms.ModelForm):
-    class Meta:
-        model = Response
-        fields = ('comment',)
-        widgets = {
-            'comment': forms.Textarea(attrs={'placeholder': 'Write your response here', 'rows': 2}),
-        }
