@@ -79,15 +79,19 @@ a.category-badge > span.badge:hover {
 }
 
 .main-logo {
-    font-family: "Tangerine", cursive;
+    font-family: "Amarante", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 /* Navigation menu */
 .dropdown-menu {
     background-color: #738d8d;
+}
+
+.search-box {
+    padding: 0;
 }
 
 /* Footer */

@@ -153,6 +153,12 @@ def checkout_success(request, order_number):
             else:
                 messages.error(request, 'We could not save your information to your profile, please try again.')
 
+    order_line_items = order.lineitems.all()
+    for item in order_line_items:
+        product = item.product
+        product.is_available = False
+        product.save()
+
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')

@@ -32,6 +32,7 @@ class Product(models.Model):
     image = models.ImageField(null=True, blank=True)
     sku = models.CharField(max_length=250, unique=True, default=generate_sku)
     created_on = models.DateTimeField(auto_now_add=True)
+    is_available = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
