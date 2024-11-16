@@ -27,7 +27,7 @@ html, body {
 .callout-container {
     height: 80vh;
     width: 100vw;
-    background: url('/media/callout_image.jpg') no-repeat bottom right fixed;
+    background: url('/static/images/callout_image.jpg') no-repeat bottom right fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
