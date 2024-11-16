@@ -54,6 +54,11 @@ a:visited, .nav-link:visited {
     text-decoration: none;
 }
 
+.nav-item a {
+    color: #000;
+    text-decoration: none;
+}
+
 .main-logo-link {
     color: white;
 }
@@ -66,6 +71,11 @@ a:visited, .nav-link:visited {
 .icon-link {
     display: flex;
     font-size: 2rem;
+    color: #000;
+    text-decoration: none;
+}
+
+footer .nav-item {
     color: #000;
     text-decoration: none;
 }

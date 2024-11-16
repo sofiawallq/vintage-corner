@@ -265,6 +265,11 @@ Phone number, email adress and the restaurants adress is all there, in case some
 ![printscreen contact form]()
 
 
+### Review page
+
+add options for users to edit or delte their reviews, future feature
+
+
 ### Register account/sign in 
 
 
@@ -382,7 +387,7 @@ The project has been tested on different browsers such as: Google Chrome, Safari
 
 - Python - PEP8 Python Validator
 
-There were quite a few files to run throught the PEP8 validator,
+There were quite a few files to run throught the PEP8 validator, somewhere around 70 since there are a lot of apps. 
 
 ![printscreen python validator]()
 
