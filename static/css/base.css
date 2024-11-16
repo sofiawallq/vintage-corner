@@ -44,29 +44,36 @@ html, body {
 }
 
 /* Links */
-a {
+a, .nav-link {
     color: #000;
     text-decoration: none;
 }
 
-a, .nav-link, .main-logo-link {
+a:visited, .nav-link:visited {
+    color: #000;
     text-decoration: none;
 }
 
-.nav-link:visited, .main-logo-link:visited {
-    text-decoration: none;
+.main-logo-link {
     color: white;
+}
+
+.main-logo-link:visited {
+    color: white;
+    text-decoration: none;
 }
 
 .icon-link {
     display: flex;
     font-size: 2rem;
+    color: #000;
+    text-decoration: none;
 }
 
 /* Buttons */
 .btn {
     background-color: #353e53;
-    color: white;
+    color: white !important;
 } 
 
 .btn-jumbotron {
