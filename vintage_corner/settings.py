@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-sofiawallq-vintagecorne-ghzhx4etuci.ws.codeinstitute-ide.net', 'vintage-corner-9f26bce1e332.herokuapp.com', 'localhost']
 
