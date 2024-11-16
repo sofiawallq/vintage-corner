@@ -17,6 +17,8 @@ def review_list(request):
         reviews = reviews.order_by('-created_at')
     elif sort_by == 'product':
         reviews = reviews.order_by('product__name')
+    else:
+        reviews = reviews.order_by('-created_at') 
         
     paginator = Paginator(reviews, 6)
     page_number = request.GET.get('page')

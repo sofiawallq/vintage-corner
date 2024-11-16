@@ -51,12 +51,37 @@ def checkout(request):
             'country': request.POST['country'],
         }
         order_form = OrderForm(form_data)
+        
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_cart = json.dumps(cart)
             order.save()
+            
+            # Skapa UserProfileForm för att spara användarprofilen om användaren valt att spara
+            if 'save-info' in request.POST:
+                if request.user.is_authenticated:
+                    profile = UserProfile.objects.get(user=request.user)
+                    profile_data = {
+                        'default_full_name': order.full_name,
+                        'default_email': order.email,
+                        'default_phone_number': order.phone_number,
+                        'default_street_address1': order.street_address1,
+                        'default_street_address2': order.street_address2,
+                        'default_postcode': order.postcode,
+                        'default_town_or_city': order.town_or_city,
+                        'default_county': order.county,
+                        'default_country': order.country,
+                    }
+                    user_profile_form = UserProfileForm(profile_data, instance=profile)
+                    if user_profile_form.is_valid():
+                        user_profile_form.save()
+                    else:
+                        messages.error(request, 'There was an error saving your profile.')
+                else:
+                    messages.error(request, 'You must be logged in to save your profile.')
+            
             for item_id in cart.keys():
                 try:
                     product = Product.objects.get(id=int(item_id))
@@ -141,6 +166,8 @@ def checkout_success(request, order_number):
         # Save the user's info
         if save_info:
             profile_data = {
+                'default_full_name': order.full_name,
+                'default_email': order.email,
                 'default_phone_number': order.phone_number,
                 'default_street_address1': order.street_address1,
                 'default_street_address2': order.street_address2,
