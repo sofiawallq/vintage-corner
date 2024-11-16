@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from products.models import Product
 
-# Create your views here.
 
 def view_cart(request):
     """ A view that renders the shopping cart contents page """
@@ -19,7 +18,8 @@ def add_to_cart(request, item_id):
 
     if item_id not in cart:
         cart[item_id] = 1
-        messages.success(request, f'Added {product.name} to your shopping cart')
+        messages.success(request,
+                         f'Added {product.name} to your shopping cart')
 
     request.session['cart'] = cart
     return redirect(redirect_url)
@@ -33,7 +33,8 @@ def remove_from_cart(request, item_id):
 
     if item_id in cart:
         del cart[item_id]
-        messages.success(request, f'Removed {product.name} from your shopping cart')
+        messages.success(request,
+                         f'Removed {product.name} from your shopping cart')
 
     request.session['cart'] = cart
     return redirect('view_cart')

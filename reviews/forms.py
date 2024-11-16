@@ -8,15 +8,18 @@ class ReviewForm(forms.ModelForm):
         model = Review
         fields = ('product', 'comment',)
         widgets = {
-            'comment': forms.Textarea(attrs={'placeholder': 'Write your review here', 'rows': 6}),
+            'comment': forms.Textarea(attrs={
+                'placeholder': 'Write your review here', 'rows': 6
+            }),
         }
 
     def __init__(self, *args, **kwargs):
         user_profile = kwargs.pop('user_profile', None)
         super().__init__(*args, **kwargs)
+
         if user_profile:
             purchased_products = Product.objects.filter(
-                orderlineitem__order__user_profile=user_profile
+                order_items__order__user_profile=user_profile
             ).distinct()
             self.fields['product'].queryset = purchased_products
             self.fields['product'].required = False

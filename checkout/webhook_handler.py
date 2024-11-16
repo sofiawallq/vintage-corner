@@ -25,13 +25,13 @@ class StripeWH_Handler:
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-        
+
         send_mail(
             subject,
             body,
             settings.DEFAULT_FROM_EMAIL,
             [cust_email]
-        )    
+        )
 
     def handle_event(self, event):
         """
@@ -57,7 +57,7 @@ class StripeWH_Handler:
 
         billing_details = stripe_charge.billing_details
         shipping_details = intent.shipping
-        grand_total = round(int(stripe_charge.amount) / 100, 2) 
+        grand_total = round(int(stripe_charge.amount) / 100, 2)
 
         # Clean data in the shipping details
         for field, value in shipping_details.address.items():
@@ -77,7 +77,7 @@ class StripeWH_Handler:
                 profile.default_town_or_city = shipping_details.address.city
                 profile.default_county = shipping_details.address.state
                 profile.default_country = shipping_details.address.country
-                profile.save()        
+                profile.save()
 
         order_exists = False
         attempt = 1
@@ -136,7 +136,7 @@ class StripeWH_Handler:
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
-        self._send_confirmation_email(order)            
+        self._send_confirmation_email(order)
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200)

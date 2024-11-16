@@ -15,8 +15,8 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-12 text-center mt-3">
-            <h2>Recently added products</h2>
+        <div class="col-12 text-center mt-5">
+            <h1>Recently added products</h1>
             {% for c in current_categories %}
             <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                 <span

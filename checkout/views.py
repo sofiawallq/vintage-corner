@@ -14,11 +14,12 @@ import json
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
+
 @require_POST
 def cache_checkout_data(request):
     try:
         request.session['save_info'] = 'save-info' in request.POST
-        
+
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
@@ -31,6 +32,7 @@ def cache_checkout_data(request):
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
+
 
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
@@ -51,15 +53,14 @@ def checkout(request):
             'country': request.POST['country'],
         }
         order_form = OrderForm(form_data)
-        
+
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_cart = json.dumps(cart)
             order.save()
-            
-            # Skapa UserProfileForm för att spara användarprofilen om användaren valt att spara
+
             if 'save-info' in request.POST:
                 if request.user.is_authenticated:
                     profile = UserProfile.objects.get(user=request.user)
@@ -74,14 +75,19 @@ def checkout(request):
                         'default_county': order.county,
                         'default_country': order.country,
                     }
-                    user_profile_form = UserProfileForm(profile_data, instance=profile)
+                    user_profile_form = UserProfileForm(profile_data,
+                                                        instance=profile)
                     if user_profile_form.is_valid():
                         user_profile_form.save()
                     else:
-                        messages.error(request, 'There was an error saving your profile.')
+                        messages.error(request,
+                                       'There was an error saving your profile.'
+                                       )
                 else:
-                    messages.error(request, 'You must be logged in to save your profile.')
-            
+                    messages.error(request,
+                                   'You must be logged in to save your profile.'
+                                   )
+
             for item_id in cart.keys():
                 try:
                     product = Product.objects.get(id=int(item_id))
@@ -91,22 +97,26 @@ def checkout(request):
                     )
                     order_line_item.save()
                 except Product.DoesNotExist:
-                    messages.error(request, (
-                        "One of the products in your bag wasn't found in our database. "
-                        "Please contact us for assistance.")
-                    )
+                    messages.error(request,
+                                   "One of the products in your bag wasn't "
+                                   "found in our database. "
+                                   "Please contact us for assistance."
+                                   )
                     order.delete()
                     return redirect(reverse('view_cart'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout_success',
+                            args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
         cart = request.session.get('cart', {})
         if not cart:
-            messages.error(request, "There are no items in your shopping cart at the moment")
+            messages.error(request,
+                           "There are no items in your shopping cart "
+                           "at the moment")
             return redirect(reverse('products'))
 
         current_cart = cart_contents(request)
@@ -118,7 +128,8 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-         # Attempt to prefill the form with any info the user maintains in their profile
+        # Attempt to prefill the form with any
+        # info the user maintains in their profile
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
@@ -137,7 +148,7 @@ def checkout(request):
                 order_form = OrderForm()
         else:
             order_form = OrderForm()
-        
+
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
@@ -180,7 +191,9 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
             else:
-                messages.error(request, 'We could not save your information to your profile, please try again.')
+                messages.error(request,
+                               'We could not save your information to your '
+                               'profile, please try again.')
 
     order_line_items = order.lineitems.all()
     for item in order_line_items:
@@ -200,4 +213,4 @@ def checkout_success(request, order_number):
         'order': order,
     }
 
-    return render(request, template, context)    
+    return render(request, template, context)

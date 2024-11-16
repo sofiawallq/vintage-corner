@@ -13,7 +13,7 @@ class OrderAdmin(admin.ModelAdmin):
 
     readonly_fields = ('order_number', 'date',
                        'delivery_cost', 'order_total',
-                       'grand_total', 'original_cart', 
+                       'grand_total', 'original_cart',
                        'stripe_pid')
 
     fields = ('order_number', 'user_profile', 'date', 'full_name',
@@ -28,8 +28,9 @@ class OrderAdmin(admin.ModelAdmin):
                     'grand_total',)
 
     ordering = ('-date',)
-    
+
     search_fields = ('order_number', 'full_name', 'email')
     list_filter = ('date', 'country')
+
 
 admin.site.register(Order, OrderAdmin)

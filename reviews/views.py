@@ -18,11 +18,11 @@ def review_list(request):
     elif sort_by == 'product':
         reviews = reviews.order_by('product__name')
     else:
-        reviews = reviews.order_by('-created_at') 
-        
+        reviews = reviews.order_by('-created_at')
+
     paginator = Paginator(reviews, 6)
     page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)    
+    page_obj = paginator.get_page(page_number)
 
     return render(request, 'reviews/review_list.html', {
         'reviews': page_obj.object_list,
@@ -34,13 +34,13 @@ def review_list(request):
 @login_required
 def add_review(request):
     user_profile = UserProfile.objects.get(user=request.user)
-    
+
     if request.method == 'POST':
         form = ReviewForm(request.POST, user_profile=user_profile)
         if form.is_valid():
             review = form.save(commit=False)
             review.user = request.user
-            
+
             if review.product:
                 has_purchased = OrderLineItem.objects.filter(
                     order__user_profile=user_profile,
@@ -48,17 +48,20 @@ def add_review(request):
                 ).exists()
 
                 if not has_purchased:
-                    messages.error(request, 'You can only review products that you have purchased.')
+                    messages.error(request, 'You can only review products '
+                                   'that you have purchased.')
                     return redirect('add_review')
-            
+
             review.is_approved = False
-            
+
             review.save()
-            messages.success(request, 'Your review has been submitted and is awaiting approval.')
+            messages.success(request,
+                             'Your review has been submitted '
+                             'and is awaiting approval.')
             return redirect('review_list')
     else:
         form = ReviewForm(user_profile=user_profile)
-    
+
     return render(request, 'reviews/add_review.html', {
         'form': form,
     })

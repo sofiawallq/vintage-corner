@@ -93,7 +93,7 @@
             <div class="col-12 col-lg-3 m-auto p-auto justify-content-center text-center d-none d-lg-flex">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                        <a class="nav-link" href="#" id="user-options" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
@@ -213,7 +213,7 @@
                                 </div>
                                 <div class="optionalParent">
                                     <div class="clear foot">
-                                        <input type="submit" name="subscribe" placeholder="Enter your email"
+                                        <input type="email" name="subscribe" placeholder="Enter your email"
                                             id="mc-embedded-subscribe" class="btn my-2" value="Subscribe"
                                             aria-label="Subscribe">
                                     </div>
@@ -227,7 +227,7 @@
     </footer>
 
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
         $('.toast').toast('show');
     </script>
     {% endblock %}

@@ -29,15 +29,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['8000-sofiawallq-vintagecorne-ghzhx4etuci.ws.codeinstitute-ide.net', 'vintage-corner-9f26bce1e332.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = [
+    '8000-sofiawallq-vintagecorne-ghzhx4etuci.ws.codeinstitute-ide.net',
+    'vintage-corner-9f26bce1e332.herokuapp.com',
+    'localhost'
+    ]
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-sofiawallq-vintagecorne-ghzhx4etuci.ws.codeinstitute-ide.net']
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-sofiawallq-vintagecorne-ghzhx4etuci.ws.codeinstitute-ide.net'
+    ]
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -45,7 +50,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'cloudinary_storage',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
@@ -61,7 +65,6 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'reviews',
-    'cloudinary',
     'crispy_forms',
     'crispy_bootstrap5',
     'django_summernote',
@@ -183,7 +186,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -203,7 +206,7 @@ if 'USE_AWS' in os.environ:
     DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
     MEDIAFILES_LOCATION = 'media'
 
-    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media'
 
 
 # Static files (CSS, JavaScript, Images)
@@ -238,4 +241,3 @@ else:
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
- 
