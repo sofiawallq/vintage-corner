@@ -32,7 +32,7 @@ class Product(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(null=True, blank=True, upload_to='product_images/')
     sku = models.CharField(max_length=250, unique=True, default=generate_sku)
     created_on = models.DateTimeField(auto_now_add=True)
     is_available = models.BooleanField(default=True)
