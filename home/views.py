@@ -26,3 +26,19 @@ def about(request):
     """
     return render(request, 'home/about.html')
 
+
+def privacy_policy(request):
+    """
+    A view to render the 'home/privacy_policy.html' template, which contains
+    the companys privacy policy.
+    """
+    return render(request, 'home/privacy_policy.html')
+
+
+def terms_conditions(request):
+    """
+    A view to render the 'home/terms_conditions.html' template, which contains
+    the companys terms and conditions.
+    """
+    return render(request, 'home/terms_conditions.html')
+

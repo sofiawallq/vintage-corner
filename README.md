@@ -364,16 +364,48 @@ In the shopping cart the user have the ability to view the entire content of the
 
 ### Checkout view
 
-In the checkout view the user gets a last look at their order in the form of an order summary so they have the option to go back and change it if they wish to. In the checkout view the user can also fill out a form with delivery information and provide the store with credit card information to finalize the purchase. Here the user can opt in to save their personal information to their 
+In the checkout view the user gets a last look at their order in the form of an order summary so they have the option to go back and change it if they wish to. In the checkout view the user can also fill out a form with delivery information and provide the store with credit card information to finalize the purchase. Here the user can opt in to save their personal information to their account if they are signed in, and if not signed in they are given the option to do so. The card payment is connected to Stripe. Every field has error handling to inform the user of what went wrong and upon successful checkout the user is redirencted to an order confirmation page, along with a successmessage containing the order number. The user will also recieve an order confirmation to their registered email address. 
 
-error handling
+![printscreen checkout view]()
 
-toast succes with order number
+![printscreen checkout mobile view]()
+
+![printscreen card error]()
+
+![printscreen order confirmation]()
+
+![printscreen success toast]()
+
 
 ### Potential future features
 
+I see alot of potential features in the future - I would love to implement a rating system and the ability to read reviews on products on the detailed product page, but that would mean that there would have to be a number of the sam item in stock and that seems unlikely in a Vintage Store. 
 
-## SEO/Meta optimization
+As mentioned before a more interactive reviews page would be nice. Where users can interact with each other in more than just a plain review - share their favourite vintage items at home and edit their own reviews if they want to - to create almost like a interactive forum on the site would be really cool!
+
+Another really important feature to implement is the ability to search the entire site with the help of the search bar. At this point it only searches for product related items, but as a user I want the option to write shipping in the search bar and be redirected to the page contaning information about shipping. But that would be to massive to deal with at the moment. 
+
+
+## SEO optimization and Marketing strategy
+
+When it was time to start sorting out the meta for the e-commerce store I started thinking about who the customer might be - who buys old and slightly quirky products for their home? To summarise them I think the majority are really enthustiatic collectors who love the thrill of finding just the right vintage product. I think they have a steady income since the store sells vintage items in the higher price range, and I think the like to have few but unique products in their home that you don't find everywhere. I also think they are really conscious consumers who likes to know the history behind the product they are purchasing and love the thrill of a good vintage find.
+
+I absolutely think they use social media platforms, mainly Instagram and Facebook to get tips on good vintage stores and inspiration on what items to search for. I think they are active on platforms such as X as well, but these types of products doesn't really fit that type of content.
+
+Since it's a curated Vintage assortment it doesn't fit the aura of the page to market it through sales, deals and big adverts on multiple platforms - that's not the core of the store and its products. Vintage is all about slowing down and taking its time, so the marketing strategy would be to build longterm relationships with our customers - spread the word via satisfied customers, get them to discuss their purchase in social media and different vintage forums, get them engaged when we go out on shopping travels to curate new products for the store - simply go for an organic growth and a slow strategy in line with the items we sell. 
+
+Another good way to go for a store like this would be newsletters via email - the content would be focused on building a relationship with the customer rather than screaming about a sale, so images from the latest bying trip, people we meet along the way and colaborations with other vintage stores would be great content! Along with a few of the items in stock at the moment. 
+
+ 
+In Sweden where I'm from this would be the perfect store for the typical swedish hipster nowadays - environmentally aware and likes to buy user items, striving to be unique in every way possible and 
+
+Would your business have a budget to spend on advertising? Or would it need to work with free or low cost options to market itself?
+Mainly free organic marketing and low cost options. Big ads would not sit well with the business aura and purpose
+
+Research other ecommerce businesses that sell similar products or services to your idea. What marketing practices do they employ? Which ones appear to be working best?
+
+
+### Meta tags and keys
 
 Searched different vintage stores online to see what keywords they use, 
 
@@ -383,14 +415,56 @@ also learned about the social media meta tags
 
 meta keys will be updated according to what items are in the shop
 
+short tail long tail
+
+![printscreen meta content]()
+
 
 ## Business model 
 
+
+
+1. Value Proposition
+Unique and High-Quality Vintage Items: Vintage Corner offers carefully selected items that cannot be found in mainstream stores.
+Sustainability: Promotes reuse and reduces environmental impact.
+Nostalgia and Style: Vintage designs provide customers with the opportunity to create a personalized home with character.
+2. Customer Segments
+Home Decor Enthusiasts: Individuals looking for unique and distinctive home decor items.
+Eco-Conscious Shoppers: Customers who value sustainability and reuse.
+Collectors: People who are interested in specific, period-authentic pieces.
+3. Channels
+Website: A user-friendly and visually appealing e-commerce platform.
+Social Media: Platforms like Instagram and Pinterest to showcase products, inspire potential customers, and expand the reach.
+Email Newsletters: Regular updates with promotions and decorating tips for subscribers.
+4. Customer Relationships
+Personal Interaction: Direct communication via chat, email, and social media.
+Loyalty Programs: Rewards for repeat customers.
+Post-Purchase Support: Guidance on the care and maintenance of vintage items.
+5. Revenue Streams
+Product Sales: Primary revenue comes from selling vintage items.
+Memberships: Special subscriptions for exclusive previews of new products.
+Collaborations: Partnerships with interior design bloggers and stylists, offering commissions.
+6. Key Resources
+Inventory: A diverse range of vintage items.
+Staff: Buyers, customer service representatives, and e-commerce developers.
+Technology Platform: An e-commerce solution to enable smooth and efficient shopping.
+7. Key Activities
+Sourcing and Procurement: Identifying and purchasing high-quality vintage items.
+Marketing: Actively promoting products through digital channels.
+Order Fulfillment: Efficiently packing and shipping orders.
+8. Key Partnerships
+Vintage Suppliers: Collaborations with auction houses and antique dealers.
+Logistics Partners: Ensuring reliable and timely delivery.
+Influencers and Bloggers: To reach a wider audience and build credibility.
+9. Cost Structure
+Purchasing Costs: Expenses for acquiring products.
+Marketing Expenses: Costs for digital campaigns and advertising.
+E-commerce Platform Maintenance: Technical upkeep and design enhancements.
+Logistics: Shipping and packaging costs.
 Business Model Canvas
 
-## Facebook page
 
-
+### Facebook page
 
 ![]()
 ![]()
@@ -398,20 +472,6 @@ Business Model Canvas
 
 You can view the page at: [Vintage Corner Facebook page](https://www.facebook.com/vintage.corner.eshop/)
 
-
-## The customer 
-
-- who is he/she? 
-
-since its a curated vintage assortment we don't want to market the page through sales and deals and big adverts - that's not the core of store and its products. The store is for ... so the approach is to build a long term relationship with the customers,
-
-get them engaged in shopping travels, get them to discuss their products in social media and forums, organic growth, spread the word via satisfied customers - a slow strategy in line with the assortment of products. 
-
-SEO
-
-image names alt attribute on images hosted on site, rel attribute noopener on social media links, add links to info page about vintage cvameras because customers are nerds
-
-länka mellan olika sidor för att keep user on the page
 
 ## Technologies used
 
