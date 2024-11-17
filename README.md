@@ -62,7 +62,7 @@ Below you can get a feel for the colour schema it inspired, and even though I di
 ![printscreen colour palett](static/images/printscreens/colour_palett.png)
 
 
-### User Stories
+## User Stories
 
 An agile approach was used to initialize the project - Epics to set the main structure for the user stories that needed to be written, and to make the project a little bit more approachable by bitesizing it. After the epics were set I wrote all the user stories and gave them labels to identify the must-haves, the should-haves, the could-haves and the wont-have - all in line with the MoSCoW prioritazion method. Every user story that I would work with then got some Acceptance Criterias and Tasks to make their purpose and what needed to be done even more clear. The final step of of the agile process was to give each user story a milestone label to help focus the work process even further. 
 
@@ -123,13 +123,17 @@ As a Site Admin I can delete a product from the site if they are no longer avail
 
 
 
-__EPIC:__ Purchase and checkout
+__EPIC:__ Shopping cart
 
 As a Site User I can easily add products to my shopping cart so that I can purchase the products I am interested in.
 
 As a Site User I can easily access my shopping cart at any point so that I can view what products I've added so far and the total amount spent.
 
 As a Site User I can update the items in my shopping cart when viewing it so that I can update the quantity, size or remove the product before checkout.
+
+
+
+__EPIC:__ Purchase and checkout
 
 As a new Site User I can easily enter my payment information so that I can check out quickly and smoothly.
 
@@ -153,7 +157,7 @@ As a Site Admin I can send a newsletter to registered email adresses so that the
 
 
 
-### Wireframes
+## Wireframes
 
 Wireframes for both the mobile design and larger devices such as tablets and computers were made using [Balsamique](https://balsamiq.com/).
 
@@ -184,24 +188,24 @@ Here is also the wireframe for the personal profile page where the user can upda
 There were 18 wireframes made in total, which can all be found [here](static/images/wireframes).
 
 
-### Project planning
+## Project planning
 
-I started out with setting up pretty much the same file structure as the Boutique Ado project, since there are alot of apps and additional features when creating an e-commece store it's really easy to get lost somewhere in the many maaany folders and files. I did decide to go in a different direction with the static folders for CSS - the Boutique Ado project had multiple folders with CSS-styling belonging to each app, but after a while I just felt that it made the structure more messy since I am the only one working on the project. I see the value when multiple people are involved, but in this project it just felt redundant.
+I started out with setting up pretty much the same file structure as the Boutique Ado project - since there are alot of apps and additional features when creating an e-commece store it's really easy to get lost somewhere in the many maaany folders and files. I did decide to go in a different direction with the static folders for CSS and JavaScript than what was made in the code along project - the Boutique Ado project had multiple folders with CSS-styling and js-files belonging to each app, but after a while I just felt that it made the structure more messy since I am the only one working on the project. I see the value when multiple people are involved, but in this project it just felt redundant.
 
-Next part of the process was to tackle the User Stories so I had something to achieve with each feature that was added to the page. More on that process below. After that the wireframes were created, and lastly the Entity Relationship Diagrams to plan the custom models that were needed (see below also) were made.
+Next part of the process was to tackle the User Stories so that I had something to achieve with each feature that was added to the page, more on that process below. After that the wireframes were created, and lastly the Entity Relationship Diagrams to plan the custom models that were needed were made.
 
-After that I started building the actual e-commerce store, while at the same time I was figuring out how the Facebook would look and drawing out some form of marketing strategy.
+After that I started building the actual e-commerce store, while at the same time I was figuring out how the Facebook page would look and drawing out some form of marketing strategy.
 
 
 ### Agile methodologies
 
-- Kanban board - I used the Project Board in GitHub for the planning of the Project. Issues were created as User Stories with Acceptance Criterias belonging to each User Story. The User Stories were also assigned with tasks, to clarify for myself what each User Story demanded of me.  
+- Kanban board - I used the Project Board in GitHub for the main planning of the Project. Issues were created as User Stories, with Acceptance Criterias belonging to each User Story. The User Stories were also assigned with tasks, to clarify for myself what each User Story demanded of me. As I love working on the design of a web page it's easy to put way to much time on that part, so the User Stories really help me to focus on the functionality of the project first and foremost.
 
-As I love working on the design of a web page it's easy to put way to much time on that part, so the User Stories really helped me to focus on the functionality of the project first and foremost.
+- Epics - I really understand the value of Epics for large projects, to give the team a better overview of the projects User Stories and further prioritize the work process. I would have loved to work with even more Epics to break up the User Stories since I feel like some Epics are a little "heavy" with Stories (such as the Search, sort and filter products), but I had to move on to the next part of the planning so at that point I went with the Epics I had. 
 
-- Epics - I really understand the value of Epics for larger projects, to give a better overview of the projects user stories and further prioritize the work process. But they seem a little over-ambitious for a project of this size, although they work well with my brain.
+- Milestones - Milestones were used as iterations and split the work into 4 iterations with its own Stories. I tried to evenly distribute the Stories so that each iteration would have pretty much the same amout of Stories - but if I would have added Story Points into the Agile mix I would have realized early on that some Stories in the first iterations would have demanded fewer Stories to accompany them in that specific iteration - there were simply to many demanding Storiews in the same iterations, as I talked about in the User Stories section above.
 
-- Milestones - 
+![printscreen milestones]()
 
 - MoSCoW Prioritization - The User Stories are labeled with one of the following four categories, all according to the MoSCow prioritization methodology:
 
@@ -226,16 +230,14 @@ The database design consists of a main project directory called vintage_corner, 
 
 __Entity Relationship Diagrams(ERD)__
 
-Tree custom models were made for this project - one for Products, one to handle the Contact form in the contact app, and one to manage Reviews. Many more models exist within the project but they all come from the Boutique Ado code along project and are little or not altered at all. 
+Tree custom models were made for this project - one for managing all Products in the store, one to handle the Contact form in the contact app, and one to manage Reviews. Many more models exist within the project but they all come from the Boutique Ado code along project, and are somewhat or not altered at all - many of them have gotten an extra field or two but don't feel altered enough to be called custom.
 
 Below are the ERD's that were drawn out for the project. The User model is handled by the Django Framwork, but it plays an importanty role in my Review model since it has a one-to-many relationship - making sure signed in users can write many reviews connected to their one profile. The Review model also has a ForeignKey in the form of a product-field that is connected to the Product model, so that a user is able to write a review about a specific product that they have bought if they wish to.
 
 
 ![printscreen entity relationship diagram](static/images/printscreens/erd_data_models.jpeg)
 
-
-
-Had a model for response as well
+I actually had a model for a response-function as well where users could write a response to a review that somebody else had written, but to many aspects weren't working at the time so I decided to skip it for now and save it for future development.
 
 
 ## Features
