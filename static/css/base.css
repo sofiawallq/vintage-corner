@@ -43,6 +43,23 @@ html, body {
     color: white;
 }
 
+/* Header logo */
+.main-logo {
+    font-family: "Amarante", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+/* Navigation menu */
+.dropdown-menu {
+    background-color: #738d8d;
+}
+
+.search-box {
+    padding: 0;
+}
+
 /* Links */
 a, .nav-link {
     color: #000;
@@ -95,43 +112,10 @@ a.category-badge > span.badge:hover {
     color: #fff !important;
 }
 
-/* Text */
-.text-black {
-    color: #000 !important;
-}
-
-.main-logo {
-    font-family: "Amarante", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 4rem;
-}
-
-/* Navigation menu */
-.dropdown-menu {
-    background-color: #738d8d;
-}
-
-.search-box {
-    padding: 0;
-}
-
-/* Footer */
-footer {
-    background-color: #738d8d;
-    width: 100%;
-    padding: 20px 0;
-}
-
-.footer-container {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-/* Products */
+/* Products page */
 .card-bg { 
-   background-color: #d8c4bf;
-}    
+    background-color: #d8c4bf;
+ }  
 
 /* Product form and image field  */
 .btn-file {
@@ -165,8 +149,6 @@ footer {
     background-color: #d8c4bf;
 }
 
-
-
 /* Shopping cart */
 .bag-notification-wrapper img {
     max-width: 100%;
@@ -176,6 +158,33 @@ footer {
 /* Checkout view*/
 .cart-item-image {
     max-width: 200px;
+}
+
+
+/* Personal profile page */
+.order-history {
+    max-height: 416px; /*height of form + submit button*/
+    overflow-y: auto;
+}
+
+#profile-update-form .form-control {
+    color: #000;
+}
+
+#profile-update-form input::placeholder {
+    color: #aab7c4;
+}
+
+/* Footer */
+footer {
+    background-color: #738d8d;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.footer-container {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 /* CSS from Stripe documentation */
@@ -249,20 +258,6 @@ select option[value=""] {
     height: 100%;
 }
 
-/* Personal profile page */
-.order-history {
-    max-height: 416px; /* height of profile form + submit button */
-    overflow-y: auto;
-}
-
-#profile-update-form .form-control {
-    color: #000;
-}
-
-#profile-update-form input::placeholder {
-    color: #aab7c4;
-}
-
 /* Bootstrap toasts */
 .message-container {
     position: fixed;
@@ -285,7 +280,7 @@ select option[value=""] {
     overflow-y: auto;
 }
 
-/* fixed top navbar only on medium and up */
+/* Styling for specific screen width */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
