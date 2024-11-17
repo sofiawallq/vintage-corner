@@ -1,3 +1,4 @@
+// Entire file from Boutique Ado code along project
 var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 var clientSecret = $('#id_client_secret').text().slice(1, -1);
 var stripe = Stripe(stripePublicKey);
@@ -36,7 +37,7 @@ card.addEventListener('change', function (event) {
     }
 });
 
-// Handle form submit
+// Handle form submission
 var form = document.getElementById('payment-form');
 
 form.addEventListener('submit', function (ev) {
@@ -105,7 +106,7 @@ form.addEventListener('submit', function (ev) {
             }
         });
     }).fail(function () {
-        // just reload the page, the error will be in django messages
+        // Reload the page
         location.reload();
     });
 });

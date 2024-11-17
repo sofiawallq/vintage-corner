@@ -10,7 +10,16 @@ import stripe
 @csrf_exempt
 def webhook(request):
     """
-    Listen for webhooks from Stripe
+    Listen for webhooks from Stripe and handle the events.
+    This view is used to process incoming webhook notifications from Stripe.
+    It listens for specific events like payment success or failure, verifies
+    the signature of the incoming event, and triggers
+    the corresponding handler to process the event.
+    The webhook uses the Stripe API to verify the event signature, ensuring
+    that the event was sent by Stripe and is valid.
+    Returns a response with status 200 for successful event handling,
+    or status 400 for any issues such as invalid payload or
+    signature verification errors.
     """
     wh_secret = settings.STRIPE_WH_SECRET
     stripe.api_key = settings.STRIPE_SECRET_KEY

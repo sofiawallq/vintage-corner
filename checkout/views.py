@@ -17,6 +17,17 @@ stripe.api_key = settings.STRIPE_SECRET_KEY
 
 @require_POST
 def cache_checkout_data(request):
+    """
+    Caches checkout data into the session to save information
+    for Stripe PaymentIntent.
+    This view receives the POST data from the checkout form,
+    checks if the user wants to save their profile information,
+    and modifies the Stripe PaymentIntent with relevant cart and user data.
+    The data is then stored in the session for use
+    during the payment confirmation process.
+    Returns a response with status 200 if data was successfully cached,
+    or status 400 if an error occurs during processing.
+    """
     try:
         request.session['save_info'] = 'save-info' in request.POST
 
@@ -35,6 +46,17 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
+    """
+    Handles the checkout process by displaying the order form,
+    creating a Stripe PaymentIntent, and processing the form data for payment.
+    This view retrieves the cart from the session, calculates the total amount,
+    and allows the user to fill out the order form. If the order form
+    is valid, the order is saved and line items are associated with the order.
+    If the user opts in to save their profile information,
+    it is updated in the profile model.
+    Returns a response with the checkout form or a redirect after
+    a successful checkout.
+    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -161,7 +183,13 @@ def checkout(request):
 
 def checkout_success(request, order_number):
     """
-    Handle successful checkouts
+    Handles a successful checkout by associating the order with
+    the user's profile, marking products as unavailable,
+    and sending a confirmation message.
+    This view is triggered after a successful payment.
+    It ensures the user's profile is updated with the new order information,
+    marks purchased products as unavailable, and clears the cart session.
+    Returns a response displaying the order details and success message.
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)

@@ -4,13 +4,20 @@ from products.models import Product
 
 
 def view_cart(request):
-    """ A view that renders the shopping cart contents page """
+    """ 
+    A view that renders the shopping cart contents page.
+    """
 
     return render(request, 'shopping_cart/shopping_cart.html')
 
 
 def add_to_cart(request, item_id):
-    """ Add the specified product to the shopping cart """
+    """ 
+    Adds a specified product to the shopping cart.
+    If the item hasn't been added to the cart already,
+    the cart content is increased by one upon user interaction.
+    Shows success message accordingly.
+    """
 
     product = get_object_or_404(Product, pk=item_id)
     redirect_url = request.POST.get('redirect_url')
@@ -26,7 +33,12 @@ def add_to_cart(request, item_id):
 
 
 def remove_from_cart(request, item_id):
-    """ Remove the specified product from the shopping cart """
+    """ 
+    Remove a specified product from the shopping cart.
+    Upon user interaction the item is removed from the cart
+    and the database is updated.
+    Shows success message accordingly.
+    """
 
     product = get_object_or_404(Product, pk=item_id)
     cart = request.session.get('cart', {})

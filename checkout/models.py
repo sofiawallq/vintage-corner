@@ -8,6 +8,16 @@ from profiles.models import UserProfile
 
 
 class Order(models.Model):
+    """
+    A model to represent a customer order, containing order details such as
+    shipping information, total amounts, and payment details.
+    Methods:
+        _generate_order_number: Generates a unique order number using UUID.
+        update_total: Updates the order's total,
+        including recalculating delivery costs.
+        save: Overrides the save method to generate an order number
+        if it is not set.
+    """
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
                                      null=True, blank=True,
@@ -34,14 +44,16 @@ class Order(models.Model):
 
     def _generate_order_number(self):
         """
-        Generate a random, unique order number using UUID
+        Generate a random, unique order number using UUID.
+        Returns the generated order number in uppercase.
         """
         return uuid.uuid4().hex.upper()
 
     def update_total(self):
         """
-        Update grand total each time a line item is added,
+        Update grand total of the order each time a line item is added,
         accounting for delivery costs.
+        The updated values are saved to the order instance.
         """
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))
         ['lineitem_total__sum'] or 0
@@ -54,8 +66,10 @@ class Order(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        Override the original save method to set the order number
+        Override the original save method to generate and set the order number
         if it hasn't been set already.
+        This ensures that each order gets a unique order number before
+        it is saved to the database.
         """
         if not self.order_number:
             self.order_number = self._generate_order_number()
@@ -66,6 +80,12 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
+    """
+    A model to represent an individual product line item within an order.
+    Methods:
+        save: Overrides the save method to calculate the lineitem_total
+        and ensure the order total is updated.
+    """
     order = models.ForeignKey(Order, null=False, blank=False,
                               on_delete=models.CASCADE,
                               related_name='lineitems')
@@ -81,8 +101,12 @@ class OrderLineItem(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        Override the original save method to set the lineitem total
-        and update the order total.
+        Override the original save method to calculate
+        and set the lineitem total.
+        The lineitem_total is calculated as the product price.
+        This method also updates the total price of the associated order.
+        Returns a string describing the line item with product SKU
+        and associated order number.
         """
         self.product_name = self.product.name if self.product else self.product_name
         self.product_price = self.product.price if self.product else self.product_price

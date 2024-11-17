@@ -7,8 +7,15 @@ from .forms import ProductForm
 
 
 def all_products(request):
-    """ A view to show all products, including sorting and search """
-
+    """
+    A view to display all products with optional filtering,
+    searching, and sorting.
+    This view retrieves and displays all available products, applying filters
+    based on search queries, category selection,
+    and sorting criteria if provided through GET parameters.
+    Returns a rendered HTML page displaying the filtered and sorted
+    list of products.
+    """
     products = Product.objects.filter(is_available=True)
     query = None
     categories = None
@@ -50,7 +57,13 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ A view to show detailed product information """
+    """
+    A view to display detailed information for a specific product.
+    This view fetches a product using its unique identifier
+    and renders a template displaying detailed information about the product.
+    Returns a rendered HTML page showing the product's details.
+    product_id (int): The unique identifier of the product to display.
+    """
 
     product = get_object_or_404(Product, pk=product_id)
 
@@ -63,7 +76,16 @@ def product_detail(request, product_id):
 
 @login_required
 def add_product(request):
-    """ Admin - Add a product to the store """
+    """
+    Admin - Allow store admins/superusers to add a new product to the store.
+    This view displays a form for adding a new product.
+    If the form is submitted and valid,
+    the new product is saved to the database.
+    Error messages are shown if the form is invalid
+    or if the user is unauthorized.
+    Returns a rendered HTML page with the product form or a redirect
+    upon successful submission.
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -90,7 +112,16 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ Admin - Edit a product in the store """
+    """
+    Admin - Allow store admins/superusers to edit an existing product.
+    This view fetches a specific product for editing and displays a form
+    pre-filled with the product's current data.
+    Form submissions update the product if valid, while unauthorized
+    users are redirected with an error.
+    Returns a rendered HTML page with the product form or a redirect
+    upon successful submission.
+    product_id (int): The unique identifier of the product to edit.
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -120,7 +151,12 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ Admin - Delete a product from the store """
+    """
+    Admin - Allow store admins/superusers to delete a product from the store.
+    Unauthorized access attempts are redirected with an error message.
+    Returns a redirect to the main products page after deletion.
+    product_id (int): The unique identifier of the product to delete.
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))

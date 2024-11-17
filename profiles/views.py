@@ -8,7 +8,16 @@ from checkout.models import Order
 
 @login_required
 def profile(request):
-    """ Display the users profile. """
+    """
+    Display and update the users profile.
+    This view retrieves the profile of the currently authenticated user,
+    and displays it in a form. If request method is POST,
+    it attempts to update the profile with the submitted data and
+    shows a success or error message accordingly.
+    Additionally, the view fetches all orders associated
+    with the users profile.
+    Returns a rendered HTML page with users profile form and a list of orders.
+    """
     profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == 'POST':
@@ -34,6 +43,16 @@ def profile(request):
 
 
 def order_history(request, order_number):
+    """
+    Display a past order confirmation for the user.
+    This view retrieves an order by its order number
+    and displays it as a past order confirmation.
+    It also notifies the user that the displayed page is a
+    historical confirmation, and that an email confirmation
+    was sent on the original order date.
+    Returns a rendered HTML page showing order details and context
+    indicating it is viewed from the users profile.
+    """
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (

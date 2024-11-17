@@ -10,6 +10,15 @@ from .forms import ReviewForm
 
 
 def review_list(request):
+    """
+    This function retrieves all approved reviews from
+    the database and applies sorting based on query parameter.
+    The reviews can be sorted by date or by the name of a product.
+    The function also handles pagination to display a
+    limited number of reviews per page.
+    Returns a rendered HTML page displaying a list of reviews,
+    current sorting and pagination details.
+    """
     sort_by = request.GET.get('sort', '')
     reviews = Review.objects.filter(is_approved=True)
 
@@ -33,6 +42,17 @@ def review_list(request):
 
 @login_required
 def add_review(request):
+    """
+    Allows authenticated users to submit either a general review
+    or for a product they have purchased.
+    This function handles both the display and submission of the review form.
+    If the form is submitted, the function checks if the user has purchased
+    the product they wish to review.
+    If not an error message is shown accordingly.
+    Valid submissions are saved but marked as not approved, pending moderation.
+    Returns a rendered HTML page showing the review form and redirects to the
+    review list with appropriate messages.
+    """
     user_profile = UserProfile.objects.get(user=request.user)
 
     if request.method == 'POST':

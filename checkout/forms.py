@@ -3,6 +3,14 @@ from .models import Order
 
 
 class OrderForm(forms.ModelForm):
+    """
+    This form is linked to the Order model and provides fields for the user
+    to input their shipping details - including their full name,
+    email, phone number, address, and country.
+    It is used during the checkout process.
+    Methods:
+        __init__: Initializes the form, adding custom placeholders and styling.
+    """
     class Meta:
         model = Order
         fields = ('full_name', 'email', 'phone_number',
@@ -12,8 +20,8 @@ class OrderForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         """
-        Add placeholders and classes, remove auto-generated
-        labels and set autofocus on first field
+        Initializes the form, add placeholders and classes,
+        remove auto-generated labels and set autofocus on first field.
         """
         super().__init__(*args, **kwargs)
         placeholders = {

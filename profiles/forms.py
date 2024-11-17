@@ -3,6 +3,18 @@ from .models import UserProfile
 
 
 class UserProfileForm(forms.ModelForm):
+    """
+    A form for updating the users profile information.
+    This form allows users to edit their default contact
+    and delivery information.
+    It customizes the form's widgets to include placeholders, adds CSS classes,
+    and removes auto-generated labels for a cleaner user interface.
+    The first field is set to autofocus for good UX.
+    Meta:
+        model (UserProfile): Specifies the `UserProfile` model for the form.
+        exclude: Specifies fields that should be excluded from the form,
+        in this case, the 'user' field.
+    """
     class Meta:
         model = UserProfile
         exclude = ('user',)

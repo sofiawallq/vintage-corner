@@ -4,7 +4,12 @@ from products.views import all_products
 
 
 def index(request):
-    """ A view to return the home/index page with products """
+    """
+    A view to return the home/index page with the most recently products.
+    This view queries the database for the three most recently created products
+    and passes them to the context for rendering the index page.
+    Renders the 'home/index.html' template with the products context.
+    """
     products = Product.objects.all().order_by('-created_on')[:3]
 
     context = {
@@ -15,6 +20,9 @@ def index(request):
 
 
 def about(request):
-    """ A view to return the about page """
+    """
+    A view to render the 'home/about.html' template, which contains
+    information about the company.
+    """
     return render(request, 'home/about.html')
 

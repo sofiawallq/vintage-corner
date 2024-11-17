@@ -9,6 +9,7 @@
             <hr class="w-60 mb-1">
         </div>
     </div>
+    <!--Items in cart-->
     <div class="row justify-content-center">
         <div class="col-12 col-md-10 mt-4 mb-4">
             {% if cart_items %}
@@ -31,11 +32,13 @@
                     </div>
                 </div>
                 {% endfor %}
+                <!--Bag total-->
                 <div class="d-flex flex-column align-items-end mt-3">
                     <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
                     <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
                     <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                 </div>
+                <!--Buttons-->
                 <div class="text-right mt-3">
                     <a href="{% url 'products' %}" class="btn btn-md-lg mt-3">
                         <span class="icon">
@@ -51,6 +54,7 @@
                     </a>
                 </div>
             {% else %}
+            <!--Empty bag-->
                 <div class="row">
                     <div class="col-12 col-md-6 text-center">
                         <p class="lead mb-5">Your bag is empty.</p>

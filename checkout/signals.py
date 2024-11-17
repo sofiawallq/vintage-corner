@@ -6,7 +6,10 @@ from .models import OrderLineItem
 @receiver(post_save, sender=OrderLineItem)
 def update_on_save(sender, instance, created, **kwargs):
     """
-    Update order total on lineitem when they are created/added
+    Signal receiver to update the order total when an OrderLineItem is saved.
+    This function is triggered when a new OrderLineItem is created,
+    or an existing one is updated. It ensures that the total price of the
+    associated order is recalculated whenever a line item is added or modified.
     """
     instance.order.update_total()
 
@@ -14,6 +17,8 @@ def update_on_save(sender, instance, created, **kwargs):
 @receiver(post_delete, sender=OrderLineItem)
 def update_on_delete(sender, instance, **kwargs):
     """
-    Update order total on lineitem when they are deleted
+    Signal receiver to update the order total when an OrderLineItem is deleted.
+    This function is triggered when an OrderLineItem is deleted. It ensures that the
+    total price of the associated order is recalculated when a line item is removed.
     """
     instance.order.update_total()

@@ -5,7 +5,14 @@ from products.models import Product
 
 
 def cart_contents(request):
-
+    """
+    Constructs and returns the context for the shopping cart in a dictionary.
+    Retrieves the contents of the shopping cart from the session data
+    and calculates total cost, number of products, delivery fee,
+    and the grand total. If the total cost is below the free delivery
+    threshold defined in the settings, a delivery charge is applied
+    as a percentage of the total.
+    """
     cart_items = []
     total = 0
     product_count = 0
