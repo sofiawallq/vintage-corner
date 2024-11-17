@@ -23,10 +23,11 @@ def add_to_cart(request, item_id):
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
 
-    if item_id not in cart:
+    if item_id in cart:
+        messages.error(request, f'{product.name} is already in your shopping cart')
+    else:
         cart[item_id] = 1
-        messages.success(request,
-                         f'Added {product.name} to your shopping cart')
+        messages.success(request, f'Added {product.name} to your shopping cart')
 
     request.session['cart'] = cart
     return redirect(redirect_url)

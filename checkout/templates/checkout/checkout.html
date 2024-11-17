@@ -21,28 +21,28 @@
                     <p class="mb-1 mt-0 small text-muted">Subtotal</p>
                 </div>
             </div>
-            {% for item in bag_items %}
-            <div class="row">
-                <div class="col-2 mb-1">
+            {% for item in cart_items %}
+            <div class="row d-flex align-items-center mb-4">
+                <div class="col-3">
                     <a href="{% url 'product_detail' item.product.id %}">
-                        {% if product.image %}
-                        <img class="w-100" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        {% if item.product.image %}
+                        <img class="img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                         {% else %}
-                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        <img class="img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
                         {% endif %}
                     </a>
                 </div>
-                <div class="col-7">
+                <div class="col-6">
                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                    <p class="my-0 small">Size:
-                        {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
-                    <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                </div>
+                <div class="col-3 text-right">
+                    <p class="my-0">${{ item.product.price | floatformat:2 }}</p>
                 </div>
             </div>
             {% endfor %}
             <hr class="my-0">
             <!--Order total-->
-            <div class="row text-right">
+            <div class="row text-right mt-3">
                 <div class="col-7 offset-2">
                     <p class="my-0">Order Total:</p>
                     <p class="my-0">Delivery:</p>

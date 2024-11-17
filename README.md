@@ -89,7 +89,7 @@ __EPIC:__ View products and navigation
 
 __EPIC:__ Search, sort and filter products
 
-- - As a Site User I can search for products by name or category so that I can easily find what I am looking for without having to look through all products on the site.
+- As a Site User I can search for products by name or category so that I can easily find what I am looking for without having to look through all products on the site.
 
 - As a Site User I can sort the products into given categories so that I can easily find the products I am interested in, without having to go through all products on the page.
 
@@ -107,53 +107,53 @@ __EPIC:__ Search, sort and filter products
 
 __EPIC:__ Registration and personal profile
 
-As a Site User I can register for an account so that I can login and view my order history, update my personal information etc.
+- As a Site User I can register for an account so that I can login and view my order history, update my personal information etc.
 
-As a Site User I can login to my registered account and edit my user profile so that I can save my payment details, view my order history and easily update my delivery adress.
+- As a Site User I can login to my registered account and edit my user profile so that I can save my payment details, view my order history and easily update my delivery adress.
 
 
 
 __EPIC:__ Administrate products on site
 
-As a Site Admin I can easily add new items to my online store so that the site is always up to date with available products for purchase.
+- As a Site Admin I can easily add new items to my online store so that the site is always up to date with available products for purchase.
 
-As a Site Admin I can edit and update the product details so that the price, description, image etc. are always correct and up to date.
+- As a Site Admin I can edit and update the product details so that the price, description, image etc. are always correct and up to date.
 
-As a Site Admin I can delete a product from the site if they are no longer available so that the customers don't accidentally buy products that are not available.
+- As a Site Admin I can delete a product from the site if they are no longer available so that the customers don't accidentally buy products that are not available.
 
 
 
 __EPIC:__ Shopping cart
 
-As a Site User I can easily add products to my shopping cart so that I can purchase the products I am interested in.
+- As a Site User I can easily add products to my shopping cart so that I can purchase the products I am interested in.
 
-As a Site User I can easily access my shopping cart at any point so that I can view what products I've added so far and the total amount spent.
+- As a Site User I can easily access my shopping cart at any point so that I can view what products I've added so far and the total amount spent.
 
-As a Site User I can update the items in my shopping cart when viewing it so that I can update the quantity, size or remove the product before checkout.
+- As a Site User I can update the items in my shopping cart when viewing it so that I can update the quantity, size or remove the product before checkout.
 
 
 
 __EPIC:__ Purchase and checkout
 
-As a new Site User I can easily enter my payment information so that I can check out quickly and smoothly.
+- As a new Site User I can easily enter my payment information so that I can check out quickly and smoothly.
 
-As a Site User I can sign in to my account to get my saved payment information so that i don't have to fill it out every time I make a purchase.
+- As a Site User I can sign in to my account to get my saved payment information so that i don't have to fill it out every time I make a purchase.
 
-As a Site User I can view an order confirmation after chechout so that I can verify that my order is correct.
+- As a Site User I can view an order confirmation after chechout so that I can verify that my order is correct.
 
-As a Site User I can receive an email order confirmation to my chosen email address after chechout so that I can control my order later without having to sign in to an account.
+- As a Site User I can receive an email order confirmation to my chosen email address after chechout so that I can control my order later without having to sign in to an account.
 
 
 
 __EPIC:__ Reviews and newsletter
 
-As a Site User I can read ratings and reviews on products so that I can make an informed purchase decision.
+- As a Site User I can read ratings and reviews on products so that I can make an informed purchase decision.
 
-As a Site User I can rate and write a review about a product, or the website in general so that I can share my experience and help other customers make informed decisions.
+- As a Site User I can rate and write a review about a product, or the website in general so that I can share my experience and help other customers make informed decisions.
 
-As a Site User I can subscribe to a newsletter so that I don't miss out on deals and offers, new products I might like etc.
+- As a Site User I can subscribe to a newsletter so that I don't miss out on deals and offers, new products I might like etc.
 
-As a Site Admin I can send a newsletter to registered email adresses so that the customers know about new products, specila offers etc.
+- As a Site Admin I can send a newsletter to registered email adresses so that the customers know about new products, specila offers etc.
 
 
 
@@ -247,6 +247,7 @@ I actually had a model for a response-function as well where users could write a
 
 ### Header
 
+The header has quite a few elements in it, even though it looks pretty clean. It has the name of the store, a search bar to search for products, a navigation menu, a section for management of the users personal profile (plus product management for superusers) and a shopping cart that takes the user to a shopping cart view when clicked. The shopping cart is also always updated with the total amount spent so far during the user session, if the user has added items to their cart that is. At the moment the search bar only filters throught product-realed querys, but I would love to add functionality so that it searches through the entire page in the future. 
 
 ![printscreen header]()
 
@@ -257,58 +258,117 @@ The mobile version containts pretty much the same features but presented in a re
 
 ### Navigation menu
 
+The navigation menu consists of a built-in drop-down menu if the user wishes to look at a specific product category or simply view all products on the page. It also contains links to the About page, a Contact page and a reviews page if the user wishes to read what other users think about the webshop and the products.  
 
 ![printscreen web page navigation menu]()
 
-With the help of Bootstrap and some custom CSS styling the navigation menu becomes a drop down feature on smaller devices. Features such as My Account, Search and the Shopping cart icon are not part of the drop-down menu but are always visible as separate icons for good UX. 
+With the help of Bootstrap and some custom CSS styling the navigation menu becomes a drop down feature on smaller devices. Features such as My Account, Search and the Shopping cart icon are not part of the drop-down menu but are always visible as separate icons for good UX.
 
-![printscreen drop down navigation menu]()
+![printscreen mobile drop down navigation menu]()
 
 
 ### Home page & Footer
 
-The home page consist of only three sections apart from the header - a large jumbotron image to set the feeling for the user when they first land on the page, along with a big tagline that clarifies what the store is all about. Below htat is a protion sized section of what new products are avaliable in the store at the moment, and a button to redirect the user to a page where they can view all products in the store. Below those sections is the footer, which contains links to the stores social media, and a newsletter sign-up form for users who wish to opt-in on that. 
+The home page consist of only three sections apart from the header - a large jumbotron image to set the feeling for the user when they first land on the page, along with a big tagline that clarifies what the store is all about. Below that is a portion sized section of the all products view, where the user can get a quick look at the newest additions to the store - along and a button to redirect the user to a page where they can view all products in the store. Below those sections is the footer, which contains links to the stores social media, and a newsletter sign-up form for users who wish to opt-in on that. 
+
+![printscreen home page]()
+
+![printscreen mobile home page]()
+
+![printscreen home page]()
 
 
 ### Product list page
 
+When navigation to the Products page the user has the option to either view all products on the site, or choose a specific category to filter out products. they also have the option to Sort the product list by either price, name or news.
 
+![printscreen all products page]()
 
-Sort by option by either price, name or news. at the moment the news doesn't really change much since 
+![printscreen mobile products page]() ![printscreen mobile products sorted by]()
+
+![printscreen products filtered into category]()
+
+![printscreen products sorted by]()
 
 
 ### About page
 
+The about page containts some general info about the company behind the store. It also provides the user with important links to Terms & Conditions, Privacy Policy, FAQ etc. I would have liked to put all of those important documents under its own headline in the navigation menu, but since time is of the esseence I had to settle with putting it all in one place for now. 
+
+![printscreen about page]()
+
+![printscreen terms and conditions modal]()
+
+![printscreen mobile privacy policy]()
 
 
 ### Contact page
 
-On the Contact page the user can find all the information they can possibly need if the wan't to get in touch with 
-
-Phone number, email adress and the restaurants adress is all there, in case somebody want's to send them a letter.
-
-![printscreen contact information]()
-
+On the Contact page the user has the option to fill out a handy Contact Form if they want to get in touch with the store. The contact form is connencted to the Django admin panel so that the administrator can view incoming questions and inquiries from site users and reply to them. In line with a user friendly interface the site user gets an immediate respons validating that the message has been sent successfully, or if there are any errors in the field input when filling out the form. The respons is in form a Success-message generated with Bootstrap Toasts-messages, which are used throughout the site for information and validation. 
 
 ![printscreen contact form]()
+
+The contact form is responsive and user friendly on all screen sizes and devices. Error handling works as it should on both small and large screens.
+
+![printscreen mobile contact form]() ![printscreen field input error contact form]()
 
 
 ### Review page
 
-add options for users to edit or delte their reviews, future feature
+On the review page a site user can read reviews that have been written about the site in general, or about a product that they have previously bought. There is also the option to click a button and get redirected to a age where they can write a review of their own. In order to write a review the user must be registered and logged in to their account, so that the view can fetch information about the users previously bought products and display them in a list to the user. 
+
+![printscreen review page]()
+
+![printscreen multiple review pages]()
+
+![printscreen add a review form]()
+
+There is a lot of potential future features and developments that can be done to this page - I would love to have options for the user to edit or delete their reviews, write a response to somebody elses review and add images or videos to go along with their review - a user interaction like that would be gold for any site! But focus for now had to be on the functions that need to be in place for an online store, so content like this will have to wait. I am also not thrilled abot the design of the page, but again - function before style at this point. 
 
 
-### Register account/sign in 
+### Register for an account/sign in 
+
+The user has the option to register for an account on the page, to be able to access their own personal profile page in the future. Or they can sign in to an existing account if they have already registered for one. Either way there's a possibility to do both in separate forms on the site - forms that got some styling with the help of Django Crispy Forms. Both forms contain password validation. 
+
+
+![printscreen sign up form]()
+
+![printscreen sign in form]()
+
+![printscreen sign out]()
+
+![printscreen mobile sign up]()
 
 
 ### Personal profile page
 
+On the personal profile page the user can view their saved delivery information, update the information if they want to, and view a list of previous orders - if they have any. 
+
+![printscreen personal profile page]()
+
+![printscreen ]()
+
+![printscreen ]()
+
+![printscreen ]()
+
 
 ### Shopping cart view
+
+In the shopping cart the user have the ability to view the entire content of their shopping cart, and they have the option to remove items from the cart if they wish to. The total amount of the order is updated in real-time with user interactions, and so is the database. 
+
+![printscreen shopping cart view]()
+
+![printscreen mobile shopping cart]()
 
 
 ### Checkout view
 
+In the checkout view the user gets a last look at their order in the form of an order summary so they have the option to go back and change it if they wish to. In the checkout view the user can also fill out a form with delivery information and provide the store with credit card information to finalize the purchase. Here the user can opt in to save their personal information to their 
+
+error handling
+
+toast succes with order number
 
 ### Potential future features
 
