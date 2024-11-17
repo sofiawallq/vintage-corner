@@ -1,10 +1,10 @@
 # Vintage Corner
 
-Vintage Corner is an online store with a carefully selected assortment of vintage items for the home. Every piece is unique and in general there is only one copy of every item. On the webpage the user can view all products avaliable at the moment, sort them into categories or filter them in a preferred order. The user can also register for a personal account where they can view and update their personal information such as delivery address, view their order history and save their payment details for future orders. The user have full CRUD functionality to update their profile or manage their shopping cart before making a purchase. 
+Vintage Corner is an online store with a carefully selected assortment of vintage items for the home. Every piece is unique and in general there is only one copy of every item, but you might find multiple items in the same category. On the webpage the user can view all products avaliable at the moment, sort them into categories, or filter them in a preferred order. The user can also register for a personal account where they can view and update their personal information such as delivery address, view their order history and save their details for future orders. The user have full CRUD functionality to update their profile or manage their shopping cart before making a purchase. 
 
-It is a Full Stack e-commerce store build with the help of the Django framework and in addition the users CRUD functionality the site admin also have the option to add ,edit or delete items directly in the browser interface. 
+Vintage Corner is a Full Stack e-commerce store build with the help of the Django framework, and in addition the users CRUD functionality the site admin also have the option to add, edit or delete items directly in the browser interface. 
 
-The live website can be seen [here]()
+The live website can be seen [here](https://vintage-corner-9f26bce1e332.herokuapp.com/)
 
 ![printscreen responsive website]()
 
@@ -48,13 +48,27 @@ The live website can be seen [here]()
 
 ## UX/UI Design
 
+I wanted the website to have a sort of vintage feel, but at the same time a modern touchg in the styling to be a good representation of me. The colour scheme is mild and the main purpose is to enhance the product images and the UX. As usual I set out with a high amibiton to design something beautiful with a really good user interface, responsive modals and nice-looking forms to fill out - all with the help of a perfect Bootstrap grid system. Some of the things I set out to do I absolutely achieved, while some visual effects just didn't fit into the projects timeframe. As always it came down to focusing on the functionality within the different apps, and since there are quite a lot of them for this project, the layout was forced to take a step back. I had to make sure the authentication process worked, that the user profiles was connected to checkout view, that the orders went through and that the emails were sent - along with a thousand other details that need to be in place when building an e-commerce store. I do believe I have a good foundation to stand on with both the UX and the user interface, but there are absolutely room for improvement. 
+
+
+### Colour scheme
+
+The colour scheme and inspiration for the webpage actually came from a somewhat unexpected place - namely my shower curtain. Everytime I look at it I fall in love with the combination of colours, so I thought "why not" and used it as my inspiration for the colours of the page.
+
+![printscreen inspiration image](static/images/printscreens/inspo_image.png)
+
+Below you can get a feel for the colour schema it inspired, and even though I didn't really have the time to follow it all the way through and had to lighten up some elements on the page due to readability, I think it's a really beautiful colour palett that works well with the vintage vibe. I will definitely come back to it when it's time to give some more love to the page and add on more of the colours to give the page some depth.
+
+![printscreen colour palett](static/images/printscreens/colour_palett.png)
 
 
 ### User Stories
 
-An agile approach was used to initialize the project - Epics to set the main structure for the user stories that needed to be written, and to the project a little bit more approachable by bitesizing it down. After the epics were set I wrote all the user stories and gave them labels to identify the must-haves, the should-haves, the could-haves and the wont-have - all in line with the MoSCoW prioritazion method. Every user story that I would work with then got some Acceptance Criterias and Tasks to make their purpose and what needed to be done even more clear. The final step of of the agile process was to give each user story a milestone label to help focus the work even further. 
+An agile approach was used to initialize the project - Epics to set the main structure for the user stories that needed to be written, and to make the project a little bit more approachable by bitesizing it. After the epics were set I wrote all the user stories and gave them labels to identify the must-haves, the should-haves, the could-haves and the wont-have - all in line with the MoSCoW prioritazion method. Every user story that I would work with then got some Acceptance Criterias and Tasks to make their purpose and what needed to be done even more clear. The final step of of the agile process was to give each user story a milestone label to help focus the work process even further. 
 
-When it came down to the milestones I decided to divide them into 4 Iterations and User Stories concerning vital parts such as adding and viewing products, payment etc were part of the first iteration, and if I didn't finish them in the active iteration they would move into the next iteration - and something else had to be dropped or moved to another iteration. In real life I really see the value of this approach and would have put a lot less "big" User Stories into each iteration for it to actually be realistic to manage. In this scenario each iteration only lasted for two weeks and continue on after project deadline - in a real worl project I would have split up each iteration into a 4 week period and made sure the vital functions was evenly disturbed. But since we're working towards a hard deadline and with a short timeframe in this project, the Milestones are mainly there to show a more full circle approach to the agile way of working - but for the Vintage Corner project I don't really fell that they are applicable. 
+When it came down to the milestones I decided to divide them into 4 Iterations. User Stories concerning vital parts such as adding and viewing products, payment etc were part of the first iteration - and if I didn't finish them in the active iteration they would move into the next iteration, and something else had to be dropped or moved to another iteration. In real life I really see the value of working with iterations and I would have put a lot less "big" User Stories into each iteration for it to actually be realistic to manage. I would definitely not put so many vital parts in the first iteration ever again, but spread them out over the entire timeframe. In this scenario each iteration only lasted for two weeks and the timeframe continues on after my projects deadline - in a real worl project I would have split up each iteration into a 4 week period and as mentioned I would have made sure the vital functions was evenly distributed over all 4 iterations. But since we're working towards a hard deadline and with a short timeframe in this project, the Milestones are mainly there to show a more full circle approach to the agile way of working - but for the Vintage Corner project I don't really feel that they are applicable for the short amount of development time at my disposal.
+
+![printscreen milestones]()
 
 I ended up with a total of 25 User Stories to work with in the end, the majority o them made it into Done section of my Kanban Board. Two of the User Stories containt criterias about the ability to choose size and quantity on an item, which I think are vital in general to an online store. But in this case they are not current since the store sells one of a kind pieces that don't come in different sizes, so those two User Stories won't make it out of the Todo-section. Another User Story that will remain in the Todo-section is the one about identifying deals and offers, since it's a Vintage store with handpicked items the sale-vibe doesnt't really fit i nline with the business model and the store customer. They are not on this site to make a bargain but to find something unique for their home. 
 
@@ -141,21 +155,33 @@ As a Site Admin I can send a newsletter to registered email adresses so that the
 
 ### Wireframes
 
-Wireframes for both the mobile design and larger devices such as tablets and computers were made using [Balsamique](https://balsamiq.com/). The approach 
+Wireframes for both the mobile design and larger devices such as tablets and computers were made using [Balsamique](https://balsamiq.com/).
 
 I really love the process of creating wireframes since you don't really take in limitations such as time and coding experience into the process - you just create what you like and end up with a couple of inspiring frames that you really strive to make a reality. Soem changes were made along the way due to issues with responsivness and some features not looking so great when coming to life - but mainly I stuck to the wireframes. 
 
-As some might notice there are no wireframes for the reviews page, since this feature came about later in the project when I felt the need for more custom models and more interactive features on the site. 
+As some might notice there are no wireframes for the reviews page, since this feature came about later in the project when I felt the need for more custom models and more interactive features on the site. I also missed to create a wireframe for the shopping cart, and went straight for the checkout view. Luckily there is a shopping cart view on the actual webpage.
 
-Below are some examples:
+Below are some examples of my wireframes:
 
+The first wirefram shows the landing page with all its features such as header, navigation menu with drop-down options, the searchbar, the account icon with its drop-down options and the little shoppingcart. You can also see selected products below a large jumbotron featuring an image, and the footers content at the bottom. 
+
+![printscreen](static/images/wireframes/landing_page.png)
+
+The wireframe for a detailed product page shows all the features I think are vital for the user - such as a product image, product name, a description of the product, the price and of course the option to actually put it into the shopping cart. 
+
+![printscreen](static/images/wireframes/detailed_product_page.png)
+
+I wanted the checkout view to containt two elements - a form to fill out all the delivery and pyament information, and a summary of the order so that the user can take one last look at it before they commit to the purchase. 
+
+![printscreen](static/images/wireframes/checkout_view.png)
+
+As mentioned all pages also got some mobile wireframes, for example the landing page is simply a responsive version of the one for larger screens, but here the products stack on top of each other and the navigation bar is an icon with drop-down functionality instead. 
+
+Here is also the wireframe for the personal profile page where the user can update their personal information and view previous orders. 
+
+![printscreen](static/images/wireframes/mobile_laning_page.png)![printscreen](static/images/wireframes/mobile_personal_profile.png)
 
 There were 18 wireframes made in total, which can all be found [here](static/images/wireframes).
-
-
-
-### Colour scheme
-
 
 
 ### Project planning
@@ -319,6 +345,11 @@ since its a curated vintage assortment we don't want to market the page through 
 
 get them engaged in shopping travels, get them to discuss their products in social media and forums, organic growth, spread the word via satisfied customers - a slow strategy in line with the assortment of products. 
 
+SEO
+
+image names alt attribute on images hosted on site, rel attribute noopener on social media links, add links to info page about vintage cvameras because customers are nerds
+
+länka mellan olika sidor för att keep user on the page
 
 ## Technologies used
 
@@ -489,7 +520,7 @@ os.environ.setdefault("SECRET_KEY", "your__secret_key")
 The Code Institute code along project "Boutique Ado" has been extremly helpful when it comes to setting up the structure for the project and I have returned to it again and agian throughout the development to make sure i use the right commands, deploy in the right way and so on. 
 The models we worked with in that project was of course inspiration for when designing my own 
 
-As always [Stack Overflow](https://stackoverflow.co/) has been my go to place everytime I've googled a piece of code for troubleshooting. 
+As always [Stack Overflow](https://stackoverflow.com/) has been my go to place everytime I've googled a piece of code for troubleshooting. 
 
 Product info mainly from Wikipedia
 
@@ -499,3 +530,4 @@ Product info mainly from Wikipedia
 [Pexels.com](https://www.pexels.com/)
 [Unsplash.com](https://unsplash.com/)
 [Favicon](https://favicon.io/emoji-favicons/)
+https://imagecolorpicker.com/

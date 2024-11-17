@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://vintage-corner-9f26bce1e332.herokuapp.com/sitemap.xml

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/accounts/login/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/shopping_cart/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/products/?category=furniture</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/products/?category=candle_holder</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/products/?category=camera</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/products/?category=mirror</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/products/?category=type_writer</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/products/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/about</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/contact/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/reviews/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/products/int:19/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/products/int:6/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/products/int:5/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/products/int:9/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/products/int:10/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/products/int:1/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/products/int:7/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/products/int:8/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/products/int:12/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/products/int:3/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/products/int:4/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/products/int:2/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/products/int:11/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/products/int:13/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/products/int:14/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/accounts/login/?next=/reviews/add_review/</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/accounts/signup/?next=%2Freviews%2Fadd_review%2F</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://vintage-corner-9f26bce1e332.herokuapp.com/accounts/login/?next=%2Freviews%2Fadd_review%2F</loc>
+  <lastmod>2024-11-17T13:54:38+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+
+
+</urlset>
