@@ -614,9 +614,9 @@ There were quite a few files to run throught the PEP8 validator, somewhere aroun
 
 ![printscreen python validator](static/images/printscreens/pep8_validator.jpg)
 
-When testing the page using Lighthouse for Chrome, 
+When testing the page using Lighthouse for Chrome, some results came back really good, but Perfomance could aboslutely be improved. The main issue are some large images, which could be optimized for browser usage if I want the number to go up. Accessibility tells me that some more contrast between some text element and the background could be improved, and I absolutely agree. 
 
-![printscreen lighthouse]()
+![printscreen lighthouse](static/images/printscreens/lighthouse.jpg)
 
 
 
@@ -641,13 +641,17 @@ Some User Stories haven't made it out of the "Todo" column due the fact that the
 
 - For some reason my Toast message for when an item in the shopping cart is removed doesn't work and even though I've tried time and time again to fix it, I haven't been able to solve it. 
 
-- I've also had some BIG issues with adding checkboxes to different parts of the site. I had one required checkbox in the checkout view that the user had to fill in to ensure that they accept the Terms and Conditions on the site, but no matter how many times I changed the code it didn't quite work with the POST-methods so instead it caused issues with fulfilling the payment process. So at the moment it's no longer present in the checkout view, but I am determined to get it back in there and get the whole process working. 
+- I've also had some BIG issues with adding checkboxes to different parts of the site. I had one required checkbox in the checkout view that the user had to fill in to ensure that they accept the Terms and Conditions on the site, but no matter how many times I changed the code it didn't quite work with the POST-methods so instead it caused issues with fulfilling the payment process. So at the moment it's no longer present in the checkout view, but I am determined to get it back in there and get the whole process working. I also planned on having checkboxed for accepting the Privacy Policy on both the Sign up page and in the footer included in the newsletter sign-up form, but once again trouble emerged and I felt I didn't have the time to fix it. So again i really want them present because I know how important they are. 
 
-I also planned on having checkboxed for accepting the Privacy Policy on both the Sign up page and in the footer included in the newsletter sign-up form, but once again trouble emerged and I felt I didn't have the time to fix it. So again i really want them present because I know how important they are. 
+- Some users have to verify their email address when logging in, even though they have already verified it. This is due to the fact that I had to change ACCOUNT_EMAIL_VERIFICATION to mandatory, because otherwise the verification for new user didn't work. I tried hard to sort it out wit the help of signals listening to log-in action but couldn't solve it so that needs to be resolved. But I though - rather verify to much than not at all. 
+
+- The delete account function works in some parts, but not all the way yet
 
 - There is an issue with the CSS rules on some Samsung phones that use the Android Internet Browser, some of the colours get inverted som the colour scheme is alot darker in those browsers. It still works but it doesn't look like I intended, so I will have to dig deeper into that. 
 
 - For some reason blue colour remain on some links when clicked in the deployed version, but since that's just an aesthetic issue I'll leave it for now.
+
+- Need to work with the Allauth base template since it was to much hassle to edit each template so some of the verification and reset pages are not styled at all, which looks horrible. 
 
 
 ## Deployment
