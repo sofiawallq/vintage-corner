@@ -27,7 +27,7 @@ def add_to_cart(request, item_id):
         messages.error(request, f'{product.name} is already in your shopping cart')
     else:
         cart[item_id] = 1
-        messages.success(request, f'Added {product.name} to your shopping cart')
+        messages.success(request, f'Added {product.name} to your shopping cart', extra_tags='cart')
 
     request.session['cart'] = cart
     return redirect(redirect_url)

@@ -92,6 +92,10 @@ a:visited, .nav-link:visited {
     text-decoration: none;
 }
 
+.nav-link:active {
+    color: #000;
+}
+
 footer .nav-item {
     color: #000;
     text-decoration: none;

@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from .models import UserProfile
 from .forms import UserProfileForm
 from checkout.models import Order
+from django.contrib.auth import logout
 
 
 @login_required
@@ -40,6 +41,33 @@ def profile(request):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_account(request):
+    """
+    Handle the deletion of the user's account and profile.
+    This view deletes the user account after confirmation.
+    """
+    if request.method == 'POST':
+        try:
+            user = request.user
+
+            profile = user.userprofile
+            profile.delete()
+
+            user.delete()
+
+            messages.success(request, "Your account has been successfully deleted.")
+            return redirect('home')
+
+        except UserProfile.DoesNotExist:
+            messages.error(request, "An error occurred while trying to delete your account.")
+            return redirect('profile')
+    else:
+        raise Http404("Page not found. Only POST method is allowed.")
+    
+    logout(request)
 
 
 def order_history(request, order_number):

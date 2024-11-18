@@ -14,16 +14,16 @@
                 <hr class="mt-1 mb-3">
             </div>
         </div>
-        {% if grand_total and not on_profile_page %}
+        {% if 'cart' in message.tags %}
             <p class="bg-white py-1">Your Shopping Cart ({{ product_count }})</p>
             <div class="bag-notification-wrapper"> 
                 {% for item in cart_items %}
                     <div class="row">
                         <div class="col-3 my-1">
-                            {% if product.image %}
-                            <img class="img-fluid rounded" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            {% if item.product.image %}
+                            <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                             {% else %}
-                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
                             {% endif %}
                         </div>
                         <div class="col-9">
