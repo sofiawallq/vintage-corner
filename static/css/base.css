@@ -51,6 +51,10 @@ html, body {
     font-size: 4rem;
 }
 
+.tagline {
+    text-shadow: 2px 2px 3px #353e53;
+}
+
 /* Navigation menu */
 .dropdown-menu {
     background-color: #738d8d !important;
