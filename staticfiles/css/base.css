@@ -43,6 +43,23 @@ html, body {
     color: white;
 }
 
+/* Header logo */
+.main-logo {
+    font-family: "Amarante", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+/* Navigation menu */
+.dropdown-menu {
+    background-color: #738d8d;
+}
+
+.search-box {
+    padding: 0;
+}
+
 /* Links */
 a, .nav-link {
     color: #000;
@@ -50,6 +67,11 @@ a, .nav-link {
 }
 
 a:visited, .nav-link:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+.nav-item a {
     color: #000;
     text-decoration: none;
 }
@@ -70,6 +92,19 @@ a:visited, .nav-link:visited {
     text-decoration: none;
 }
 
+.nav-link:active {
+    color: #000;
+}
+
+footer .nav-item {
+    color: #000;
+    text-decoration: none;
+}
+
+.navbar-toggler {
+    color: #000;
+}
+
 /* Buttons */
 .btn {
     background-color: #353e53;
@@ -85,43 +120,10 @@ a.category-badge > span.badge:hover {
     color: #fff !important;
 }
 
-/* Text */
-.text-black {
-    color: #000 !important;
-}
-
-.main-logo {
-    font-family: "Amarante", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 4rem;
-}
-
-/* Navigation menu */
-.dropdown-menu {
-    background-color: #738d8d;
-}
-
-.search-box {
-    padding: 0;
-}
-
-/* Footer */
-footer {
-    background-color: #738d8d;
-    width: 100%;
-    padding: 20px 0;
-}
-
-.footer-container {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-/* Products */
+/* Products page */
 .card-bg { 
-   background-color: #d8c4bf;
-}    
+    background-color: #d8c4bf;
+ }  
 
 /* Product form and image field  */
 .btn-file {
@@ -155,8 +157,6 @@ footer {
     background-color: #d8c4bf;
 }
 
-
-
 /* Shopping cart */
 .bag-notification-wrapper img {
     max-width: 100%;
@@ -166,6 +166,33 @@ footer {
 /* Checkout view*/
 .cart-item-image {
     max-width: 200px;
+}
+
+
+/* Personal profile page */
+.order-history {
+    max-height: 416px; /*height of form + submit button*/
+    overflow-y: auto;
+}
+
+#profile-update-form .form-control {
+    color: #000;
+}
+
+#profile-update-form input::placeholder {
+    color: #aab7c4;
+}
+
+/* Footer */
+footer {
+    background-color: #738d8d;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.footer-container {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 /* CSS from Stripe documentation */
@@ -239,25 +266,12 @@ select option[value=""] {
     height: 100%;
 }
 
-/* Personal profile page */
-.order-history {
-    max-height: 416px; /* height of profile form + submit button */
-    overflow-y: auto;
-}
-
-#profile-update-form .form-control {
-    color: #000;
-}
-
-#profile-update-form input::placeholder {
-    color: #aab7c4;
-}
-
 /* Bootstrap toasts */
 .message-container {
     position: fixed;
-    top: 100px;
+    top: 1rem;
     right: 15px;
+    margin-left: 15px;
     z-index: 99999999999;
 }
 
@@ -275,7 +289,39 @@ select option[value=""] {
     overflow-y: auto;
 }
 
-/* fixed top navbar only on medium and up */
+
+/* Mailchimp form */
+#mc_embed_signup form {
+    max-width: 600px;
+    padding: 0;
+    margin: 0;
+}
+
+#mc_embed_signup h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#mc_embed_signup .button {
+    background-color: #353e53;
+    color: white !important;
+}
+
+#mc_embed_signup #mce-success-response {
+    color: white;
+}
+
+#mc_embed_signup div.response {
+    padding: 0;
+    font-weight: normal;
+    float: left;
+    top: -1.5em;
+    z-index: 1;
+}
+
+/* Styling for specific screen width */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;

@@ -268,13 +268,15 @@ With the help of Bootstrap and some custom CSS styling the navigation menu becom
 
 ### Home page & Footer
 
-The home page consist of only three sections apart from the header - a large jumbotron image to set the feeling for the user when they first land on the page, along with a big tagline that clarifies what the store is all about. Below that is a portion sized section of the all products view, where the user can get a quick look at the newest additions to the store - along and a button to redirect the user to a page where they can view all products in the store. Below those sections is the footer, which contains links to the stores social media, and a newsletter sign-up form for users who wish to opt-in on that. 
+The home page consist of only three sections apart from the header - a large jumbotron image to set the feeling for the user when they first land on the page, along with a big tagline that clarifies what the store is all about. Below that is a portion sized section of the all products view, where the user can get a quick look at the newest additions to the store - along and a button to redirect the user to a page where they can view all products in the store. 
 
 ![printscreen home page](static/images/printscreens/landing_page.jpg)
 
 ![printscreen home page product section](static/images/printscreens/landing_page_products.jpg)
 
-![printscreen footer]()
+Below those sections is the footer, which contains links to the stores social media and a newsletter sign-up form for users who wish to opt-in on that. It lacks a little bit on the layout but works as it should. The sign-up form is embedded via Mailchimp and when a user opts in for a newsletter they are added to Vintage Stores Contact list. 
+
+![printscreen footer](static/images/printscreens/footer.jpg)
 
 
 
@@ -637,8 +639,15 @@ Some User Stories haven't made it out of the "Todo" column due the fact that the
 
 - Success toast show up with cart items when you log in
 
-
 - Problem with storing the shopping cart when you log in during a shopping session, the cart gets emptied and I would have probably figured it out 
+
+- For some reason my Toast message for when an item in the shopping cart is removed doesn't work and even though I've tried time and time again to fix it, I haven't been able to solve it. 
+
+- I've also had some BIG issues with adding checkboxes to different parts of the site. I had one required checkbox in the checkout view that the user had to fill in to ensure that they accept the Terms and Conditions on the site, but no matter how many times I changed the code it didn't quite work with the POST-methods so instead it caused issues with fulfilling the payment process. So at the moment it's no longer present in the checkout view, but I am determined to get it back in there and get the whole process working. 
+
+I also planned on having checkboxed for accepting the Privacy Policy on both the Sign up page and in the footer included in the newsletter sign-up form, but once again trouble emerged and I felt I didn't have the time to fix it. So again i really want them present because I know how important they are. 
+
+
 
 
 ## Deployment
@@ -701,13 +710,30 @@ os.environ.setdefault("SECRET_KEY", "your__secret_key")
 - Create a runtime.txt file in your apps root directory and add the Python version from the list of supported runtimes, in a format like this: python-3.12.5.
 
 
-4. Deploy on Heroku
+5. Deployment with media files
+- Install S3 Storage and Boto with the command pip3 install boto3
+- Add ... to to your requirements.txt file with the command: pip3 freeze --local > requirements.txt
+- Add 'storages' to your list of INSTALLED_APPS in settings.py.
+- In setting.py add a these parameters to manage external storage in AWS and replace with correct paths were needed:
+    AWS_STORAGE_BUCKET_NAME = 'bucket-name'
+    AWS_S3_REGION_NAME = 'eu-north-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media/product_images'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+- 
+
+
+6. Deploy on Heroku
 - Click on the "Deploy" tab on your Heroku Dashboard.
 - Under the "Deploy method" section choose to Connect to GitHub, depending on earlier access you might be asked to authenticate using GitHub.
 - Choose the projects repository in the list that apperas when you start to type in the search box. 
 - Start a manual deployment of the main branch by scrolling to the bottom of the Deploy-page and click on "Deploy branch".
 - Click "Open app" to view your deployed project. 
 - Open the "Resources" tab and switch to Eco Dyno to keep the project up and running. 
+
 
 
 ## References/credit
@@ -722,6 +748,8 @@ The models we worked with in that project was of course inspiration for when des
 As always [Stack Overflow](https://stackoverflow.com/) has been my go to place everytime I've googled a piece of code for troubleshooting. 
 
 Product info mainly from Wikipedia
+
+I also chose to ask ChatGPT for a good example of a docstring, which I then altered for the different parts of Python code in the progress. But thanks to AI i got a good structure to work with.
 
 
 ### Media
