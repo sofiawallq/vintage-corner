@@ -637,9 +637,7 @@ Some User Stories haven't made it out of the "Todo" column due the fact that the
 
 ### Bugs
 
-- Success toast show up with cart items when you log in
-
-- Problem with storing the shopping cart when you log in during a shopping session, the cart gets emptied and I would have probably figured it out 
+- There are still some issues with storing the content of the shopping cart when you log in/log out during a shopping session, the cart gets emptied and I know the issue is regarding how the data is stored in the session, but I have to save that issue for the future. 
 
 - For some reason my Toast message for when an item in the shopping cart is removed doesn't work and even though I've tried time and time again to fix it, I haven't been able to solve it. 
 
@@ -647,7 +645,9 @@ Some User Stories haven't made it out of the "Todo" column due the fact that the
 
 I also planned on having checkboxed for accepting the Privacy Policy on both the Sign up page and in the footer included in the newsletter sign-up form, but once again trouble emerged and I felt I didn't have the time to fix it. So again i really want them present because I know how important they are. 
 
+- There is an issue with the CSS rules on some Samsung phones that use the Android Internet Browser, some of the colours get inverted som the colour scheme is alot darker in those browsers. It still works but it doesn't look like I intended, so I will have to dig deeper into that. 
 
+- For some reason blue colour remain on some links when clicked in the deployed version, but since that's just an aesthetic issue I'll leave it for now.
 
 
 ## Deployment

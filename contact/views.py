@@ -19,6 +19,9 @@ def contact_store(request):
         contact_form = ContactStore(data=request.POST)
         if contact_form.is_valid():
             contact_form.save()
+            messages.success(request, f'Your question has been sent '
+                             'and we will get back to you as soon as possible!')
+            
             return redirect('/contact/?success=true')
 
     return render(

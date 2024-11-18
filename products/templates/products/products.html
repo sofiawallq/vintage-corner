@@ -18,6 +18,12 @@
     <div class="row">
         <div class="col-12 col-md-3 mt-4">
             <form method="GET" action="{% url 'products' %}">
+                {% if request.GET.q %}
+                    <input type="hidden" name="q" value="{{ request.GET.q }}">
+                {% endif %}
+                {% if request.GET.category %}
+                    <input type="hidden" name="category" value="{{ request.GET.category }}">
+                {% endif %}
                 <label for="sort">Sort by:</label>
                 <select name="sort" id="sort" onchange="this.form.submit()">
                     <option value="">Select</option>
