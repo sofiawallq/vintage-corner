@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center mt-3">
+            <h1>Shipping information</h1>
+            <hr class="w-60 mb-1">
+        </div>
+    </div>
+    <!--Shipping information-->
+    <div class="row mx-4">
+        <div class="col-12 mt-4">
+            <p>This document sets out the shipping policy that applies to customers that make a purchase at
+                vintagecorner.com. If you have any questions, please contact our customer service team on info@vintagecorner.com. Or via our <a href="{% url 'contact' %}">Contact page</a></p>
+            <h3>Delivery Costs</h3>
+            <p>We offer the following delivery costs: Free delivery on all order over $100. Else 10% of the cart total amount.</p>
+            <h3>Order Processing Time</h3>
+            <p>All orders placed before 2 PM Monday to Friday are processed and dispatched the same day, all
+                orders placed after will be dispatched the next day. All orders placed during the weekend or on
+                a public holiday will be sent from our warehouse on Monday or on the next business day.</p>
+            <h3>Delivery Address & P.O. Boxes</h3>
+            <p>Please note that we are unable to modify the delivery address once you have placed your order.
+                We are sorry but we do not ship to P.O. boxes.</p>
+            <h3>International Orders</h3>
+            <p>Your package may be subject to import duties and taxes. You, as the customer, are responsible
+                for paying those fees. We recommend that you check with your local customs office before
+                placing an order on our website as these fees can sometimes be significant and we are unable
+                to calculate these for you.</p>
+            <h3>Tracking Your Order</h3>
+            <p>Once your order has been dispatched, we will send you a confirmation email with tracking
+                information. You will be able to track your package directly on the carrier’s website.</p>
+            <h3>Returns, Refunds, and Exchanges</h3>
+            <p>We want you to be completely happy with your purchase - please read our return & refund
+                policy for detailed information about our processes.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

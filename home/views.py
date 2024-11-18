@@ -10,7 +10,7 @@ def index(request):
     and passes them to the context for rendering the index page.
     Renders the 'home/index.html' template with the products context.
     """
-    products = Product.objects.all().order_by('-created_on')[:3]
+    products = Product.objects.filter(is_available=True).order_by('-created_on')[:3]
 
     context = {
         'products': products,
@@ -33,6 +33,13 @@ def privacy_policy(request):
     the companys privacy policy.
     """
     return render(request, 'home/privacy_policy.html')
+
+def shipping(request):
+    """
+    A view to render the 'home/terms_conditions.html' template, which contains
+    the companys shipping information.
+    """
+    return render(request, 'home/shipping.html')
 
 
 def terms_conditions(request):

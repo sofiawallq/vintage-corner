@@ -15,97 +15,28 @@
             <p>Welcome to <strong>Vintage Corner</strong>, Europe’s leading marketplace for unique design objects and
                 the stories behind them.
                 Rooted in the ethos that beautiful design can also be sustainable, our team scours the globe for a
-                curated selection of vintage and contemporary furniture, lighting, accessories, and crafts, and delivers
+                curated selection of vintage and contemporary furniture, lighting, accessories, and much more - and delivers
                 them straight to your doorstep.</p>
-            <p>Our product catalog is carefully curated by our specialized Supply team and the international array of
-                high profile and underground galleries, shops, editors, artisans, and designers that they get on board.
-                We’re passionate about pieces that tell a story — because we believe the
-                world’s best design is always more than merely functional; it’s created by visionary minds and skilled
-                hands, and then handpicked by us to create one-of-a-kind spaces.</p>
-            <p>Our passion for extraordinary design has grown out of years of experience—and we aim to share this
-                passion with you. Our Merchandising team carefully looks at the places and things that shape today’s
-                design conversation and bring you exciting collections every month.</p>
+            <p>Our product catalog is carefully curated and we’re passionate about pieces that tell a story — because we believe the
+                world’s best design is always more than merely functional.</p>
             <p>Our experienced Customer Care team works hard to make your experience with us as convenient as possible,
                 and you can rest assured that every purchased piece is in safe hands. By partnering with specialized and
-                standard international shippers, our Logistics team ensures that
-                purchases are handled with the utmost care and attention, and that every shipment is completely insured
+                standard international shippers, our Logistics team ensures that purchases are handled with the utmost care 
+                and attention, and that every shipment is completely insured
                 against damage.</p>
         </div>
-        <div class="col-12 col-md-6 mt-4">
+        <div class="col-12 col-md-6 mt-4 mb-5">
             <img src="{% static 'images/two_suitcases.png' %}" alt="two vintage suitcases" class="img-fluid mb-4">
-        </div>
-        <div class="col-12 col-md-6 mt-4">
-            <a href="#" data-toggle="modal" data-target="#shippingModal">
-                <h5>Shipping information</h5>
-            </a>
-            <a href="#" data-toggle="modal" data-target="#termsModal">
-                <h5>Terms & Conditions</h5>
-            </a>
-            <a href="#" data-toggle="modal" data-target="#privacyModal">
-                <h5>Privacy Policy</h5>
-            </a>
-        </div>
-    </div>
-
-    <!--Modal for Shipping information-->
-    <div class="modal fade" id="shippingModal" tabindex="-1" role="dialog" aria-labelledby="shippingModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="shippingModalLabel">Shipping information</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    yadadada
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--Modal for Terms and conditions-->
-    <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="termsModalLabel">Terms & Conditions</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--Modal for Privacy Policy-->
-    <div class="modal fade" id="privacyModal" tabindex="-1" role="dialog" aria-labelledby="privacyModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="privacyModalLabel">Privacy Policy</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
+            <div class="col-12 pl-0">
+                <a href="{% url 'shipping' %}" alt="terms_and_conditions">
+                    <h5>Shipping information</h5>
+                </a>
+                <a href="{% url 'terms_conditions' %}" alt="terms_and_conditions">
+                    <h5>Terms & Conditions</h5>
+                </a>
+                <a href="{% url 'privacy_policy' %}" alt="privacy_policy">
+                    <h5>Privacy Policy</h5>
+                </a>
             </div>
         </div>
     </div>
