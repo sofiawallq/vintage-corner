@@ -46,28 +46,39 @@ def profile(request):
 @login_required
 def delete_account(request):
     """
-    Handle the deletion of the user's account and profile.
-    This view deletes the user account after confirmation.
+    Handles the deletion of the currently logged-in users account and profile.
+    This view processes the account deletion request. 
+    It logs out the user before deletion to prevent any issues.
+    Deletes the associated user profile if it exists.
+    Deletes the user's account from the system.
+    If a user attempts to delete their account via a
+    GET request or invalid method, a 404 error will be raised,
+    as only POST requests are allowed for this action.
+    Returns a redirect to the home page with a success message
+    if account deletion is successful.
+    Or redirects to the profile page with an error message if
+    there is a problem deleting the account.
     """
     if request.method == 'POST':
         try:
             user = request.user
+            logout(request)
+            sleep(2)
 
             profile = user.userprofile
             profile.delete()
 
             user.delete()
-
+            
             messages.success(request, "Your account has been successfully deleted.")
             return redirect('home')
 
         except UserProfile.DoesNotExist:
             messages.error(request, "An error occurred while trying to delete your account.")
             return redirect('profile')
+
     else:
         raise Http404("Page not found. Only POST method is allowed.")
-    
-    logout(request)
 
 
 def order_history(request, order_number):
