@@ -1,12 +1,12 @@
 # Vintage Corner
 
-Vintage Corner is an online store with a carefully selected assortment of vintage items for the home. Every piece is unique and in general there is only one copy of every item, but you might find multiple items in the same category. On the webpage the user can view all products avaliable at the moment, sort them into categories, or filter them in a preferred order. The user can also register for a personal account where they can view and update their personal information such as delivery address, view their order history and save their details for future orders. The user have full CRUD functionality to update their profile or manage their shopping cart before making a purchase. 
+Vintage Corner is an online store with a carefully selected assortment of vintage items for the home. Every piece is unique and in general there is only one copy of every item, but you might find multiple items in the same category to offer the customer a range of products. On the webpage the user can view all products avaliable at the moment in the store, filter them by categories, sort them in a preferred order or search for a specific product. The user can also register for a personal account where they can view and update their personal information such as delivery address, view their order history and save their details for future orders. The user have full CRUD functionality to update their profile or manage their shopping cart before making a purchase.  
 
-Vintage Corner is a Full Stack e-commerce store build with the help of the Django framework, and in addition the users CRUD functionality the site admin also have the option to add, edit or delete items directly in the browser interface. 
+Vintage Corner is a Full Stack e-commerce store build with the help of the Django framework, and in addition to the users CRUD functionality the e-commerce store also offers full CRUD functionality for the store admin to add, edit and delete products on the site - without having to access the Django Admin panel.
 
 The live website can be seen [here](https://vintage-corner-9f26bce1e332.herokuapp.com/)
 
-![printscreen responsive website](static/images/printscreens/responsive_page.jpg)
+![printscreen responsive website](static/images/printscreens/responsive_page.jpg).
 
 
 ## Table of content
@@ -59,7 +59,7 @@ The live website can be seen [here](https://vintage-corner-9f26bce1e332.herokuap
 
 ## UX/UI Design
 
-I wanted the website to have a sort of vintage feel, but at the same time a modern touchg in the styling to be a good representation of me. The colour scheme is mild and the main purpose is to enhance the product images and the UX. As usual I set out with a high amibiton to design something beautiful with a really good user interface, responsive modals and nice-looking forms to fill out - all with the help of a perfect Bootstrap grid system. Some of the things I set out to do I absolutely achieved, while some visual effects just didn't fit into the projects timeframe. As always it came down to focusing on the functionality within the different apps, and since there are quite a lot of them for this project, the layout was forced to take a step back. I had to make sure the authentication process worked, that the user profiles was connected to checkout view, that the orders went through and that the emails were sent - along with a thousand other details that need to be in place when building an e-commerce store. I do believe I have a good foundation to stand on with both the UX and the user interface, but there are absolutely room for improvement. 
+I wanted the website to have a sort of vintage feel, but at the same time a modern touch in the layout to be a good representation of me as a developer. The colour scheme is mild and the main purpose is to enhance the product images and the UX. As usual I set out with a high ambiton to design something really beautiful with a nice user interface, responsive modals and good looking forms to fill out - all with the help of a perfect Bootstrap grid system. Some of the things I set out to do I absolutely achieved, while some visual effects just didn't fit into the projects timeframe. As always it came down to focusing on the functionality within the different apps - and since there are quite a lot of apps for this project, the layout was forced to take a step back. I had to make sure the authentication process worked, that the user profiles was connected to checkout view, that the orders went through and that the emails were sent - along with a thousand other details that need to be in place when building an e-commerce store. I do believe I have a good foundation to stand on with both the UX and the user interface, but there are definitely room for improvement. 
 
 
 ### Colour scheme
@@ -79,11 +79,11 @@ An agile approach was used to initialize the project - Epics to set the main str
 
 ![printscreen user story](static/images/printscreens/example_user_story.jpg)
 
-When it came down to the milestones I decided to divide them into 4 Iterations. User Stories concerning vital parts such as adding and viewing products, payment etc were part of the first iteration - and if I didn't finish them in the active iteration they would move into the next iteration, and something else had to be dropped or moved to another iteration. In real life I really see the value of working with iterations and I would have put a lot less "big" User Stories into each iteration for it to actually be realistic to manage. I would definitely not put so many vital parts in the first iteration ever again, but spread them out over the entire timeframe. In this scenario each iteration only lasted for two weeks and the timeframe continues on after my projects deadline - in a real worl project I would have split up each iteration into a 4 week period and as mentioned I would have made sure the vital functions was evenly distributed over all 4 iterations. But since we're working towards a hard deadline and with a short timeframe in this project, the Milestones are mainly there to show a more full circle approach to the agile way of working - but for the Vintage Corner project I don't really feel that they are applicable for the short amount of development time at my disposal.
+When it came down to the milestones I decided to divide them into 4 Iterations. User Stories concerning vital parts such as adding and viewing products, payment etc were part of the first iteration - and if I didn't finish them in the active iteration they would move into the next iteration, and something else had to be dropped or moved to another iteration. In real life I really see the value of working with iterations and I would have put a lot less "heavy" User Stories into the same iteration for it to actually be realistic to manage. I will definitely not put so many vital parts in the first iteration ever again, but spread them out over the entire timeframe. In this project scenario each iteration only lasted for two weeks and the timeframe continues on after my projects deadline - in a real worl project I would have split up each iteration into a 4 week period and as mentioned I would have made sure the vital functions was evenly distributed over all 4 iterations. But since we're working towards a hard deadline and with a short timeframe in this project, the Milestones are mainly there to show a full circle approach to the agile way of working - but for the Vintage Corner project I don't really feel that they are applicable for the short amount of development time at my disposal.
 
 ![printscreen milestones](static/images/printscreens/milestones.jpg)
 
-I ended up with a total of 25 User Stories to work with in the end, the majority o them made it into Done section of my Kanban Board. Two of the User Stories containt criterias about the ability to choose size and quantity on an item, which I think are vital in general to an online store. But in this case they are not current since the store sells one of a kind pieces that don't come in different sizes, so those two User Stories won't make it out of the Todo-section. Another User Story that will remain in the Todo-section is the one about identifying deals and offers, since it's a Vintage store with handpicked items the sale-vibe doesnt't really fit i nline with the business model and the store customer. They are not on this site to make a bargain but to find something unique for their home. 
+I ended up with a total of 25 User Stories to work with in the end, the majority of them made it into Done section of my Kanban Board. Two of the User Stories containt criterias about the ability to choose size and quantity on an item, which I think are vital in general to an online store. But in this case they are not current since the store sells one of a kind pieces that don't come in different sizes, so those two User Stories won't make it out of the Todo-section. Another User Story that will remain in the Todo-section is the one about identifying deals and offers, since it's a Vintage store with handpicked items the sale-vibe doesnt't really fit in line with the business model and the store customer. They are not on this site to make a bargain but to find something unique for their home. 
 
 ![printscreen user stories](static/images/printscreens/stories_status.jpg)
 
@@ -202,11 +202,11 @@ There were 18 wireframes made in total, which can all be found [here](static/ima
 
 ## Project planning
 
-I started out with setting up pretty much the same file structure as the Boutique Ado project - since there are alot of apps and additional features when creating an e-commece store it's really easy to get lost somewhere in the many maaany folders and files. I did decide to go in a different direction with the static folders for CSS and JavaScript than what was made in the code along project - the Boutique Ado project had multiple folders with CSS-styling and js-files belonging to each app, but after a while I just felt that it made the structure more messy since I am the only one working on the project. I see the value when multiple people are involved, but in this project it just felt redundant.
+I started out with setting up pretty much the same file structure as the Boutique Ado code along project - since there are alot of apps and additional features when creating an e-commece store it's really easy to get lost somewhere in the many maaany folders and files. I did decide to go in a different direction with the static folders for CSS and JavaScript than what was made in the code along project - the Boutique Ado project had multiple folders with CSS-styling and js-files belonging to each app, but after a while I just felt that it made the structure more messy since I am the only one working on the project. I see the value when multiple people are involved, but in this project it just felt redundant.
 
 Next part of the process was to tackle the User Stories so that I had something to achieve with each feature that was added to the page, more on that process below. After that the wireframes were created, and lastly the Entity Relationship Diagrams to plan the custom models that were needed were made.
 
-After that I started building the actual e-commerce store, while at the same time I was figuring out how the Facebook page would look and drawing out some form of marketing strategy.
+After that I started building the actual e-commerce store, while at the same time I was figuring out how the Facebook page would look and drawing out some form of marketing strategy and a business model for the store.
 
 
 ### Agile methodologies
@@ -215,7 +215,7 @@ After that I started building the actual e-commerce store, while at the same tim
 
 - Epics - I really understand the value of Epics for large projects, to give the team a better overview of the projects User Stories and further prioritize the work process. I would have loved to work with even more Epics to break up the User Stories since I feel like some Epics are a little "heavy" with Stories (such as the Search, sort and filter products), but I had to move on to the next part of the planning so at that point I went with the Epics I had. 
 
-- Milestones - Milestones were used as iterations and split the work into 4 iterations with its own Stories. I tried to evenly distribute the Stories so that each iteration would have pretty much the same amout of Stories - but if I would have added Story Points into the Agile mix I would have realized early on that some Stories in the first iterations would have demanded fewer Stories to accompany them in that specific iteration - there were simply to many demanding Storiews in the same iterations, as I talked about in the User Stories section above.
+- Milestones - Milestones were used as iterations and split the work into 4 iterations with its own Stories. I tried to evenly distribute the Stories so that each iteration would have pretty much the same amout of Stories - but if I would have added Story Points into the Agile mix I would have realized early on that some Stories in the first two iterations would have demanded fewer Stories to accompany them in that specific iteration - there were simply to many demanding Stories in the same iterations, as I mentioned in the User Stories section above.
 
 - MoSCoW Prioritization - The User Stories are labeled with one of the following four categories, all according to the MoSCow prioritization methodology:
 
@@ -227,6 +227,7 @@ After that I started building the actual e-commerce store, while at the same tim
 
   - Won’t Have: Features that will not be included in the project at this point, but might be a desirable feature in future development. 
 
+
 ![printscreen moscow open issues](static/images/printscreens/open_issues_moscow.jpg) 
 ![printscreen moscow closed issues](static/images/printscreens/closed_issues_moscow.jpg)
 
@@ -234,21 +235,25 @@ After that I started building the actual e-commerce store, while at the same tim
 
 ### Database Design
 
-The database design consists of a main project directory called vintage_corner, and then separate apps for pretty much every feature on the page. The About page is the only page on the site one that lives in the same app as a different template - due to the fact that it doesn't need any models, views etc of its own.
+The database design consists of a main project directory called vintage_corner, and then separate apps for pretty much every feature on the page. The About page is the only page on the site that lives in the same app as a different page template - due to the fact that it doesn't need any models, views etc of its own.
 
 ![printscreen root directory](static/images/printscreens/root_directory.jpg)
 
 
 ### Entity Relationship Diagrams
 
-Tree custom models were made for this project - one for managing all Products in the store, one to handle the Contact form in the contact app, and one to manage Reviews. Many more models exist within the project but they all come from the Boutique Ado code along project, and are somewhat or not altered at all - many of them have gotten an extra field or two but don't feel altered enough to be called custom.
+Tree custom models were made for this project - one for managing all products in the store, one to handle the contact form in the contact app, and one to manage reviews. Many more models exist within the project but they all come from the Boutique Ado code along project, and are somewhat or not altered at all - many of them have gotten an extra field or two to adapt to my needs, but don't feel altered enough to be called custom.
+
+The Product models is_avaliable line plays an important role when it comes to showing only avaliable products to the user in the store, and still keep the products in the database for the customers orders to display properly in the admin panel. 
+
+![printscreen product model](static/images/printscreens/product_model.jpg)
 
 Below are the ERD's that were drawn out for the project. The User model is handled by the Django Framwork, but it plays an importanty role in my Review model since it has a one-to-many relationship - making sure signed in users can write many reviews connected to their one profile. The Review model also has a ForeignKey in the form of a product-field that is connected to the Product model, so that a user is able to write a review about a specific product that they have bought if they wish to.
 
-
 ![printscreen entity relationship diagram](static/images/printscreens/erd_data_models.jpeg)
 
-I actually had a model for a response-function as well where users could write a response to a review that somebody else had written, but to many aspects weren't working at the time so I decided to skip it for now and save it for future development.
+I actually had a model for a response-function as well, where users could write a response to a review that somebody else had written, but to many aspects weren't working at the time so I decided to skip it for now and save it for future development.
+
 
 
 ## Features
@@ -271,7 +276,7 @@ The navigation menu consists of a built-in drop-down menu if the user wishes to 
 
 ![printscreen web page navigation menu](static/images/printscreens/nav_bar_large_screens.jpg)
 
-With the help of Bootstrap and some custom CSS styling the navigation menu becomes a drop down feature on smaller devices. Features such as My Account, Search and the Shopping cart icon are not part of the drop-down menu but are always visible as separate icons for good UX. As you can see all the icons have a drop-down functions, such as the search bar in the image below.
+With the help of Bootstrap and some custom CSS styling the navigation menu becomes a drop down feature on smaller devices. Features such as My Account, Search and the Shopping cart icon are not part of the drop-down menu but are always visible as separate icons for good UX. As you can see all the icons have a drop-down function on smaller devices, such as the search bar in the image below.
 
 ![printscreen mobile drop down navigation menu](static/images/printscreens/mobile_dropdown_menu.jpg) ![printscreen mobile drop down navigation menu](static/images/printscreens/mobile_dopdown_search.jpg)
 
@@ -279,13 +284,15 @@ With the help of Bootstrap and some custom CSS styling the navigation menu becom
 
 ### Home page and Footer
 
-The home page consist of only three sections apart from the header - a large jumbotron image to set the feeling for the user when they first land on the page, along with a big tagline that clarifies what the store is all about. Below that is a portion sized section of the all products view, where the user can get a quick look at the newest additions to the store - along and a button to redirect the user to a page where they can view all products in the store. 
+The home page consist of only three sections apart from the header - a large jumbotron image to set the feeling for the user when they first land on the page, along with a big tagline that clarifies what the store is all about. Below that is a portion sized section of the all products view, where the user can get a quick look at the newest additions to the store - along with a button to redirect the user to a page where they can view all products in the store. 
 
 ![printscreen home page](static/images/printscreens/landing_page.jpg)
 
+A Recently added products section to hopefully spark an interest for the products in stock at the moment.
+
 ![printscreen home page product section](static/images/printscreens/landing_page_products.jpg)
 
-Below those sections is the footer, which contains links to the stores social media and a newsletter sign-up form for users who wish to opt-in on that. It lacks a little bit on the layout but works as it should. The sign-up form is embedded via Mailchimp and when a user opts in for a newsletter they are added to Vintage Stores Contact list. 
+Below those sections is the footer, which contains links to the stores social media and a newsletter sign-up form for users who wish to opt-in on that. It lacks a little bit on the layout but works as it should. The sign-up form is embedded via Mailchimp and when a user opts in for a newsletter they are added to Vintage Stores Contact list. The links to social media uses the rel-attribute for better SEO.
 
 ![printscreen footer](static/images/printscreens/footer.jpg)
 
@@ -293,19 +300,19 @@ Below those sections is the footer, which contains links to the stores social me
 
 ### Product list page
 
-When navigation to the Products page the user has the option to either view all products on the site, or choose a specific category to filter out products. The categories can be found in the navigation bar at the moment. 
+When navigating to the Products page the user has the option to either view all products on the site, or choose a specific category to filter out products. The categories can be found in the navigation bar at the moment. 
 
 ![printscreen all products page](static/images/printscreens/all_products_view.jpg)
 
-Active category is shown to the user below the page headline.
+The active category is shown to the user below the page headline. In the future I would like to add the category selection options to the actual Product page interface as well, for a better user experience so they don't have to navigate the page via the navigation bar alone. 
 
 ![printscreen products filtered into category](static/images/printscreens/active_category.jpg)
 
-They also have the option to Sort the products by either price, name or news. 
+The user also have the option to Sort the products by either price, name or news. 
 
 ![printscreen products sorted by](static/images/printscreens/sort_by_filter_price.jpg)
 
-The product page is ressponsive and sorting products works well in this view also.
+The product page is ressponsive and sorting products works well on smaller screens as well.
 
 ![printscreen mobile products page](static/images/printscreens/mobile_all_products_view.jpg) ![printscreen mobile products sorted by](static/images/printscreens/mobile_sort_by_filter_price.jpg)
 
@@ -313,7 +320,7 @@ The product page is ressponsive and sorting products works well in this view als
 
 ### About page
 
-The about page containts some general info about the company behind the store. It also provides the user with important links to Terms & Conditions, Privacy Policy and Shipping information. I would have liked to put all of those important documents under its own headline in the navigation menu, but since time is of the esseence I had to settle with putting it all in here right now since I didn't really have the time to figure out the layout for that section in the navigation menu. 
+The about page containts some general info about the company behind the store. It also provides the user with important links to Terms & Conditions, Privacy Policy and Shipping information. I would have liked to put all of those important documents under its own headline in the navigation menu, but since time is of the esseence I had to settle for putting it all in here right now since I didn't really have the time to figure out the layout for that section in the navigation menu. 
 
 ![printscreen about page](static/images/printscreens/about_page.jpg)
 
@@ -329,7 +336,7 @@ On the Contact page the user has the option to fill out a handy Contact Form if 
 
 ![printscreen contact form](static/images/printscreens/contact_form.jpg)
 
-The contact form is responsive and user friendly on all screen sizes and devices. Error handling works as it should on both small and large screens. You get to practice some swedish while viewing the images as well :)
+The contact form is responsive and user friendly on all screen sizes and devices. Error handling works as it should on both small and large screens. You get to practice some swedish while viewing the image as well :)
 
 ![printscreen mobile contact form](static/images/printscreens/mobile_contact_form.jpg) ![printscreen field input error contact form](static/images/printscreens/mobile_contact_form_error_input.jpg)
 
@@ -375,7 +382,7 @@ On the personal profile page the user can view their saved delivery information,
 
 ![printscreen personal profile page](static/images/printscreens/personal_profile.jpg)
 
-They also have the option to update their personal information on this page, which is then saved instantly in the database and the user gets a success-message for confirmation. 
+They also have the option to update their personal information on this page, which is then saved instantly in the database and the user gets a success-message for confirmation. Pretty much full CRUD functionality is offered to the user on this page.
 
 ![printscreen update personal profile](static/images/printscreens/mobile_update_personal_profile.jpg)
 
@@ -383,7 +390,7 @@ They also have the option to update their personal information on this page, whi
 
 ### Product management
 
-Under the "My account" icon in the header a superuser gets access to a view called Product Management, where they can add products to the site directly in the browser or edit/delete existing products. The database is updated in real-time with the superuser interaction and the whole function provides easy management and an interface with full CRUD-functionality for the store owner, without having to manage the page via the Django Admin panel.
+Under the "My account" icon in the header a superuser gets access to a view called Product Management - where they can add products to the site directly in the browser, or edit/delete existing products. The database is updated in real-time with the superuser interaction and the whole function provides easy management and an interface with full CRUD-functionality for the store owner, without having to manage the page via the Django Admin panel.
 
 ![printscreen add product](static/images/printscreens/add_product.jpg)
 
@@ -391,7 +398,7 @@ The add and edit functions works well on small screens as well and the interface
 
 ![printscreen edit product](static/images/printscreens/edit_product.jpg)
 
-When a superuser is signed in to their account the Edit/Delte functionality is accessible via the product pages as well thanks to the links that are present in connection to the products. 
+When a superuser is signed in to their account the Edit/Delte functionality is accessible via the product pages as well, thanks to the links that are present in connection to the products. 
 
 ![printscreen edit_delete links](static/images/printscreens/edit_delete_links.jpg)
 
@@ -423,9 +430,11 @@ In the checkout view the user gets a last look at their order in the form of an 
 
 ![printscreen checkout view](static/images/printscreens/checkout_view.jpg)
 
+On smaller devices the order summary and delivery information stack on top of each other for an easier overview. 
+
 ![printscreen checkout mobile view](static/images/printscreens/mobile_checkout.jpg) ![printscreen checkout mobile view two](static/images/printscreens/mobile_checkout_view-2.jpg)
 
-Every field has error handling to inform the user of what went wrong - again we get the opportunity to learn a little swedish here, but for those of you who aren't fluid in the language, the error message tells us that the cards expiration date has passed.
+Every field has error handling to inform the user of what went wrong - again we get the opportunity to learn a little swedish here, but for those of you who aren't fluid in the language the error message tells us that the cards expiration date has passed.
 
 ![printscreen card validation](static/images/printscreens/card_validation_2.jpg)
 
@@ -439,17 +448,21 @@ When the order is completed the products that have been bought are removed from 
 
 ### Potential future features
 
-I see alot of potential features in the future - I would love to implement a rating system and the ability to read reviews on products on the detailed product page, but that would mean that there would have to be a number of the same item in stock, and that seems unlikely in a Vintage Store. 
+I see alot of potential features in the future: 
 
-As mentioned before a more interactive reviews page would be nice. Where users can interact with each other in more than just a plain review - share their favourite vintage items at home and edit their own reviews if they want to - to create almost like a interactive forum on the site would be really cool!
+- I would love to implement a rating system and the ability to read reviews on products on the detailed product page, but that would mean that there would have to be a number of the same item in stock, and that seems unlikely in a Vintage Store. 
 
-Another really important feature to implement is the ability to search the entire site with the help of the search bar. At this point it only searches for product related items, but as a user I want the option to write shipping in the search bar and be redirected to the page contaning information about shipping. But that would be to massive to deal with at the moment. 
+- As mentioned before a more interactive reviews page would be nice. Where users can interact with each other in more than just a plain review - share their favourite vintage items with others and edit their own reviews if they want to - to create almost like a interactive forum on the site would be really cool!
 
-Some updates on the navigation menu on smaller screens is much needed from a UX/UI point of view because I am not thrilled about how some features overlap at the moment. 
+- Another really important feature to implement is the ability to search the entire site with the help of the search bar. At this point it only searches for product related items, but as a user I want the option to write shipping in the search bar and be redirected to the page contaning information about shipping. But that would be to massive to deal with at the moment. 
 
-I would also like for all headlines on the page to be linked to an actual page, since clickable headlines feels like a must on most websites now for a really good user exeperience.
+- Some updates on the navigation menu on smaller screens is much needed from a UX/UI point of view because I am not thrilled about how some features overlap at the moment. 
 
-I would also like to implement a Category selector on the actual product page, maybe above the "Sort by" box, and not only in the navbar for a better user interface. 
+- I would also like for all headlines on the page to be linked to an actual page, since clickable headlines feels like a must on most websites now for a really good user exeperience.
+
+- I would also like to implement a Category selector on the actual product page, maybe above the "Sort by" box, and not only in the navbar for a better user interface. 
+
+- Another really important feature that needs to be added is a a little info somewhere on the site telling the user if they are logged in or not, without having to check the "My Account" icon. I unfortunately realised I forgot this feature a little to late and didn't want to risk ruining something on the site by trying to add it in the last minute.
 
 
 
@@ -459,7 +472,8 @@ When it was time to start sorting out the meta for the e-commerce store I starte
 
 I absolutely think they use social media platforms, mainly Instagram and Facebook to get tips on good vintage stores and inspiration on what items to search for. I think they are active on platforms such as X as well, but these types of products doesn't really fit that type of content. In Sweden where I'm from this would be the perfect store for the typical swedish hipster nowadays - environmentally aware and likes to buy used items, striving to be unique in every way possible and therefor might end up with the exact same vintage items as every other hipster. But they are an easy market to target through social media. 
 
-I would have liked to added a few external pages with rel-attributes to optimize the SEO, for example other vintage stores or maybe to a site that tells the story behind vintage products, but there wasn't really time to do the research. So at this point I think only my social media link has a rel-attribute - so the potential for improved SEO is big!
+I would have liked to added a few external pages with rel-attributes to optimize the SEO, for example other vintage stores or maybe links to a site that tells the story behind vintage products, but there wasn't really time to do the research. So at this point I think only my social media link has a rel-attribute - so the potential for improved SEO is big!
+
 
 
 ### Marketing Strategy 
@@ -482,7 +496,7 @@ The plan would be to update some of the meta keys according to what items are in
 
 ### Business model 
 
-I like the idea of a proper business model for my store, but since I didn't really have the time to write one I asked ChatGPT for one and I think it looks alright so I'll paste it in for the sake of having one. I think the AI nailed the customer segments since they are pretty much the same as what I discussed a little earlier. 
+I actually asked an AI for help with the business model, mainly to see if they could analyse the page and interpret it in the same way as me - simply to get a confirmation for if the users experience the store in the way I intend them to. I think the AI nailed the customer segments since they are pretty much the same as what I discussed earlier in the section above. 
 
 __Value Proposition__
 Unique and High-Quality Vintage Items: Vintage Corner offers carefully selected items that cannot be found in mainstream stores.
@@ -533,7 +547,7 @@ Logistics: Shipping and packaging costs.
 
 ### Facebook page
 
-The Facebook page is pretty simple and straight forward, and hopefully it can still be viewed on the link below. Since there is no user iteractivity on the page right now there might be a risk that the link isn't working du to Facebooks business page protocol. I think the most important part of the stores Facebook page is to continuolsy upload new items so that the customers don't miss out on anything. To tell the stories behind the products would be a nice touch, and maybe how and where the store found them. To sell through story building is extremly important for this type of store where you don't push products through sales and large marketing campaigns. 
+The Facebook page is pretty simple and straight forward, and hopefully it can still be viewed on the link below. Since there is no user iteractivity on the page right now there might be a risk that the link isn't working du to Facebooks business page protocol. I think the most important part of the Vintage Corners Facebook page is to continuolsy upload new items so that the customers don't miss out on anything. To tell the stories behind the products would be a nice touch, and maybe how and where the store found them. To sell through story telling is extremly important for this type of store, where you don't push products through sales and large marketing campaigns. 
 
 ![facebook cover](static/images/printscreens/facebook_cover.jpg)
 
@@ -541,7 +555,7 @@ Hopefully the posts will spark interactivity with the users.
 
 ![facebook posts](static/images/printscreens/facebook_second_view.jpg)
 
-Images seems like a vital part of a Facebook page to catch the eye of a user when they scroll through the massive amount of posts in their Facebook feed. 
+Images is a vital part of a Facebook page to catch the eye of a user when they scroll through the massive amount of posts in their Facebook feed. 
 
 ![facebook pohotos](static/images/printscreens/facebook_photos_and_post_view.jpg)
 
@@ -569,8 +583,9 @@ Django - main framework for a secure and resuable development process.
 
 ### Libraries & Additional Programs/Software/Tools
 - AWS S3 - used to store all product images/media files for deployed site
-- Bootstrap - used for some of the front-end design. Mainly to make the page responsive and make use of Bootstraps grid system. It was accompanied by some custom CSS since I'm not all that familiar with Bootstraps many fuctions and add ons just yet.
 - Balsamique - used to create all wireframes for the project
+- Bootstrap - used for some of the front-end design. Mainly to make the page responsive and make use of Bootstraps grid system. It was accompanied by some custom CSS since I'm not all that familiar with Bootstraps many fuctions and add ons just yet.
+- Boto3 - Amazon Web Services (AWS) Software Development Kit for Python
 - Django All Auth - used for user registration and authentication
 - Django Crispy Forms - used for all forms on the page, mainly to control their behaviour and give them the same look for a good UX
 - Django Summernote - used as the editor for the Admin panel
@@ -597,13 +612,16 @@ The manual testing consisted of not only the things listed below, but the testin
 
 I also asked them to check that the email verification and confirmation was working the way that it should. 
 
+
 ### Responsivness 
 
 Mainly thanks to Bootstrap the page is responsive on all devices - from mobile phones to tablets, laptops and larger screens. It reaches a max-width on larger devices as to not look to stretched out and looks alright on even the smallest mobile screens. I've asked friends and family to try it out on different devices to get as many opinions in as possible. 
 
+
 ### Browser compability
 
 The project has been tested on different browsers such as: Google Chrome, Safari, Microsoft Edge and Mozilla Firefox. It looks and functions pretty much the same on all browsers. 
+
 
 ### Validator testing
 
@@ -633,32 +651,34 @@ When testing the page using Lighthouse for Chrome, some results came back really
 
 ### User Story testing
 
-The User Story testing has been performed throughout the development. When building the site I moved the Stories I was working on into the "In Progress" column on my Kanban-board, and then checked that every acceptance criteria and task was fulfilled before moving it into the "Done" column. As you can see there are still Stories left in the "In progress" column, due to the fact that some criterias have been met, but not all of them. The project is still functional but I don't want to move them into the Done column until the criterias are fully met. 
+The User Story testing has been performed throughout the development. When building the site I moved the Stories I was working on into the "In Progress" column on my Kanban-board, and then checked that every acceptance criteria and task was fulfilled before moving it into the "Done" column. As you can see there are still Stories left in the "In progress" column, due to the fact that some criterias have been met, but not all of them. The project is still functional but I don't want to move them into the Done column until all the criterias and tasks are fully met. 
 
 For example the Acceptance Criterias in the User Stories regarding Reviews haven't all been met, and will not be fulfilled at this point in the project. Some of the criterias concern the ability to add images and videos to a review, and to be able edit a review and leave a response to somebody elses review - so they will both remain in the "In Progress" column for now. 
 
 At the moment a users card information isn't saved to their personal profile, so the criterias in "Pay for products - returning customer" User Story hasnt been fully met at therefore it is not Done at this point either. 
 
-And lastly the story regarding Signing up for a newsletter contains criterias about the ability to sign up for a newsletter at checkout, and criterias about being able to opt out from the mailing list via a link in the newsletter which I can't deliver at this point. 
+And lastly the story regarding Signing up for a newsletter contains criterias about the ability to sign up for a newsletter at checkout, and criterias about being able to opt out from the mailing list via a link in the newsletter, which I can't deliver at this point. 
 
 ![printscreen kanban board](static/images/printscreens/kanban_board.jpg)
 
-Some User Stories haven't made it out of the "Todo" column due the fact that they a Stories that I do believe apply to e-commerce stores in general and therefor is valuable to include, but they do not apply to this particualr store due to the fact that you can not choose size or quantity on any of the products on the page, and we don't work with deals and offers so they will remain in the Todo part of the board for this project. 
+Some User Stories haven't made it out of the "Todo" column due the fact that they a Stories that I do believe apply to e-commerce stores in general and therefor is valuable to include - but they don't apply to this particular store due to the fact that you can not choose size or quantity on any of the products on the page, and we don't work with deals and offers so they will remain in the Todo part of the board for this project. 
 
 
 ### Bugs
 
+The bugs have been very present, as always with the Full Stack projects. Some I have managed to solve after alot of Googling and chatting with ChatGPT, some I have not. I'm not even sure that I've got all the bugs on print below but hopefully the majority of them. 
+
 - There are still some issues with storing the content of the shopping cart when you log in/log out during a shopping session, the cart gets emptied and I know the issue is regarding how the data is stored in the session, but I have to save that issue for the future. 
 
-- For some reason my Toast message for when an item in the shopping cart is removed doesn't work and even though I've tried time and time again to fix it, I haven't been able to solve it. 
+- For some reason my Toast message for when an item in the shopping cart is removed doesn't work, and even though I've tried time and time again to fix it - I haven't been able to solve it yet. 
 
-- I've also had some BIG issues with adding checkboxes to different parts of the site. I had one required checkbox in the checkout view that the user had to fill in to ensure that they accept the Terms and Conditions on the site, but no matter how many times I changed the code it didn't quite work with the POST-methods so instead it caused issues with fulfilling the payment process. So at the moment it's no longer present in the checkout view, but I am determined to get it back in there and get the whole process working. I also planned on having checkboxed for accepting the Privacy Policy on both the Sign up page and in the footer included in the newsletter sign-up form, but once again trouble emerged and I felt I didn't have the time to fix it. So again i really want them present because I know how important they are. 
+- I've also had some BIG issues with adding checkboxes to different parts of the site. I had one required checkbox in the checkout view that the user had to fill in to ensure that they accept the Terms and Conditions on the site, but no matter how many times I changed the code it didn't quite work with the POST-methods. So instead it caused issues with fulfilling the payment process. So at the moment it's not present in the checkout view, but I am determined to get it back in there and get the whole process working. I also planned on having checkboxed for accepting the Privacy Policy on both the Sign up page and in the footer section (included in the newsletter sign-up form), but once again trouble emerged and I felt I didn't have the time to fix it. So again i really want them present because I know how important they are. 
 
-- Some users have to verify their email address when logging in, even though they have already verified it. This is due to the fact that I had to change ACCOUNT_EMAIL_VERIFICATION to mandatory, because otherwise the verification for new user didn't work. I tried hard to sort it out wit the help of signals listening to log-in action but couldn't solve it so that needs to be resolved. But I though - rather verify to much than not at all. 
+- Some users have to verify their email address when logging in, even though they have already verified it when they registered for an account. This is due to the fact that I had to change the ACCOUNT_EMAIL_VERIFICATION to mandatory in my settings, because otherwise the verification for new user didn't work. I tried hard to sort it out wit the help of signals listening to log-in action, but couldn't solve it so that needs to be resolved. But I though - rather verify to much than not at all. 
 
-- The delete account function works in some parts, but not all the way yet
+- The delete account function works in some parts, but not all the way yet. An account can be deleted but the confirmation message-process doesn't work as it shoul, so at the moment the user is only redirected to the sign in page when they delete their account, without the Success-message telling them that the account was deleted, which is poor UX and needs to be sorted out. Some actions need to be added to this view in order for it to work properly.
 
-- There is an issue with the CSS rules on some Samsung phones that use the Android Internet Browser, some of the colours get inverted som the colour scheme is alot darker in those browsers. It still works but it doesn't look like I intended, so I will have to dig deeper into that. 
+- There is an issue with the CSS rules on some Samsung phones that use the Android Internet Browser, some of the colours get inverted and the colour scheme is alot darker in those browsers. It still works but it doesn't look like I intended, so I will have to dig deeper into that. This was discovered when I asked friends and family to test the webpage.
 
 - For some reason blue colour remain on some links when clicked in the deployed version, but since that's just an aesthetic issue I'll leave it for now.
 
@@ -695,8 +715,8 @@ This project was deployed using Heroku.
 
 
 2. Ready your code for deployment in your Code Editor.
-- Install a production ready webserver for Heroku such as gunicorn by writing the following command in your terminal: pip3 install gunicorn~=20.1.0.
-- Add gunicorn==20.1.0 to the requirements.txt file with the following command in your terminal: pip3 freeze --local > requirements.txt.
+- Install a production ready webserver for Heroku such as gunicorn by writing the following command in your terminal: pip3 install gunicorn.
+- Add gunicorn to the requirements.txt file with the following command in your terminal: pip3 freeze --local > requirements.txt.
 - Create a file called Procfile in the root directory of your project.
 - Inside the Procfile declare that the web process followed by the command to execute your Django project: web: gunicorn yourprojectsname.wsgi
 - Open the projects settings.py file an set DEBUG=False
@@ -708,15 +728,15 @@ This project was deployed using Heroku.
 - Create an env.py file and add the following:
 import os
 os.environ.setdefault( "DATABASE_URL", "")
-os.environ.setdefault("SECRET_KEY", "your__secret_key")
+os.environ.setdefault("SECRET_KEY", "your_secret_key")
 - Check to se that your env.py file is added to the .gitignore file. 
 - Make sure your settings.py has this code in it: SECRET_KEY = os.environ.get("SECRET_KEY").
-- Click on the "Settings" tab and navigate to the "Reveal Config Vars" section. 
+- Navigate to the Heroku admin panel and click on the "Settings" tab and navigate to the "Reveal Config Vars" section. 
 - Add a SECRET_KEY value to Herokus Config Vars.
 
 
 4. Deployment with static files
-- Install Python package for whitenoise with the command: pip3 install whitenoise==6.7.0
+- Install Python package for whitenoise with the command: pip3 install whitenoise
 - Add whitenoise to your requirements.txt file with the command: pip3 freeze --local > requirements.txt
 - Add 'whitenoise.middleware.WhiteNoiseMiddleware' to the list of MIDDLEWARE in settings.py below Django SecurityMiddleware.
 - In settings.py add a path to staticfiles in this way: STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -726,9 +746,10 @@ os.environ.setdefault("SECRET_KEY", "your__secret_key")
 
 
 5. Deployment with media files
-- Install S3 Storage and Boto with the command pip3 install boto3
-- Add ... to to your requirements.txt file with the command: pip3 freeze --local > requirements.txt
+- Install S3 Storage and Boto with the command pip3 install django-storages boto3.
+- Add both programs to to your requirements.txt file with the command: pip3 freeze --local > requirements.txt.
 - Add 'storages' to your list of INSTALLED_APPS in settings.py.
+- Navigate to AWS-page and set up a bucket with a folder for your media files.
 - In setting.py add a these parameters to manage external storage in AWS and replace with correct paths were needed:
     AWS_STORAGE_BUCKET_NAME = 'bucket-name'
     AWS_S3_REGION_NAME = 'eu-north-1'
@@ -738,7 +759,13 @@ os.environ.setdefault("SECRET_KEY", "your__secret_key")
     DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
     MEDIAFILES_LOCATION = 'media/product_images'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
-- 
+- Navigate to AWS-page and fetch your AWS Access key id and AWS Secret Access Key.
+-  Add the following to your env.py file:
+    os.environ.setdefault("AWS_ACCESS_KEY_ID", "your_aws_access_key_id")
+    os.environ.setdefault("AWS_SECRET_ACCESS_KEY", "your_aws_secret_access_key")
+- Navigate to the Heroku admin panel and click on the "Settings" tab and navigate to the "Reveal Config Vars" section. 
+- Add a AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY value to Herokus Config Vars.
+- Also add the value USE_AWS and set the key to "True" in Heroku Config Vars.
 
 
 6. Deploy on Heroku
@@ -757,19 +784,22 @@ os.environ.setdefault("SECRET_KEY", "your__secret_key")
 ### Content
 
 
-The Code Institute code along project "Boutique Ado" has been extremly helpful when it comes to setting up the structure for the project and I have returned to it again and agian throughout the development to make sure i use the right commands, deploy in the right way and so on. 
-The models we worked with in that project was of course inspiration for when designing my own 
+The Code Institute code along project "Boutique Ado" has been extremly helpful when it comes to setting up the structure for the project and I have returned to it again and agian throughout the development to make sure I use the right commands, deploy in the right way, set up Stripe payment correctly and so on. Some of the models we worked with in that project was of course inspiration for when designing my own custom models, but I also copied alot of the models from the project since I built the same type of project.
 
 As always [Stack Overflow](https://stackoverflow.com/) has been my go to place everytime I've googled a piece of code for troubleshooting. 
 
-Product info mainly from Wikipedia
+The product details mainly came from Wikipedia by googling the products in the store at the moment.
 
-I also chose to ask ChatGPT for a good example of a docstring, which I then altered for the different parts of Python code in the progress. But thanks to AI i got a good structure to work with.
+The About section I borrowed from another Vitage Store called [Panomo](https://www.pamono.com/about-us) that I found via the mighty Google.
+
+I also chose to ask ChatGPT for a good example of a docstring, which I then altered for the different parts of Python code in the progress. But thanks to AI i got a good structure to work with. 
+
+As mentioned before ChatGPT also played a vital part in troubleshooting the site, even though you have to be careful when you specify what you need help with since it often leaves out all the parts that are connected to solving the issues in your project. 
 
 
 ### Media
 
-[Pexels.com](https://www.pexels.com/)
-[Unsplash.com](https://unsplash.com/)
-[Favicon](https://favicon.io/emoji-favicons/)
-https://imagecolorpicker.com/
+- [Pexels.com](https://www.pexels.com/) for free product images.
+- [Unsplash.com](https://unsplash.com/) for free produt images.
+- [Favicon](https://favicon.io/emoji-favicons/) for favicons.
+- [Imagecolorpicker](https://imagecolorpicker.com/) for picking out my colours for the webpage.

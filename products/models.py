@@ -50,7 +50,6 @@ class Product(models.Model):
     Meta:
         verbose_name_plural (str): Specifies the plural form of the product name
     """
-    
     name = models.CharField(max_length=250)
     category = models.ForeignKey('Category', null=True, blank=True,
                                  on_delete=models.SET_NULL)
