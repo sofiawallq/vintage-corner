@@ -1,6 +1,6 @@
 /* General styling */
 html, body {
-    background-color: #e3e1e1;
+    background-color: #e3e1e1 !important;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -20,8 +20,8 @@ html, body {
 
 /* Containers */
 .header-container {
-    background-color: #738d8d;
-    color: white;
+    background-color: #738d8d !important;
+    color: white !important;
 }
 
 .callout-container {
@@ -51,9 +51,13 @@ html, body {
     font-size: 4rem;
 }
 
+.tagline {
+    text-shadow: 2px 2px 3px #353e53;
+}
+
 /* Navigation menu */
 .dropdown-menu {
-    background-color: #738d8d;
+    background-color: #738d8d !important;
 }
 
 .search-box {
@@ -107,7 +111,7 @@ footer .nav-item {
 
 /* Buttons */
 .btn {
-    background-color: #353e53;
+    background-color: #353e53 !important;
     color: white !important;
 } 
 
@@ -154,7 +158,7 @@ a.category-badge > span.badge:hover {
 
 /*Review page*/
 .card {
-    background-color: #d8c4bf;
+    background-color: #d8c4bf !important;
 }
 
 /* Shopping cart */
@@ -185,7 +189,7 @@ a.category-badge > span.badge:hover {
 
 /* Footer */
 footer {
-    background-color: #738d8d;
+    background-color: #738d8d !important;
     width: 100%;
     padding: 20px 0;
 }
