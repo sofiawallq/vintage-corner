@@ -88,7 +88,7 @@ I ended up with a total of 25 User Stories to work with in the end, the majority
 ![printscreen user stories](static/images/printscreens/stories_status.jpg)
 
 
-Below are the epics and the User Stories I ended up with. 
+Below are the epics and the User Stories I ended up with, the Projects Kanban board can be viewed [here](https://github.com/users/sofiawallq/projects/5/views/1). 
 
 
 __EPIC:__ View products and navigation
