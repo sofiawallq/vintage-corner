@@ -11,21 +11,32 @@ The live website can be seen [here](https://vintage-corner-9f26bce1e332.herokuap
 
 ## Table of content
 - [UX/UI Design](#uxui-design)
+  - [Colour scheme](#colour-scheme)
   - [User Stories](#user-stories)
   - [Wireframes](#wireframes)
-  - [Colour scheme](#colour-scheme)
   - [Project Planning](#project-planning)
     - [Agile methodologies](#agile-methodologies)
     - [Database design](#database-design)
+    - [Entity relationship diagrams](#entity-relationship-diagrams)
 - [Features](#features)
   - [Existing features](#existing-features)
   - [Header](#header)
   - [Navigation menu](#navigation-menu)
-  - [Landing page](#landing-page)
+  - [Home age & Footer](#home-page-and-footer)
+  - [About page](#about-page)
   - [Contact page](#contact-page)
-  - [Register account/login page](#register-accountlogin-page)
-  - [Footer](#footer)
+  - [Review page](#review-page)
+  - [Register for an account/sign in](#register-for-account-or-sign-in)
+  - [Personal Profile page](#personal-profile-page)
+  - [Product management](#product-management)
+  - [Shopping cart view](#shopping-cart-view)
+  - [Checkout view](#checkout-view)
   - [Potential future features](#potential-future-features)
+- [SEO, Meta and Marketing](#seo-meta-and-marketing)  
+  - [Marketing Strategy](#marketing-strategy)
+  - [Meta tags and keys](#meta-tags-and-keys)
+  - [Business model](#business-model)
+  - [Facebook page](#facebook-page)
 - [Technologies used](#technologies-used)
   - [Languages](#languages)
   - [Database](#database)
@@ -228,7 +239,7 @@ The database design consists of a main project directory called vintage_corner, 
 ![printscreen root directory](static/images/printscreens/root_directory.jpg)
 
 
-__Entity Relationship Diagrams(ERD)__
+### Entity Relationship Diagrams
 
 Tree custom models were made for this project - one for managing all Products in the store, one to handle the Contact form in the contact app, and one to manage Reviews. Many more models exist within the project but they all come from the Boutique Ado code along project, and are somewhat or not altered at all - many of them have gotten an extra field or two but don't feel altered enough to be called custom.
 
@@ -266,7 +277,7 @@ With the help of Bootstrap and some custom CSS styling the navigation menu becom
 
 
 
-### Home page & Footer
+### Home page and Footer
 
 The home page consist of only three sections apart from the header - a large jumbotron image to set the feeling for the user when they first land on the page, along with a big tagline that clarifies what the store is all about. Below that is a portion sized section of the all products view, where the user can get a quick look at the newest additions to the store - along and a button to redirect the user to a page where they can view all products in the store. 
 
@@ -342,7 +353,7 @@ There is a lot of potential future features and developments that can be done to
 
 
 
-### Register for an account/sign in 
+### Register for an account or sign in 
 
 The user has the option to register for an account on the page, to be able to access their own personal profile page in the future. Or they can sign in to an existing account if they have already registered for one. Either way there's a possibility to do both in separate forms on the site - forms that got some styling with the help of Django Crispy Forms and they both contain password validation. Both options are accessible to the user through the "My account" icon in the page header, which the user can find on all pages of the site. 
 
@@ -442,7 +453,7 @@ I would also like to implement a Category selector on the actual product page, m
 
 
 
-## SEO optimization, Meta and Marketing
+## SEO, Meta and Marketing
 
 When it was time to start sorting out the meta for the e-commerce store I started thinking about who the customer might be - who buys old and slightly quirky products for their home? To summarise them I think the majority of the customers are really enthustiatic collectors who love the thrill of finding just the right vintage product. I think they have a steady income since the store sells vintage items in the higher price range, and I think they like to have few but unique products in their home that you don't find everywhere. I also think they are really conscious consumers who likes to know the history behind the product they are purchasing and love the thrill of a good vintage find.
 
